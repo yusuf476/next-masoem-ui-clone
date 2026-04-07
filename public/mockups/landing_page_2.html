@@ -1,0 +1,434 @@
+<!DOCTYPE html>
+
+<html class="light" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Masoem University Store</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&amp;family=Inter:wght@400;500;600&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            "colors": {
+                    "on-primary": "#ffffff",
+                    "surface-tint": "#4059aa",
+                    "tertiary-container": "#6e2c00",
+                    "outline-variant": "#c5c5d3",
+                    "surface-container": "#eeeeee",
+                    "surface-bright": "#f9f9f9",
+                    "primary-container": "#1e3a8a",
+                    "on-tertiary-container": "#f39461",
+                    "on-primary-container": "#90a8ff",
+                    "surface-container-highest": "#e2e2e2",
+                    "on-error": "#ffffff",
+                    "secondary-fixed-dim": "#adc6ff",
+                    "inverse-on-surface": "#f1f1f1",
+                    "on-background": "#1a1c1c",
+                    "inverse-surface": "#2f3131",
+                    "primary-fixed-dim": "#b6c4ff",
+                    "on-error-container": "#93000a",
+                    "secondary": "#0058be",
+                    "tertiary-fixed": "#ffdbcb",
+                    "surface-container-lowest": "#ffffff",
+                    "on-surface-variant": "#444651",
+                    "secondary-fixed": "#d8e2ff",
+                    "surface": "#f9f9f9",
+                    "secondary-container": "#2170e4",
+                    "on-secondary-container": "#fefcff",
+                    "inverse-primary": "#b6c4ff",
+                    "on-secondary-fixed": "#001a42",
+                    "background": "#f9f9f9",
+                    "primary": "#00236f",
+                    "surface-container-low": "#f3f3f3",
+                    "primary-fixed": "#dce1ff",
+                    "surface-dim": "#dadada",
+                    "on-tertiary": "#ffffff",
+                    "error-container": "#ffdad6",
+                    "on-secondary-fixed-variant": "#004395",
+                    "outline": "#757682",
+                    "error": "#ba1a1a",
+                    "on-primary-fixed-variant": "#264191",
+                    "on-tertiary-fixed-variant": "#773205",
+                    "on-secondary": "#ffffff",
+                    "surface-variant": "#e2e2e2",
+                    "on-tertiary-fixed": "#341100",
+                    "surface-container-high": "#e8e8e8",
+                    "on-surface": "#1a1c1c",
+                    "tertiary": "#4b1c00",
+                    "on-primary-fixed": "#00164e",
+                    "tertiary-fixed-dim": "#ffb691"
+            },
+            "borderRadius": {
+                    "DEFAULT": "0.25rem",
+                    "lg": "0.5rem",
+                    "xl": "0.75rem",
+                    "full": "9999px"
+            },
+            "fontFamily": {
+                    "headline": ["Manrope"],
+                    "body": ["Inter"],
+                    "label": ["Inter"]
+            }
+          },
+        }
+      }
+    </script>
+<style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+        .editorial-asymmetry {
+            clip-path: polygon(0 0, 100% 0, 100% 90%, 0 100%);
+        }
+    </style>
+<style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+  </head>
+<body class="bg-surface font-body text-on-surface selection:bg-primary-container selection:text-white">
+<nav class="bg-white/80 dark:bg-slate-900/80 backdrop-blur-xl fixed top-0 w-full z-50">
+<div class="flex justify-between items-center px-6 py-4 max-w-7xl mx-auto">
+<div class="flex items-center gap-4">
+<span class="material-symbols-outlined text-blue-900 dark:text-blue-400">menu</span>
+<span class="text-xl font-black text-blue-900 dark:text-white tracking-tight font-headline">Masoem University Store</span>
+</div>
+<div class="hidden md:flex gap-8 items-center">
+<a class="text-blue-700 dark:text-blue-400 font-semibold text-sm font-label transition-all hover:bg-slate-100/50 px-3 py-2 rounded-xl" href="#">Shop</a>
+<a class="text-slate-600 dark:text-slate-400 text-sm font-label hover:text-blue-600 px-3 py-2 rounded-xl transition-all" href="#">Search</a>
+<a class="text-slate-600 dark:text-slate-400 text-sm font-label hover:text-blue-600 px-3 py-2 rounded-xl transition-all" href="#">Orders</a>
+<a class="text-slate-600 dark:text-slate-400 text-sm font-label hover:text-blue-600 px-3 py-2 rounded-xl transition-all" href="#">Profile</a>
+</div>
+<div class="flex items-center gap-4">
+<span class="material-symbols-outlined text-blue-900 dark:text-blue-400 cursor-pointer">shopping_cart</span>
+</div>
+</div>
+</nav>
+<main class="pt-20">
+<!-- Hero Section -->
+<section class="relative overflow-hidden bg-surface py-20 lg:py-32 px-6">
+<div class="max-w-7xl mx-auto grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+<div class="z-10 order-2 lg:order-1">
+<h1 class="text-5xl lg:text-7xl font-headline font-extrabold text-primary leading-tight tracking-tighter mb-6">
+                        Welcome to Masoem University Store
+                    </h1>
+<p class="text-lg lg:text-xl text-on-surface-variant mb-10 max-w-lg font-body leading-relaxed">
+                        Your trusted campus e-commerce platform. Elevate your academic journey with curated essentials and premium university apparel.
+                    </p>
+<div class="flex flex-wrap gap-4">
+<button class="bg-primary text-on-primary px-8 py-4 rounded-xl font-bold text-lg hover:bg-primary/90 transition-all shadow-xl shadow-primary/10 active:scale-95">
+                            Shop Now
+                        </button>
+<button class="bg-surface-container-highest text-on-surface px-8 py-4 rounded-xl font-bold text-lg hover:bg-surface-container-high transition-all active:scale-95">
+                            Explore Products
+                        </button>
+</div>
+</div>
+<div class="relative order-1 lg:order-2">
+<div class="absolute -top-12 -right-12 w-64 h-64 bg-secondary-fixed opacity-30 rounded-full blur-3xl"></div>
+<div class="absolute -bottom-12 -left-12 w-48 h-48 bg-primary-fixed opacity-40 rounded-full blur-3xl"></div>
+<div class="relative aspect-square rounded-3xl overflow-hidden shadow-2xl rotate-2">
+<img alt="Student life workspace" class="w-full h-full object-cover" data-alt="Modern high-angle shot of student workspace with laptop, university notebook, and designer coffee mug in soft morning campus light" src="https://lh3.googleusercontent.com/aida-public/AB6AXuC-ss_HA4MxGHtglg5DhawPoctGXHceERTMPiPS1wyyhvTZ2MhubmvGqtSI_gd3u8sgjj8U5ttkMaGqSLlkeqJ-o9bhtNagPzbLONzNOT59P3D7l5FmVXpBnu8F2wqQmsu2JzEuz5Epqd53IX7MHwrWiod3_Z4tEnKz_btrpdw7ULKzBEkJQPrqE4bNS6fTqmGwLPxgtU5om4DbTNAMEJQtwqI2GC3YSUbhlB4-3FstlcNKPLEVDxOFF4i_Zy6_-fBCC7FrUVwWRcoR"/>
+</div>
+</div>
+</div>
+</section>
+<!-- Categories Bento Grid -->
+<section class="py-24 px-6 bg-surface-container-low">
+<div class="max-w-7xl mx-auto">
+<div class="flex flex-col md:flex-row md:items-end justify-between mb-12 gap-4">
+<div>
+<h2 class="text-3xl font-headline font-bold text-primary mb-2">Curated Collections</h2>
+<p class="text-on-surface-variant">Everything you need for campus life in one place.</p>
+</div>
+<a class="text-secondary font-bold flex items-center gap-2 hover:gap-3 transition-all" href="#">View All Categories <span class="material-symbols-outlined">arrow_forward</span></a>
+</div>
+<div class="grid grid-cols-2 md:grid-cols-5 gap-4">
+<div class="group bg-surface-container-lowest p-8 rounded-2xl hover:bg-primary transition-all cursor-pointer">
+<div class="bg-primary-fixed w-12 h-12 rounded-xl flex items-center justify-center mb-6 group-hover:bg-on-primary/20 transition-all">
+<span class="material-symbols-outlined text-primary group-hover:text-white">devices</span>
+</div>
+<h3 class="font-headline font-bold group-hover:text-white">Electronics</h3>
+</div>
+<div class="group bg-surface-container-lowest p-8 rounded-2xl hover:bg-primary transition-all cursor-pointer">
+<div class="bg-primary-fixed w-12 h-12 rounded-xl flex items-center justify-center mb-6 group-hover:bg-on-primary/20 transition-all">
+<span class="material-symbols-outlined text-primary group-hover:text-white">apparel</span>
+</div>
+<h3 class="font-headline font-bold group-hover:text-white">Fashion</h3>
+</div>
+<div class="group bg-surface-container-lowest p-8 rounded-2xl hover:bg-primary transition-all cursor-pointer">
+<div class="bg-primary-fixed w-12 h-12 rounded-xl flex items-center justify-center mb-6 group-hover:bg-on-primary/20 transition-all">
+<span class="material-symbols-outlined text-primary group-hover:text-white">menu_book</span>
+</div>
+<h3 class="font-headline font-bold group-hover:text-white">Books</h3>
+</div>
+<div class="group bg-surface-container-lowest p-8 rounded-2xl hover:bg-primary transition-all cursor-pointer">
+<div class="bg-primary-fixed w-12 h-12 rounded-xl flex items-center justify-center mb-6 group-hover:bg-on-primary/20 transition-all">
+<span class="material-symbols-outlined text-primary group-hover:text-white">school</span>
+</div>
+<h3 class="font-headline font-bold group-hover:text-white">Campus Merchandise</h3>
+</div>
+<div class="group bg-surface-container-lowest p-8 rounded-2xl hover:bg-primary transition-all cursor-pointer">
+<div class="bg-primary-fixed w-12 h-12 rounded-xl flex items-center justify-center mb-6 group-hover:bg-on-primary/20 transition-all">
+<span class="material-symbols-outlined text-primary group-hover:text-white">stop</span>
+</div>
+<h3 class="font-headline font-bold group-hover:text-white">Accessories</h3>
+</div>
+</div>
+</div>
+</section>
+<!-- Featured Products -->
+<section class="py-24 px-6 bg-surface">
+<div class="max-w-7xl mx-auto">
+<h2 class="text-3xl font-headline font-bold text-primary mb-12">New Arrivals</h2>
+<div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8">
+<!-- Product 1 -->
+<div class="group relative">
+<div class="bg-surface-container-lowest rounded-xl p-4 transition-all hover:shadow-2xl hover:shadow-primary/5">
+<div class="aspect-square rounded-lg overflow-hidden bg-surface-container mb-4">
+<img alt="Campus Smartwatch" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" data-alt="Minimalist white smartwatch on a clean grey background with soft studio lighting and sharp details" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBfa19JBbxeg9DANqY0CoZnZPRp6wpUnw0UA1fSOoQ0ZVXk99hdAwvZhOsRKKsk2Q2C4_P6VvAcMwnwtJRfyfouAxK7ax9j8FnXn0IEBoWCr5QXS2-MiB1qy7t8ylANyX0iINAGWRS42uwxcMoJiAJbVfCJ_P2hd5jhb9JxanASeYrJnHqskKIdeL4d3cnjWpopXU-5WJz6JVBMrv7G0KxSVsCbKIqlijUiYJ4hZ0F2xpOI94XqWpkjSZ-kirJ56icA3MmpLI6iYE_s"/>
+</div>
+<h3 class="font-headline font-bold text-lg mb-1">MU Scholar Series Watch</h3>
+<div class="flex items-center gap-2 mb-3">
+<div class="flex text-amber-400">
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined">star</span>
+</div>
+<span class="text-xs font-bold text-on-surface-variant">(48)</span>
+</div>
+<div class="flex items-center justify-between">
+<span class="text-xl font-extrabold text-primary">$89.00</span>
+<button class="bg-primary text-white p-2 rounded-lg hover:bg-secondary transition-colors">
+<span class="material-symbols-outlined">shopping_cart</span>
+</button>
+</div>
+</div>
+</div>
+<!-- Product 2 -->
+<div class="group relative">
+<div class="bg-surface-container-lowest rounded-xl p-4 transition-all hover:shadow-2xl hover:shadow-primary/5">
+<div class="aspect-square rounded-lg overflow-hidden bg-surface-container mb-4">
+<img alt="University Hoodie" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" data-alt="Navy blue premium cotton hoodie featuring university crest embroidery, displayed on a high-end minimalist clothing rack" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDQT4qlT-U7332T_YKwtsaHzCsIyYOzGwQftspA6W6vSrt_Zfvr3QlDVRfZA3uHC8n4jofewmE-8rBr5s_JiSlhWDy_WaTyJLLIBdTt4DYaEnYHOG-G15dptFMFf-tUeNb2_H3SU7Zy1lxWZnqvPRkupvHWvR_T5Z0xDrFLuy-Cpnx88eMzFBjaKXJCvx9v4HGwPqqycIhx_3ORU-C5OJQr_NIgSZw9ZlHK5VH7ALj02_5ZCibCw1wZB1PNB4sKs03Cbk1CIGN5Otuq"/>
+</div>
+<h3 class="font-headline font-bold text-lg mb-1">Signature Heritage Hoodie</h3>
+<div class="flex items-center gap-2 mb-3">
+<div class="flex text-amber-400">
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">star_half</span>
+</div>
+<span class="text-xs font-bold text-on-surface-variant">(124)</span>
+</div>
+<div class="flex items-center justify-between">
+<span class="text-xl font-extrabold text-primary">$45.00</span>
+<button class="bg-primary text-white p-2 rounded-lg hover:bg-secondary transition-colors">
+<span class="material-symbols-outlined">shopping_cart</span>
+</button>
+</div>
+</div>
+</div>
+<!-- Product 3 -->
+<div class="group relative">
+<div class="bg-surface-container-lowest rounded-xl p-4 transition-all hover:shadow-2xl hover:shadow-primary/5">
+<div class="aspect-square rounded-lg overflow-hidden bg-surface-container mb-4">
+<img alt="Canvas Backpack" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" data-alt="Durable charcoal grey canvas backpack with brown leather straps sitting on an oak desk in a bright academic study room" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDLmsGgXfPCHILGe0OqaLzRgLw7ttfWpZomW694mWl9uSbWqVKt-B0IVShfQjTSp7TleA44F3_9G1t0_sUPyElygGi4HquknGOpa9T5ZrU8l--EgsiwwLbKrxU4rb-hkF86-u6E8dMTvKkNUhDsSaMsrrb31JO4iVskAmsGhgskwZkWNdF0_0Xj7VoksvTJJA7qDhvjL6PrUIp8C9U_B02Yd6sOYHn5Hg2UBapcE6kp7oAQk2nK-cvLdJHqpCAN5g74ptCktVLFgTkZ"/>
+</div>
+<h3 class="font-headline font-bold text-lg mb-1">Daily Campus Backpack</h3>
+<div class="flex items-center gap-2 mb-3">
+<div class="flex text-amber-400">
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined">star</span>
+</div>
+<span class="text-xs font-bold text-on-surface-variant">(92)</span>
+</div>
+<div class="flex items-center justify-between">
+<span class="text-xl font-extrabold text-primary">$62.00</span>
+<button class="bg-primary text-white p-2 rounded-lg hover:bg-secondary transition-colors">
+<span class="material-symbols-outlined">shopping_cart</span>
+</button>
+</div>
+</div>
+</div>
+<!-- Product 4 -->
+<div class="group relative">
+<div class="bg-surface-container-lowest rounded-xl p-4 transition-all hover:shadow-2xl hover:shadow-primary/5">
+<div class="aspect-square rounded-lg overflow-hidden bg-surface-container mb-4">
+<img alt="Headphones" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" data-alt="Modern noise-canceling over-ear headphones in matte black, resting on a textured surface with moody dramatic lighting" src="https://lh3.googleusercontent.com/aida-public/AB6AXuArNewRtjmrr-avlHV4X951l_-4lmTS4lkyWfvEwNeVgW1G2XnTnx5JO-q_TRtwTpKkEU7yCVZelj4TNCfqacXiM_J35h5xVu98TRyJvc6vVQl_vgh_iYGtOJPcXmzMp0qhMPla46-w5TaT5zZ5uJxjYNcqDhnI4v7Ai-j20ZMn23hzaUQBzzKOYnMvSEp1tY52QGDONttgHEqE0A0aYvY_9AUAGo-PF5euqmgxE1-xrYgQxMEKDTmP5bsTep9A10t2rooYA2I1CJHE"/>
+</div>
+<h3 class="font-headline font-bold text-lg mb-1">Focus Wireless Audio</h3>
+<div class="flex items-center gap-2 mb-3">
+<div class="flex text-amber-400">
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">star</span>
+</div>
+<span class="text-xs font-bold text-on-surface-variant">(215)</span>
+</div>
+<div class="flex items-center justify-between">
+<span class="text-xl font-extrabold text-primary">$129.00</span>
+<button class="bg-primary text-white p-2 rounded-lg hover:bg-secondary transition-colors">
+<span class="material-symbols-outlined">shopping_cart</span>
+</button>
+</div>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- Promo Banner -->
+<section class="px-6 py-12">
+<div class="max-w-7xl mx-auto rounded-[2.5rem] overflow-hidden relative bg-primary-container text-white p-12 lg:p-24 shadow-2xl">
+<div class="absolute inset-0 opacity-10 pointer-events-none">
+<div class="absolute top-0 right-0 w-96 h-96 bg-white rounded-full -mr-48 -mt-48"></div>
+<div class="absolute bottom-0 left-0 w-64 h-64 border-8 border-white rounded-full -ml-32 -mb-32"></div>
+</div>
+<div class="relative z-10 grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+<div>
+<span class="bg-secondary px-4 py-2 rounded-full text-sm font-bold tracking-widest uppercase mb-6 inline-block">Exclusive Offer</span>
+<h2 class="text-4xl lg:text-6xl font-headline font-extrabold mb-6 leading-tight">Student ID = 20% Off Storewide</h2>
+<p class="text-xl text-on-primary-container mb-8 font-body">Verify your academic status and unlock special pricing on all electronics and apparel. Offer valid for the current semester.</p>
+<button class="bg-white text-primary px-8 py-4 rounded-xl font-bold text-lg hover:bg-surface-dim transition-all">Verify Now</button>
+</div>
+<div class="hidden lg:block">
+<img alt="Student reading" class="rounded-3xl shadow-xl w-full" data-alt="A focused student sitting in a modern university library using a tablet with golden sunlight streaming through large windows" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCHOpF2cOvyXxc_p5I4gag-wdMEh6ybobSudQJOBIaZlA3zV_FxTARocSSmUipr8jpM7cMf3EFxVgLless-IcbbXdxC3SjiEtNJaGRiqvLcTErQH2iPFHG63F8K9g-5_DfyxuPh85MaclodB9hVap-lpz9QpayVYizfBsdu7BHx4uhyWKeR0Rzde1tKDz7VJ16JbMWeWiX7lyfH5g1j_1L1Rz6nxNgv2hQH_inyr5aoK4hEeEvYw6i_Gu6cBWKoevooCrvTWju04m1q"/>
+</div>
+</div>
+</div>
+</section>
+<!-- Testimonials -->
+<section class="py-24 px-6 bg-surface-container-low">
+<div class="max-w-7xl mx-auto text-center mb-16">
+<h2 class="text-3xl font-headline font-bold text-primary mb-4">Student Voices</h2>
+<p class="text-on-surface-variant max-w-2xl mx-auto">Experience why Masoem University students choose our platform for their daily campus needs.</p>
+</div>
+<div class="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-3 gap-8">
+<div class="bg-surface-container-lowest p-8 rounded-2xl shadow-sm italic text-on-surface-variant relative">
+<span class="material-symbols-outlined text-4xl text-primary-fixed mb-4" style="font-variation-settings: 'FILL' 1;">format_quote</span>
+<p class="mb-6">"The ordering process is incredibly seamless. I got my textbooks delivered right to my dorm within 24 hours. Truly professional service!"</p>
+<div class="flex items-center gap-4">
+<div class="w-12 h-12 rounded-full bg-slate-200"></div>
+<div class="text-left">
+<h4 class="font-bold text-on-surface not-italic">Sarah J.</h4>
+<span class="text-xs not-italic text-on-surface-variant">Engineering Student</span>
+</div>
+</div>
+</div>
+<div class="bg-surface-container-lowest p-8 rounded-2xl shadow-sm italic text-on-surface-variant relative">
+<span class="material-symbols-outlined text-4xl text-primary-fixed mb-4" style="font-variation-settings: 'FILL' 1;">format_quote</span>
+<p class="mb-6">"Finally, a place to get authentic university merch that actually looks good and is made of high-quality materials. Highly recommended."</p>
+<div class="flex items-center gap-4">
+<div class="w-12 h-12 rounded-full bg-slate-200"></div>
+<div class="text-left">
+<h4 class="font-bold text-on-surface not-italic">Kevin D.</h4>
+<span class="text-xs not-italic text-on-surface-variant">Business Senior</span>
+</div>
+</div>
+</div>
+<div class="bg-surface-container-lowest p-8 rounded-2xl shadow-sm italic text-on-surface-variant relative">
+<span class="material-symbols-outlined text-4xl text-primary-fixed mb-4" style="font-variation-settings: 'FILL' 1;">format_quote</span>
+<p class="mb-6">"The tech accessories deals for students are unmatched. I saved over $100 on my new headphones and laptop setup."</p>
+<div class="flex items-center gap-4">
+<div class="w-12 h-12 rounded-full bg-slate-200"></div>
+<div class="text-left">
+<h4 class="font-bold text-on-surface not-italic">Maria L.</h4>
+<span class="text-xs not-italic text-on-surface-variant">Art &amp; Design Student</span>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- Newsletter Section -->
+<section class="py-24 px-6 bg-white">
+<div class="max-w-4xl mx-auto bg-surface-container-lowest border border-outline-variant/10 p-12 rounded-[2rem] text-center shadow-xl">
+<h2 class="text-3xl font-headline font-bold text-primary mb-4">Stay in the Loop</h2>
+<p class="text-on-surface-variant mb-8">Get notified about flash sales, restocks, and exclusive campus collaborations.</p>
+<div class="flex flex-col sm:flex-row gap-4 max-w-lg mx-auto">
+<input class="flex-grow bg-surface-container-high border-none rounded-xl px-6 py-4 focus:ring-2 focus:ring-primary-fixed outline-none text-on-surface" placeholder="Enter your university email" type="email"/>
+<button class="bg-primary text-white px-8 py-4 rounded-xl font-bold hover:bg-secondary transition-all active:scale-95 whitespace-nowrap">Subscribe</button>
+</div>
+<p class="text-[10px] text-slate-400 mt-4">By subscribing, you agree to our Privacy Policy and campus communication guidelines.</p>
+</div>
+</section>
+</main>
+<footer class="bg-slate-50 dark:bg-slate-950 w-full border-t border-slate-200 dark:border-slate-800">
+<div class="grid grid-cols-1 md:grid-cols-4 gap-12 px-8 py-16 max-w-7xl mx-auto">
+<div class="flex flex-col gap-6">
+<span class="text-2xl font-black text-blue-900 dark:text-white font-headline">Masoem University Store</span>
+<p class="text-sm font-inter text-slate-500 dark:text-slate-400">The official marketplace for the Masoem University community. Providing quality and excellence in every transaction.</p>
+<div class="flex gap-4">
+<div class="w-10 h-10 rounded-full bg-surface-container-high flex items-center justify-center text-primary cursor-pointer hover:bg-primary hover:text-white transition-all">
+<span class="material-symbols-outlined text-sm">public</span>
+</div>
+<div class="w-10 h-10 rounded-full bg-surface-container-high flex items-center justify-center text-primary cursor-pointer hover:bg-primary hover:text-white transition-all">
+<span class="material-symbols-outlined text-sm">alternate_email</span>
+</div>
+<div class="w-10 h-10 rounded-full bg-surface-container-high flex items-center justify-center text-primary cursor-pointer hover:bg-primary hover:text-white transition-all">
+<span class="material-symbols-outlined text-sm">link</span>
+</div>
+</div>
+</div>
+<div class="flex flex-col gap-6">
+<h3 class="text-lg font-manrope font-bold text-blue-900 dark:text-blue-400">Quick Links</h3>
+<div class="flex flex-col gap-3">
+<a class="text-sm font-inter text-slate-500 dark:text-slate-400 hover:text-blue-600" href="#">Home</a>
+<a class="text-sm font-inter text-slate-500 dark:text-slate-400 hover:text-blue-600" href="#">Products</a>
+<a class="text-sm font-inter text-slate-500 dark:text-slate-400 hover:text-blue-600" href="#">Categories</a>
+<a class="text-sm font-inter text-slate-500 dark:text-slate-400 hover:text-blue-600" href="#">About</a>
+</div>
+</div>
+<div class="flex flex-col gap-6">
+<h3 class="text-lg font-manrope font-bold text-blue-900 dark:text-blue-400">Customer Service</h3>
+<div class="flex flex-col gap-3">
+<a class="text-sm font-inter text-slate-500 dark:text-slate-400 hover:text-blue-600" href="#">Contact Us</a>
+<a class="text-sm font-inter text-slate-500 dark:text-slate-400 hover:text-blue-600" href="#">Return Policy</a>
+<a class="text-sm font-inter text-slate-500 dark:text-slate-400 hover:text-blue-600" href="#">Order Tracking</a>
+<a class="text-sm font-inter text-slate-500 dark:text-slate-400 hover:text-blue-600" href="#">FAQs</a>
+</div>
+</div>
+<div class="flex flex-col gap-6">
+<h3 class="text-lg font-manrope font-bold text-blue-900 dark:text-blue-400">Campus Location</h3>
+<div class="rounded-xl overflow-hidden shadow-inner h-32 bg-slate-200">
+<img alt="Location Map Placeholder" class="w-full h-full object-cover" data-location="Masoem University" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDnibeFarqooFHyhBc5uYy5f8gE1LxIXWI32F4ROAlezD7IcXHxKzS1Jx2YMCUrhXllEqrs87olMOCUmztaZEEApR5JfS61QhobMCCxgIqO4zS1fm2ht3Sw7PgHN7f5UyL6xz-MynJ_gACwzdPFvJ-YmE1_QlJtLAFs3Q3cQJ7TBkrxnOHgri2tbd_zc7hqmNipsTJ3pJXgKcxosDOjtBQH-IgpjZBbFSF5GKaMBRV6pU-nxR0XFns9dVzFWYqZyPXaLdNOZC8GQIs9"/>
+</div>
+<p class="text-xs text-slate-500">Jl. Raya Cipacing No. 22, Sumedang, West Java.</p>
+</div>
+</div>
+<div class="border-t border-slate-200 dark:border-slate-800 py-6 px-8 max-w-7xl mx-auto">
+<p class="text-center text-xs font-inter text-slate-500 dark:text-slate-400">© 2024 Masoem University. All rights reserved.</p>
+</div>
+</footer>
+<!-- Bottom Navigation for Mobile -->
+<nav class="fixed bottom-0 left-0 w-full z-50 flex justify-around items-center px-4 py-3 md:hidden bg-white/90 dark:bg-slate-900/90 backdrop-blur-lg border-t border-slate-100 dark:border-slate-800 rounded-t-2xl shadow-[0_-8px_24px_rgba(0,0,0,0.05)]">
+<a class="flex flex-col items-center justify-center bg-blue-100 dark:bg-blue-900/50 text-blue-900 dark:text-blue-100 rounded-2xl px-4 py-1" href="#">
+<span class="material-symbols-outlined">storefront</span>
+<span class="text-[10px] font-bold font-manrope">Shop</span>
+</a>
+<a class="flex flex-col items-center justify-center text-slate-400 dark:text-slate-500" href="#">
+<span class="material-symbols-outlined">search</span>
+<span class="text-[10px] font-bold font-manrope">Search</span>
+</a>
+<a class="flex flex-col items-center justify-center text-slate-400 dark:text-slate-500" href="#">
+<span class="material-symbols-outlined">receipt_long</span>
+<span class="text-[10px] font-bold font-manrope">Orders</span>
+</a>
+<a class="flex flex-col items-center justify-center text-slate-400 dark:text-slate-500" href="#">
+<span class="material-symbols-outlined">person</span>
+<span class="text-[10px] font-bold font-manrope">Profile</span>
+</a>
+</nav>
+</body></html>

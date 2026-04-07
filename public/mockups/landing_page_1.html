@@ -1,0 +1,424 @@
+<!DOCTYPE html>
+
+<html lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Masoem University Food Market</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;600;700;800&amp;family=Be+Vietnam+Pro:wght@400;500;600&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    "colors": {
+                        "on-secondary": "#ffffff",
+                        "surface-bright": "#f8f9fa",
+                        "on-primary-container": "#5c2800",
+                        "inverse-primary": "#ffb68b",
+                        "on-secondary-container": "#1d3989",
+                        "surface-container-lowest": "#ffffff",
+                        "secondary-fixed": "#dce1ff",
+                        "error-container": "#ffdad6",
+                        "on-primary-fixed": "#321200",
+                        "tertiary-fixed": "#ffdf9b",
+                        "primary": "#994700",
+                        "surface-variant": "#e1e3e4",
+                        "primary-container": "#ff7a00",
+                        "on-error": "#ffffff",
+                        "on-surface": "#191c1d",
+                        "on-background": "#191c1d",
+                        "outline-variant": "#e0c0af",
+                        "surface-dim": "#d9dadb",
+                        "surface-container-low": "#f3f4f5",
+                        "inverse-on-surface": "#f0f1f2",
+                        "on-secondary-fixed": "#00164e",
+                        "on-secondary-fixed-variant": "#264191",
+                        "tertiary": "#785a00",
+                        "on-primary": "#ffffff",
+                        "on-tertiary-container": "#473400",
+                        "on-tertiary-fixed": "#251a00",
+                        "background": "#f8f9fa",
+                        "primary-fixed": "#ffdbc8",
+                        "on-error-container": "#93000a",
+                        "outline": "#8c7263",
+                        "secondary-fixed-dim": "#b6c4ff",
+                        "surface-container-high": "#e7e8e9",
+                        "tertiary-container": "#c49b35",
+                        "secondary-container": "#8fa7fe",
+                        "on-primary-fixed-variant": "#753400",
+                        "primary-fixed-dim": "#ffb68b",
+                        "tertiary-fixed-dim": "#edc157",
+                        "surface-tint": "#994700",
+                        "surface-container-highest": "#e1e3e4",
+                        "surface": "#f8f9fa",
+                        "inverse-surface": "#2e3132",
+                        "surface-container": "#edeeef",
+                        "secondary": "#4059aa",
+                        "error": "#ba1a1a",
+                        "on-surface-variant": "#584235",
+                        "on-tertiary-fixed-variant": "#5b4300",
+                        "on-tertiary": "#ffffff"
+                    },
+                    "borderRadius": {
+                        "DEFAULT": "1rem",
+                        "lg": "2rem",
+                        "xl": "3rem",
+                        "full": "9999px"
+                    },
+                    "fontFamily": {
+                        "headline": ["Plus Jakarta Sans"],
+                        "body": ["Be Vietnam Pro"],
+                        "label": ["Be Vietnam Pro"]
+                    }
+                },
+            },
+        }
+    </script>
+<style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+        body { font-family: 'Be Vietnam Pro', sans-serif; }
+        h1, h2, h3 { font-family: 'Plus Jakarta Sans', sans-serif; }
+    </style>
+<style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+  </head>
+<body class="bg-surface text-on-surface">
+<!-- TopAppBar -->
+<header class="bg-white/70 dark:bg-slate-900/70 backdrop-blur-md fixed top-0 w-full z-50 shadow-sm dark:shadow-none">
+<div class="flex justify-between items-center px-6 h-16 w-full">
+<div class="flex items-center gap-4">
+<button class="text-orange-600 dark:text-orange-400 hover:bg-slate-100 dark:hover:bg-slate-800 transition-colors p-2 rounded-full scale-95 active:scale-90 transition-transform">
+<span class="material-symbols-outlined">menu</span>
+</button>
+<h1 class="text-lg font-extrabold text-slate-900 dark:text-white font-['Plus_Jakarta_Sans'] font-bold tracking-tight">Masoem University Food Market</h1>
+</div>
+<div class="flex items-center gap-2">
+<button class="text-orange-600 dark:text-orange-400 hover:bg-slate-100 dark:hover:bg-slate-800 transition-colors p-2 rounded-full scale-95 active:scale-90 transition-transform">
+<span class="material-symbols-outlined">shopping_cart</span>
+</button>
+</div>
+</div>
+</header>
+<!-- Hero Section -->
+<section class="pt-32 pb-20 px-6 max-w-7xl mx-auto overflow-hidden">
+<div class="flex flex-col lg:flex-row items-center gap-12">
+<div class="flex-1 space-y-8">
+<div class="inline-flex items-center px-4 py-2 rounded-full bg-orange-100 text-orange-700 text-sm font-semibold tracking-wide uppercase">
+<span class="material-symbols-outlined text-sm mr-2" style="font-variation-settings: 'FILL' 1;">stars</span>
+                    Official Campus Dining
+                </div>
+<h2 class="text-5xl md:text-7xl font-extrabold text-on-surface leading-[1.1] tracking-tight">
+                    Welcome to <span class="text-transparent bg-clip-text bg-gradient-to-r from-primary to-primary-container">Masoem University</span> Food Market
+                </h2>
+<p class="text-xl text-on-surface-variant max-w-xl">
+                    Order your favorite campus meals quickly and easily. Fuel your academic journey with the best flavors on campus.
+                </p>
+<div class="flex flex-wrap gap-4">
+<button class="bg-gradient-to-r from-primary to-primary-container text-on-primary px-8 py-4 rounded-full font-bold text-lg shadow-xl hover:scale-105 transition-transform active:scale-95">
+                        Order Food
+                    </button>
+<button class="bg-surface-container-high text-primary px-8 py-4 rounded-full font-bold text-lg hover:bg-surface-container-highest transition-colors active:scale-95">
+                        Browse Menu
+                    </button>
+</div>
+</div>
+<div class="flex-1 relative">
+<div class="absolute -z-10 inset-0 bg-orange-200/50 blur-[100px] rounded-full"></div>
+<div class="grid grid-cols-2 gap-4">
+<img alt="Gourmet Burger" class="w-full aspect-square object-cover rounded-xl shadow-lg" data-alt="Close-up of a premium artisan burger with melting cheese and fresh greens on a sesame seed bun, professional studio lighting" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCY1sXdNpCGgMYWTHj0o48WKL6c1nO3vf-oOxe7DMMdg5BPLXi9pIEiahgufMT6jUCFLl03D-FjY6g9eSZEoVIrtVVxrv78JhUg895U8PEzTRqXSiqY14IX7NkQ9E4_8Ee-ZO_CQOjxysWqvJtsJtdW5oBFqTApY6dK_PrUru6YtorKlljOZLlZyp4hSTUagMwVMk5-YI9ppNv5nlEemjLZLWHImj0G_4fTMdofsOpSawkc6iERRe1_uvoB8Mj93ilAXLJokOTcibQu"/>
+<div class="space-y-4">
+<img alt="Spicy Noodles" class="w-full aspect-square object-cover rounded-xl shadow-lg" data-alt="Gourmet indonesian spicy noodles with a soft boiled egg, spring onions, and vibrant chili oil, close-up food photography" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAuCvt1vegMg_3hpoc0v3Dl8po6KR536v_Xq0tpDzwthLIAoZpGwYMCjFQE8lFzonwVGZpV3lMl3RMgeY75Qi_nGDq4_G8N-MXLtesT-pfRLWGsZdnfvMoDUDB8Cay6e_luoNHMEFmdaEB-rk6G4BnG8Y5mgPGKModxBvlaH7vPFBTgkj7wwXMEcfrogVk3zTuOjbHef7VcJzGn2kNZxnLN5S5eQR8v5Da297dA4ZydgTEV5zmgPwuXPbgbchJTsrJpV3KQxTRsfmu8"/>
+<img alt="Premium Coffee" class="w-full aspect-square object-cover rounded-xl shadow-lg" data-alt="Artistic latte art in a white ceramic cup on a dark wooden table, warm morning sunlight, premium coffee aesthetic" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBrAvoMJMC_2NOTTo6VPXgMaZ-ArdlxRdV6lAczIXaBvtnCA5nrv79OqahgIsvKVEUv5Phb-zSlPte3pA95KPNCwqClQD5C7xclRfiXDn4JDCpKXyuDAMrGJ41bdlzI80ySBRYINIeH-4KnX4YvsM6W1ItmMoYmHLpwsfzJiC3sHcnDi7BvTKTeqa3PgYKyLkhDydWgo9mrV80wyAtgT8547T_26x-jxcDr6klW1wyK_j3YszxwuYC8LZ3KDvIzAUJsWixZlg9vN60b"/>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- Categories -->
+<section class="py-16 bg-surface-container-low">
+<div class="max-w-7xl mx-auto px-6">
+<div class="flex items-end justify-between mb-12">
+<div class="space-y-2">
+<h3 class="text-3xl font-bold text-on-surface">Food Categories</h3>
+<p class="text-on-surface-variant">Find exactly what you're craving</p>
+</div>
+</div>
+<div class="grid grid-cols-2 md:grid-cols-5 gap-6">
+<!-- Category Cards -->
+<div class="bg-surface-container-lowest p-6 rounded-lg text-center hover:shadow-xl transition-all hover:-translate-y-1 cursor-pointer group">
+<div class="w-16 h-16 bg-orange-100 rounded-full flex items-center justify-center mx-auto mb-4 group-hover:bg-primary-container transition-colors">
+<span class="material-symbols-outlined text-primary group-hover:text-white text-3xl">restaurant</span>
+</div>
+<span class="font-bold text-on-surface">Indonesian Food</span>
+</div>
+<div class="bg-surface-container-lowest p-6 rounded-lg text-center hover:shadow-xl transition-all hover:-translate-y-1 cursor-pointer group">
+<div class="w-16 h-16 bg-orange-100 rounded-full flex items-center justify-center mx-auto mb-4 group-hover:bg-primary-container transition-colors">
+<span class="material-symbols-outlined text-primary group-hover:text-white text-3xl">fastfood</span>
+</div>
+<span class="font-bold text-on-surface">Fast Food</span>
+</div>
+<div class="bg-surface-container-lowest p-6 rounded-lg text-center hover:shadow-xl transition-all hover:-translate-y-1 cursor-pointer group">
+<div class="w-16 h-16 bg-orange-100 rounded-full flex items-center justify-center mx-auto mb-4 group-hover:bg-primary-container transition-colors">
+<span class="material-symbols-outlined text-primary group-hover:text-white text-3xl">cookie</span>
+</div>
+<span class="font-bold text-on-surface">Snacks</span>
+</div>
+<div class="bg-surface-container-lowest p-6 rounded-lg text-center hover:shadow-xl transition-all hover:-translate-y-1 cursor-pointer group">
+<div class="w-16 h-16 bg-orange-100 rounded-full flex items-center justify-center mx-auto mb-4 group-hover:bg-primary-container transition-colors">
+<span class="material-symbols-outlined text-primary group-hover:text-white text-3xl">local_drink</span>
+</div>
+<span class="font-bold text-on-surface">Drinks</span>
+</div>
+<div class="bg-surface-container-lowest p-6 rounded-lg text-center hover:shadow-xl transition-all hover:-translate-y-1 cursor-pointer group">
+<div class="w-16 h-16 bg-orange-100 rounded-full flex items-center justify-center mx-auto mb-4 group-hover:bg-primary-container transition-colors">
+<span class="material-symbols-outlined text-primary group-hover:text-white text-3xl">icecream</span>
+</div>
+<span class="font-bold text-on-surface">Desserts</span>
+</div>
+</div>
+</div>
+</section>
+<!-- Special Promo Banner -->
+<section class="py-12 px-6">
+<div class="max-w-7xl mx-auto">
+<div class="relative bg-secondary rounded-xl overflow-hidden p-12 text-on-secondary shadow-2xl">
+<div class="absolute top-0 right-0 w-1/3 h-full opacity-10">
+<span class="material-symbols-outlined text-[200px] -rotate-12">local_offer</span>
+</div>
+<div class="relative z-10 space-y-4 max-w-2xl">
+<span class="bg-orange-500 text-white px-4 py-1 rounded-full text-xs font-black uppercase tracking-widest">Special Promo</span>
+<h3 class="text-5xl font-black italic">20% Off Storewide</h3>
+<p class="text-xl opacity-90 font-medium">Flash your student ID or use your student portal login to redeem academic discounts everyday.</p>
+<button class="bg-white text-secondary px-8 py-3 rounded-full font-bold hover:bg-orange-50 transition-colors">Claim Now</button>
+</div>
+</div>
+</div>
+</section>
+<!-- Popular Foods -->
+<section class="py-20 max-w-7xl mx-auto px-6">
+<div class="flex items-center justify-between mb-12">
+<h3 class="text-3xl font-bold text-on-surface">Student Favorites</h3>
+<button class="text-primary font-bold flex items-center gap-2">View All <span class="material-symbols-outlined">arrow_forward</span></button>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+<!-- Food Card 1 -->
+<div class="bg-surface-container-lowest rounded-lg overflow-hidden group hover:shadow-2xl transition-all">
+<div class="h-48 overflow-hidden">
+<img alt="Sate Ayam" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500" data-alt="Plate of traditional Indonesian chicken satay with peanut sauce and rice cakes, gourmet presentation, warm vibrant colors" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBTWTk4_W1ayaSDi_GaHJhsDY-vFF0fPQUVJ-j3HhbpZJffNA5zmcNPVdy1fzEqiBQ6JMEQ6GPH1ms3wLBxJxUUt5VxynY5FWnpPLoB6p43lAjHdHYFDRJijfNoBmvUJ3Cd0rP7cnnnuxx6WIMOnR9B0KzHgKl-MBYbplNWEBDdAsy0eyfwi-bsCNeX-5G9yTNMrmcapLtryPZIIm1MWad47bcdbqKv1x10buE3GN_Kn76MRWg-zQAUlVujGA_cqjn4QdVp3kDdp6VG"/>
+</div>
+<div class="p-6 space-y-4">
+<div class="flex justify-between items-start">
+<h4 class="font-bold text-xl">Sate Ayam Madura</h4>
+<div class="flex items-center text-orange-500 font-bold">
+<span class="material-symbols-outlined text-sm mr-1" style="font-variation-settings: 'FILL' 1;">star</span>
+                            4.9
+                        </div>
+</div>
+<p class="text-on-surface-variant text-sm line-clamp-2">Authentic grilled chicken skewers with rich peanut sauce and rice cakes.</p>
+<div class="flex items-center justify-between pt-2">
+<span class="text-2xl font-black text-secondary">Rp 25k</span>
+<button class="w-12 h-12 bg-primary-container text-on-primary rounded-full flex items-center justify-center shadow-lg hover:scale-110 transition-transform">
+<span class="material-symbols-outlined">add</span>
+</button>
+</div>
+</div>
+</div>
+<!-- Food Card 2 -->
+<div class="bg-surface-container-lowest rounded-lg overflow-hidden group hover:shadow-2xl transition-all">
+<div class="h-48 overflow-hidden">
+<img alt="Student Pizza" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500" data-alt="Freshly baked pepperoni pizza with bubbling cheese and crispy crust, steam rising, warm overhead lighting" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDGS4rWAkiosJILMY2LajvznbZRVemtx5wPC_KFTqSGtHx7qQx3jekWVEzpuH1e1rHVZE1dY5hsFSJMw11rjHurgExQkOSfUq-akITOKKQ-0FxLkngYyQMbfPuG4QrEKMkfJ4YFLNC_ZehVy3jirL5a1nxEvNWxL0UFgKBZ4LZRj0YXfYnH9CgVgKRyCoS69ValLVpPTvD4qVNFFYVkPhUUW2UP1CcC8xEgHGHicWSHvpUFRSbpMmP2hYvKKFiKexzOudqP-caQhraD"/>
+</div>
+<div class="p-6 space-y-4">
+<div class="flex justify-between items-start">
+<h4 class="font-bold text-xl">Student Pepperoni</h4>
+<div class="flex items-center text-orange-500 font-bold">
+<span class="material-symbols-outlined text-sm mr-1" style="font-variation-settings: 'FILL' 1;">star</span>
+                            4.7
+                        </div>
+</div>
+<p class="text-on-surface-variant text-sm line-clamp-2">Large personal pizza with triple pepperoni and extra mozzarella.</p>
+<div class="flex items-center justify-between pt-2">
+<span class="text-2xl font-black text-secondary">Rp 45k</span>
+<button class="w-12 h-12 bg-primary-container text-on-primary rounded-full flex items-center justify-center shadow-lg hover:scale-110 transition-transform">
+<span class="material-symbols-outlined">add</span>
+</button>
+</div>
+</div>
+</div>
+<!-- Food Card 3 -->
+<div class="bg-surface-container-lowest rounded-lg overflow-hidden group hover:shadow-2xl transition-all">
+<div class="h-48 overflow-hidden">
+<img alt="Crispy Chicken" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500" data-alt="Golden brown fried chicken wings with spicy gochujang glaze, sesame seeds and green onions garnish, high contrast" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBVJSSjffw_azS76VwFtw1kfqZ-bKzcUvP5VkjJzWKRGsR7ZPlx-kgN6pPqEgqa_nL59v5HAF3QA3mVSCP_HFHJQMsuF5buemMWT-LtKp6zItDaxhcDY508WxzWS0LMI-FYpVg7nH_jHjOFIo6qIOI96nus4QMY6-m0H0rd4l5FxWvrVVsE2nmhBye9q7UCqbUsqnP4HVqcuxJr3XrkIqpHYL0czkxlsgu5DvomGiHnJe5mv_156Cj5xVwhYqpE9KjXaQCcYGkBdtMV"/>
+</div>
+<div class="p-6 space-y-4">
+<div class="flex justify-between items-start">
+<h4 class="font-bold text-xl">Crispy Wings Set</h4>
+<div class="flex items-center text-orange-500 font-bold">
+<span class="material-symbols-outlined text-sm mr-1" style="font-variation-settings: 'FILL' 1;">star</span>
+                            4.8
+                        </div>
+</div>
+<p class="text-on-surface-variant text-sm line-clamp-2">6 pieces of ultra-crispy wings served with seasoned waffle fries.</p>
+<div class="flex items-center justify-between pt-2">
+<span class="text-2xl font-black text-secondary">Rp 32k</span>
+<button class="w-12 h-12 bg-primary-container text-on-primary rounded-full flex items-center justify-center shadow-lg hover:scale-110 transition-transform">
+<span class="material-symbols-outlined">add</span>
+</button>
+</div>
+</div>
+</div>
+<!-- Food Card 4 -->
+<div class="bg-surface-container-lowest rounded-lg overflow-hidden group hover:shadow-2xl transition-all">
+<div class="h-48 overflow-hidden">
+<img alt="Nasi Goreng" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500" data-alt="Traditional Indonesian Nasi Goreng with fried egg on top, cucumber slices, and prawn crackers, served in a rustic plate" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBrZwPqVU5e1TTbwWpDAevskmP9mRFnjU8bzbNlonUKggkgn_fBeXXabHt1Dwq1EdRUQpgi3dRMxOsG3Tn8W7tEUiVBvuSXJeM4VKT2RvPYxq_ivNc4pQRyZ2LNrKA-uSTjaxUKmMw4nZOodS5oLD-SwiGlOQNkns0qpAf8KOhwh5FlgDHlrk136S2Jz6stlJa1PjYFZMv4WnLjbXIDAQq3QmQwjlC2JdKPBx2mCRVKBCIi7EspeyCZ8wHNdc2x5akXEGFuSXwOztEZ"/>
+</div>
+<div class="p-6 space-y-4">
+<div class="flex justify-between items-start">
+<h4 class="font-bold text-xl">Nasi Goreng Spesial</h4>
+<div class="flex items-center text-orange-500 font-bold">
+<span class="material-symbols-outlined text-sm mr-1" style="font-variation-settings: 'FILL' 1;">star</span>
+                            4.9
+                        </div>
+</div>
+<p class="text-on-surface-variant text-sm line-clamp-2">Smoky wok-fried rice with chicken, shrimp, and a sunny-side-up egg.</p>
+<div class="flex items-center justify-between pt-2">
+<span class="text-2xl font-black text-secondary">Rp 28k</span>
+<button class="w-12 h-12 bg-primary-container text-on-primary rounded-full flex items-center justify-center shadow-lg hover:scale-110 transition-transform">
+<span class="material-symbols-outlined">add</span>
+</button>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- Testimonials (The Academic Reviews) -->
+<section class="py-24 bg-surface-container-high relative overflow-hidden">
+<div class="max-w-7xl mx-auto px-6 relative z-10">
+<h3 class="text-3xl font-bold text-center mb-16 text-on-surface">Trusted by the Campus Community</h3>
+<div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+<div class="bg-surface-container-lowest p-8 rounded-lg shadow-sm">
+<div class="flex items-center gap-4 mb-6">
+<div class="w-12 h-12 bg-blue-100 rounded-full flex items-center justify-center">
+<span class="material-symbols-outlined text-secondary">person</span>
+</div>
+<div>
+<h4 class="font-bold">Andi Pratama</h4>
+<p class="text-xs text-on-surface-variant">Informatics Engineering '22</p>
+</div>
+</div>
+<p class="italic text-on-surface-variant">"The ordering process is so seamless. I usually order while walking from class to the canteen, and it's ready when I arrive!"</p>
+</div>
+<div class="bg-surface-container-lowest p-8 rounded-lg shadow-sm">
+<div class="flex items-center gap-4 mb-6">
+<div class="w-12 h-12 bg-blue-100 rounded-full flex items-center justify-center">
+<span class="material-symbols-outlined text-secondary">person</span>
+</div>
+<div>
+<h4 class="font-bold">Siti Rahma</h4>
+<p class="text-xs text-on-surface-variant">Economics &amp; Business '23</p>
+</div>
+</div>
+<p class="italic text-on-surface-variant">"The student discount is a lifesaver. Best food quality on campus and super affordable with the 20% off promos."</p>
+</div>
+<div class="bg-surface-container-lowest p-8 rounded-lg shadow-sm">
+<div class="flex items-center gap-4 mb-6">
+<div class="w-12 h-12 bg-blue-100 rounded-full flex items-center justify-center">
+<span class="material-symbols-outlined text-secondary">person</span>
+</div>
+<div>
+<h4 class="font-bold">Budi Santoso</h4>
+<p class="text-xs text-on-surface-variant">Law Department '21</p>
+</div>
+</div>
+<p class="italic text-on-surface-variant">"Great variety of healthy snacks. Perfect for long study sessions in the library when you need a quick energy boost."</p>
+</div>
+</div>
+</div>
+</section>
+<!-- Footer -->
+<footer class="bg-slate-50 dark:bg-slate-900 w-full pt-12 pb-24 border-t border-slate-100 dark:border-slate-800">
+<div class="max-w-7xl mx-auto px-8 grid grid-cols-1 md:grid-cols-4 gap-12 font-['Be_Vietnam_Pro'] text-sm">
+<div class="space-y-6">
+<h4 class="text-xl font-black text-blue-900 dark:text-blue-200">Masoem Market</h4>
+<p class="text-slate-500 dark:text-slate-400">Serving the academic community of Masoem University with quality food and reliable service.</p>
+<div class="flex gap-4">
+<button class="w-10 h-10 rounded-full bg-surface-container-high flex items-center justify-center hover:text-orange-600 transition-colors">
+<span class="material-symbols-outlined">public</span>
+</button>
+<button class="w-10 h-10 rounded-full bg-surface-container-high flex items-center justify-center hover:text-orange-600 transition-colors">
+<span class="material-symbols-outlined">alternate_email</span>
+</button>
+</div>
+</div>
+<div>
+<h5 class="font-bold mb-6 text-on-surface">Quick Links</h5>
+<ul class="space-y-4">
+<li><a class="text-slate-500 dark:text-slate-400 hover:text-orange-500 underline transition-opacity duration-300" href="#">Privacy Policy</a></li>
+<li><a class="text-slate-500 dark:text-slate-400 hover:text-orange-500 underline transition-opacity duration-300" href="#">Terms of Service</a></li>
+<li><a class="text-slate-500 dark:text-slate-400 hover:text-orange-500 underline transition-opacity duration-300" href="#">Campus Map</a></li>
+<li><a class="text-slate-500 dark:text-slate-400 hover:text-orange-500 underline transition-opacity duration-300" href="#">Help Center</a></li>
+</ul>
+</div>
+<div>
+<h5 class="font-bold mb-6 text-on-surface">Contact Us</h5>
+<ul class="space-y-4 text-slate-500 dark:text-slate-400">
+<li class="flex items-center gap-3">
+<span class="material-symbols-outlined text-primary">location_on</span>
+                        Jl. Raya Cipacing No. 22
+                    </li>
+<li class="flex items-center gap-3">
+<span class="material-symbols-outlined text-primary">call</span>
+                        +62 (22) 1234-5678
+                    </li>
+<li class="flex items-center gap-3">
+<span class="material-symbols-outlined text-primary">mail</span>
+                        market@masoem.ac.id
+                    </li>
+</ul>
+</div>
+<div>
+<h5 class="font-bold mb-6 text-on-surface">Location</h5>
+<div class="w-full h-40 rounded-xl bg-slate-200 overflow-hidden relative">
+<img alt="Campus Map" class="w-full h-full object-cover grayscale opacity-50" data-alt="Simplified map illustration showing urban streets and campus location pins in Bandung, Indonesia" data-location="Bandung" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDn_BvXfLyYjkj13oVh3nDUP1co4y9X1_Lwx-Yk3HrOmLeF73HtTrPWqxXQDAucUY3qTHvknSpH-xO4euekAlxm6QpzoAx5BLNozjzTC38_GynsS-em0tWj6vT2U-1xatiZL323IfobqNbSIHV6mNtbd3ytRUP6bHbtFSSDw4-k0R36xQYqfiDyj7OhVcgP4PHukCILV7ystX17URdQoNa7GxJhkfps36k8N52fKNl_cusQgLrsnmfZ4gnhuMSd1gfa6dxHB5cAzQKH"/>
+<div class="absolute inset-0 flex items-center justify-center">
+<div class="bg-white p-2 rounded-full shadow-lg">
+<span class="material-symbols-outlined text-primary" style="font-variation-settings: 'FILL' 1;">location_on</span>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="max-w-7xl mx-auto px-8 mt-12 pt-8 border-t border-slate-100 dark:border-slate-800 text-center text-slate-500">
+            © 2024 Masoem University. All rights reserved.
+        </div>
+</footer>
+<!-- BottomNavBar (Visible only on mobile) -->
+<nav class="md:hidden bg-white/80 dark:bg-slate-900/80 backdrop-blur-xl fixed bottom-0 w-full rounded-t-[3rem] z-50 shadow-[0_-12px_32px_rgba(25,28,29,0.06)]">
+<div class="flex justify-around items-center h-20 px-4 pb-2">
+<div class="flex flex-col items-center justify-center bg-orange-100 dark:bg-orange-900/30 text-orange-700 dark:text-orange-300 rounded-full px-5 py-2 duration-200 active:scale-95">
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">home</span>
+<span class="font-['Be_Vietnam_Pro'] text-[11px] font-medium tracking-wide uppercase">Home</span>
+</div>
+<div class="flex flex-col items-center justify-center text-slate-500 dark:text-slate-400 px-5 py-2 hover:text-orange-500 transition-all active:scale-95 duration-200">
+<span class="material-symbols-outlined">restaurant_menu</span>
+<span class="font-['Be_Vietnam_Pro'] text-[11px] font-medium tracking-wide uppercase">Menu</span>
+</div>
+<div class="flex flex-col items-center justify-center text-slate-500 dark:text-slate-400 px-5 py-2 hover:text-orange-500 transition-all active:scale-95 duration-200">
+<span class="material-symbols-outlined">receipt_long</span>
+<span class="font-['Be_Vietnam_Pro'] text-[11px] font-medium tracking-wide uppercase">Orders</span>
+</div>
+<div class="flex flex-col items-center justify-center text-slate-500 dark:text-slate-400 px-5 py-2 hover:text-orange-500 transition-all active:scale-95 duration-200">
+<span class="material-symbols-outlined">person</span>
+<span class="font-['Be_Vietnam_Pro'] text-[11px] font-medium tracking-wide uppercase">Profile</span>
+</div>
+</div>
+</nav>
+</body></html>

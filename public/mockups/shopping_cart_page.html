@@ -1,0 +1,317 @@
+<!DOCTYPE html>
+
+<html class="light" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Shopping Cart | Masoem University Store</title>
+<link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&amp;family=Inter:wght@400;500;600&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    "colors": {
+                        "on-primary": "#ffffff",
+                        "surface-tint": "#4059aa",
+                        "tertiary-container": "#6e2c00",
+                        "outline-variant": "#c5c5d3",
+                        "surface-container": "#eeeeee",
+                        "surface-bright": "#f9f9f9",
+                        "primary-container": "#1e3a8a",
+                        "on-tertiary-container": "#f39461",
+                        "on-primary-container": "#90a8ff",
+                        "surface-container-highest": "#e2e2e2",
+                        "on-error": "#ffffff",
+                        "secondary-fixed-dim": "#adc6ff",
+                        "inverse-on-surface": "#f1f1f1",
+                        "on-background": "#1a1c1c",
+                        "inverse-surface": "#2f3131",
+                        "primary-fixed-dim": "#b6c4ff",
+                        "on-error-container": "#93000a",
+                        "secondary": "#0058be",
+                        "tertiary-fixed": "#ffdbcb",
+                        "surface-container-lowest": "#ffffff",
+                        "on-surface-variant": "#444651",
+                        "secondary-fixed": "#d8e2ff",
+                        "surface": "#f9f9f9",
+                        "secondary-container": "#2170e4",
+                        "on-secondary-container": "#fefcff",
+                        "inverse-primary": "#b6c4ff",
+                        "on-secondary-fixed": "#001a42",
+                        "background": "#f9f9f9",
+                        "primary": "#00236f",
+                        "surface-container-low": "#f3f3f3",
+                        "primary-fixed": "#dce1ff",
+                        "surface-dim": "#dadada",
+                        "on-tertiary": "#ffffff",
+                        "error-container": "#ffdad6",
+                        "on-secondary-fixed-variant": "#004395",
+                        "outline": "#757682",
+                        "error": "#ba1a1a",
+                        "on-primary-fixed-variant": "#264191",
+                        "on-tertiary-fixed-variant": "#773205",
+                        "on-secondary": "#ffffff",
+                        "surface-variant": "#e2e2e2",
+                        "on-tertiary-fixed": "#341100",
+                        "surface-container-high": "#e8e8e8",
+                        "on-surface": "#1a1c1c",
+                        "tertiary": "#4b1c00",
+                        "on-primary-fixed": "#00164e",
+                        "tertiary-fixed-dim": "#ffb691"
+                    },
+                    "borderRadius": {
+                        "DEFAULT": "0.25rem",
+                        "lg": "0.5rem",
+                        "xl": "0.75rem",
+                        "full": "9999px"
+                    },
+                    "fontFamily": {
+                        "headline": ["Manrope"],
+                        "body": ["Inter"],
+                        "label": ["Inter"]
+                    }
+                },
+            },
+        }
+    </script>
+<style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+        body { font-family: 'Inter', sans-serif; }
+        h1, h2, h3, .font-manrope { font-family: 'Manrope', sans-serif; }
+    </style>
+<style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+  </head>
+<body class="bg-surface text-on-surface">
+<!-- TopAppBar Component -->
+<header class="bg-white/80 dark:bg-slate-900/80 backdrop-blur-xl fixed top-0 w-full z-50">
+<div class="flex justify-between items-center px-6 py-4 max-w-7xl mx-auto">
+<div class="flex items-center gap-4">
+<button class="hover:bg-slate-100/50 dark:hover:bg-slate-800/50 transition-colors p-2 rounded-full active:scale-95 duration-150">
+<span class="material-symbols-outlined text-blue-900 dark:text-blue-400">menu</span>
+</button>
+<span class="text-xl font-black text-blue-900 dark:text-white tracking-tight">Masoem University Store</span>
+</div>
+<div class="flex items-center gap-2">
+<button class="hover:bg-slate-100/50 dark:hover:bg-slate-800/50 transition-colors p-2 rounded-full active:scale-95 duration-150 relative">
+<span class="material-symbols-outlined text-blue-900 dark:text-blue-400">shopping_cart</span>
+<span class="absolute top-1 right-1 bg-secondary text-white text-[10px] w-4 h-4 flex items-center justify-center rounded-full">3</span>
+</button>
+</div>
+</div>
+</header>
+<main class="pt-24 pb-32 px-4 md:px-8 max-w-7xl mx-auto min-h-screen">
+<!-- Page Title -->
+<div class="mb-8">
+<h1 class="text-3xl font-extrabold font-manrope tracking-tight text-primary">Your Shopping Bag</h1>
+<p class="text-on-surface-variant text-sm mt-1">Review your items before proceeding to checkout.</p>
+</div>
+<div class="grid grid-cols-1 lg:grid-cols-12 gap-8 items-start">
+<!-- Cart Table/List Section -->
+<section class="lg:col-span-8 space-y-4">
+<!-- Header Labels for Desktop -->
+<div class="hidden md:grid grid-cols-6 px-6 py-3 text-xs font-bold font-manrope text-on-surface-variant uppercase tracking-wider bg-surface-container-low rounded-xl">
+<div class="col-span-3">Product</div>
+<div class="text-center">Quantity</div>
+<div class="text-center">Price</div>
+<div class="text-right">Subtotal</div>
+</div>
+<!-- Cart Items Container -->
+<div class="space-y-4">
+<!-- Item 1 -->
+<div class="bg-surface-container-lowest rounded-xl p-4 md:p-6 transition-all hover:bg-white group">
+<div class="flex flex-col md:grid md:grid-cols-6 gap-4 items-center">
+<div class="col-span-3 flex items-center gap-4 w-full">
+<div class="w-24 h-24 rounded-lg overflow-hidden bg-surface-container flex-shrink-0">
+<img alt="Product" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300" data-alt="Premium navy blue university hoodie with embroidered white Masoem University crest on high quality cotton fabric" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAeWCOIKh7FLBeW5sZ5BFI3wCSppsKrf3KhLlNNFf9nxrIznXYHHZSSElyJ-wTbtwsZ4UTPQkP26fO2X0Vf5bFaHpbjmsUbmM799-39nPk5GpfLfis0DgRbDq9Ux-sGKTyCOJ2jA8q9dqMqvKOyTu_TH9ikV_HYeeJL3UfB5JfIuGloIwkRx1Kk-d5ogx04BFOH_uQs0cUrTGpRTWKSpkatYMNB8HtfJMK9kTL9Tn9bqqe4NXTelUzbsuMvlpJCgPDudmw4ifxRv3ui"/>
+</div>
+<div class="flex-1">
+<h3 class="font-bold text-primary text-lg leading-tight">Official Varsity Hoodie</h3>
+<p class="text-sm text-on-surface-variant mt-1">Navy Blue • Size XL</p>
+<button class="text-error text-xs font-semibold flex items-center gap-1 mt-2 hover:opacity-75 transition-opacity">
+<span class="material-symbols-outlined text-sm">delete</span> Remove
+                                    </button>
+</div>
+</div>
+<!-- Mobile-friendly Layout for Price/Qty -->
+<div class="flex items-center justify-between w-full md:hidden pt-4 border-t border-surface-container">
+<div class="flex flex-col">
+<span class="text-xs text-on-surface-variant">Price</span>
+<span class="font-bold text-on-surface">Rp 349.000</span>
+</div>
+<div class="flex items-center bg-surface-container-high rounded-full px-2 py-1">
+<button class="w-8 h-8 flex items-center justify-center text-primary hover:bg-white rounded-full transition-colors"><span class="material-symbols-outlined text-lg">remove</span></button>
+<span class="px-4 font-bold text-sm">1</span>
+<button class="w-8 h-8 flex items-center justify-center text-primary hover:bg-white rounded-full transition-colors"><span class="material-symbols-outlined text-lg">add</span></button>
+</div>
+</div>
+<!-- Desktop Layout for Qty/Price -->
+<div class="hidden md:flex justify-center">
+<div class="flex items-center bg-surface-container-high rounded-full px-2 py-1">
+<button class="w-6 h-6 flex items-center justify-center text-primary hover:bg-white rounded-full transition-colors"><span class="material-symbols-outlined text-sm">remove</span></button>
+<span class="px-3 font-bold text-sm">1</span>
+<button class="w-6 h-6 flex items-center justify-center text-primary hover:bg-white rounded-full transition-colors"><span class="material-symbols-outlined text-sm">add</span></button>
+</div>
+</div>
+<div class="hidden md:block text-center font-medium text-on-surface-variant">
+                                Rp 349.000
+                            </div>
+<div class="hidden md:block text-right font-bold text-primary">
+                                Rp 349.000
+                            </div>
+</div>
+</div>
+<!-- Item 2 -->
+<div class="bg-surface-container-lowest rounded-xl p-4 md:p-6 transition-all hover:bg-white group">
+<div class="flex flex-col md:grid md:grid-cols-6 gap-4 items-center">
+<div class="col-span-3 flex items-center gap-4 w-full">
+<div class="w-24 h-24 rounded-lg overflow-hidden bg-surface-container flex-shrink-0">
+<img alt="Product" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300" data-alt="Matte black stainless steel water bottle with minimalist university logo engraving and wooden lid accent" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDikfSjU1wtfbmXZ7IMMNB5P4vmL7sLXaN1Zlo-r0mwQhukPYY70nsST-FtOrjE9nw5Xyc61gDIs6icYo4xndWYCv7e5-myK9vmXKtAyRws3_UBWs_vyAsfcI2hOzPhzcIbw0Yb1KAYZIQA38prQsJkZdM5ghWGe0PF91__Dfj1X-1WKTdAYcmgV57oTrCihvOZ9la7lDJeVoioU3os93_sR2UwmlsbpQNmZXuH9DAWvbg2RndYaj94uCKyFOzedHWd0IAvaz4iZKVd"/>
+</div>
+<div class="flex-1">
+<h3 class="font-bold text-primary text-lg leading-tight">Academic Series Tumbler</h3>
+<p class="text-sm text-on-surface-variant mt-1">Matte Black • 500ml</p>
+<button class="text-error text-xs font-semibold flex items-center gap-1 mt-2 hover:opacity-75 transition-opacity">
+<span class="material-symbols-outlined text-sm">delete</span> Remove
+                                    </button>
+</div>
+</div>
+<div class="flex items-center justify-between w-full md:hidden pt-4 border-t border-surface-container">
+<div class="flex flex-col">
+<span class="text-xs text-on-surface-variant">Price</span>
+<span class="font-bold text-on-surface">Rp 125.000</span>
+</div>
+<div class="flex items-center bg-surface-container-high rounded-full px-2 py-1">
+<button class="w-8 h-8 flex items-center justify-center text-primary hover:bg-white rounded-full transition-colors"><span class="material-symbols-outlined text-lg">remove</span></button>
+<span class="px-4 font-bold text-sm">2</span>
+<button class="w-8 h-8 flex items-center justify-center text-primary hover:bg-white rounded-full transition-colors"><span class="material-symbols-outlined text-lg">add</span></button>
+</div>
+</div>
+<div class="hidden md:flex justify-center">
+<div class="flex items-center bg-surface-container-high rounded-full px-2 py-1">
+<button class="w-6 h-6 flex items-center justify-center text-primary hover:bg-white rounded-full transition-colors"><span class="material-symbols-outlined text-sm">remove</span></button>
+<span class="px-3 font-bold text-sm">2</span>
+<button class="w-6 h-6 flex items-center justify-center text-primary hover:bg-white rounded-full transition-colors"><span class="material-symbols-outlined text-sm">add</span></button>
+</div>
+</div>
+<div class="hidden md:block text-center font-medium text-on-surface-variant">
+                                Rp 125.000
+                            </div>
+<div class="hidden md:block text-right font-bold text-primary">
+                                Rp 250.000
+                            </div>
+</div>
+</div>
+</div>
+<!-- Empty Cart Message (Hidden by default) -->
+<div class="hidden flex-col items-center justify-center py-20 text-center">
+<span class="material-symbols-outlined text-6xl text-surface-container-highest mb-4">shopping_bag</span>
+<h3 class="text-xl font-bold font-manrope text-primary">Your cart is empty</h3>
+<p class="text-on-surface-variant mb-6">Looks like you haven't added anything yet.</p>
+<button class="px-8 py-3 bg-primary text-white rounded-full font-bold hover:shadow-lg transition-shadow">Start Shopping</button>
+</div>
+</section>
+<!-- Summary Card -->
+<aside class="lg:col-span-4 sticky top-28">
+<div class="bg-surface-container-lowest rounded-2xl p-8 shadow-sm border border-surface-container-low">
+<h2 class="text-xl font-bold font-manrope text-primary mb-6">Order Summary</h2>
+<div class="space-y-4 mb-8">
+<div class="flex justify-between items-center text-sm">
+<span class="text-on-surface-variant">Subtotal</span>
+<span class="font-semibold text-on-surface">Rp 599.000</span>
+</div>
+<div class="flex justify-between items-center text-sm">
+<span class="text-on-surface-variant">Shipping Estimated</span>
+<span class="font-semibold text-on-surface">Rp 20.000</span>
+</div>
+<div class="flex justify-between items-center text-sm">
+<span class="text-on-surface-variant">Tax (11%)</span>
+<span class="font-semibold text-on-surface">Rp 65.890</span>
+</div>
+<div class="pt-4 border-t border-surface-container-high flex justify-between items-center">
+<span class="text-lg font-bold font-manrope text-primary">Total Price</span>
+<span class="text-2xl font-black font-manrope text-primary">Rp 684.890</span>
+</div>
+</div>
+<div class="space-y-3">
+<button class="w-full py-4 bg-primary text-white rounded-xl font-bold text-lg hover:bg-primary-container active:scale-[0.98] transition-all flex items-center justify-center gap-2">
+                            Checkout Now <span class="material-symbols-outlined">arrow_forward</span>
+</button>
+<div class="flex items-center gap-2 px-4 py-3 bg-surface rounded-lg">
+<span class="material-symbols-outlined text-secondary text-sm">verified_user</span>
+<span class="text-[11px] text-on-surface-variant font-medium">Secure Checkout with Encryption. Powered by Masoem Financial Systems.</span>
+</div>
+</div>
+<div class="mt-8">
+<p class="text-xs font-bold text-on-surface-variant uppercase mb-4 tracking-widest">Promotion Code</p>
+<div class="flex gap-2">
+<input class="flex-1 bg-surface-container-high border-none rounded-lg text-sm focus:ring-2 focus:ring-primary" placeholder="Enter code" type="text"/>
+<button class="px-4 py-2 bg-surface-container-highest text-primary font-bold text-sm rounded-lg hover:bg-surface-container-high transition-colors">Apply</button>
+</div>
+</div>
+</div>
+</aside>
+</div>
+</main>
+<!-- Footer Component -->
+<footer class="w-full border-t border-slate-200 dark:border-slate-800 bg-slate-50 dark:bg-slate-950">
+<div class="grid grid-cols-1 md:grid-cols-4 gap-12 px-8 py-16 max-w-7xl mx-auto">
+<div class="md:col-span-1">
+<span class="text-2xl font-black text-blue-900 dark:text-white block mb-6">Masoem Store</span>
+<p class="text-sm font-inter text-slate-500 dark:text-slate-400">Premium apparel and academic supplies for the Masoem University community.</p>
+</div>
+<div>
+<h3 class="text-lg font-manrope font-bold mb-6 text-blue-900 dark:text-blue-400">Quick Links</h3>
+<ul class="space-y-3">
+<li><a class="text-sm text-slate-500 dark:text-slate-400 hover:text-blue-600 transition-all" href="#">Home</a></li>
+<li><a class="text-sm text-slate-500 dark:text-slate-400 hover:text-blue-600 transition-all" href="#">Products</a></li>
+<li><a class="text-sm text-slate-500 dark:text-slate-400 hover:text-blue-600 transition-all" href="#">Categories</a></li>
+</ul>
+</div>
+<div>
+<h3 class="text-lg font-manrope font-bold mb-6 text-blue-900 dark:text-blue-400">Help</h3>
+<ul class="space-y-3">
+<li><a class="text-sm text-slate-500 dark:text-slate-400 hover:text-blue-600 transition-all" href="#">Customer Service</a></li>
+<li><a class="text-sm text-slate-500 dark:text-slate-400 hover:text-blue-600 transition-all" href="#">About</a></li>
+</ul>
+</div>
+<div>
+<h3 class="text-lg font-manrope font-bold mb-6 text-blue-900 dark:text-blue-400">Newsletter</h3>
+<div class="flex">
+<input class="w-full bg-white dark:bg-slate-900 border-none rounded-l-lg text-sm px-4" placeholder="Email" type="email"/>
+<button class="bg-blue-900 text-white px-4 py-2 rounded-r-lg"><span class="material-symbols-outlined">send</span></button>
+</div>
+</div>
+</div>
+<div class="text-center py-8 border-t border-slate-200 dark:border-slate-800 text-sm text-slate-400">
+            © 2024 Masoem University. All rights reserved.
+        </div>
+</footer>
+<!-- BottomNavBar Component (Mobile Only) -->
+<nav class="fixed bottom-0 left-0 w-full z-50 flex justify-around items-center px-4 py-3 md:hidden bg-white/90 dark:bg-slate-900/90 backdrop-blur-lg border-t border-slate-100 dark:border-slate-800 rounded-t-2xl shadow-[0_-8px_24px_rgba(0,0,0,0.05)]">
+<a class="flex flex-col items-center justify-center text-slate-400 dark:text-slate-500 hover:bg-slate-50 dark:hover:bg-slate-800 transition-colors" href="#">
+<span class="material-symbols-outlined">storefront</span>
+<span class="text-[10px] font-bold font-manrope">Shop</span>
+</a>
+<a class="flex flex-col items-center justify-center text-slate-400 dark:text-slate-500 hover:bg-slate-50 dark:hover:bg-slate-800 transition-colors" href="#">
+<span class="material-symbols-outlined">search</span>
+<span class="text-[10px] font-bold font-manrope">Search</span>
+</a>
+<a class="flex flex-col items-center justify-center bg-blue-100 dark:bg-blue-900/50 text-blue-900 dark:text-blue-100 rounded-2xl px-4 py-1 scale-95 duration-200" href="#">
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">shopping_cart</span>
+<span class="text-[10px] font-bold font-manrope">Cart</span>
+</a>
+<a class="flex flex-col items-center justify-center text-slate-400 dark:text-slate-500 hover:bg-slate-50 dark:hover:bg-slate-800 transition-colors" href="#">
+<span class="material-symbols-outlined">person</span>
+<span class="text-[10px] font-bold font-manrope">Profile</span>
+</a>
+</nav>
+</body></html>

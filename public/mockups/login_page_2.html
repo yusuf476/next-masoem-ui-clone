@@ -1,0 +1,207 @@
+<!DOCTYPE html>
+
+<html class="light" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Login - Masoem University Food Market</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;600;700;800&amp;family=Be+Vietnam+Pro:wght@400;500;600&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            "colors": {
+                    "on-secondary": "#ffffff",
+                    "surface-bright": "#f8f9fa",
+                    "on-primary-container": "#5c2800",
+                    "inverse-primary": "#ffb68b",
+                    "on-secondary-container": "#1d3989",
+                    "surface-container-lowest": "#ffffff",
+                    "secondary-fixed": "#dce1ff",
+                    "error-container": "#ffdad6",
+                    "on-primary-fixed": "#321200",
+                    "tertiary-fixed": "#ffdf9b",
+                    "primary": "#994700",
+                    "surface-variant": "#e1e3e4",
+                    "primary-container": "#ff7a00",
+                    "on-error": "#ffffff",
+                    "on-surface": "#191c1d",
+                    "on-background": "#191c1d",
+                    "outline-variant": "#e0c0af",
+                    "surface-dim": "#d9dadb",
+                    "surface-container-low": "#f3f4f5",
+                    "inverse-on-surface": "#f0f1f2",
+                    "on-secondary-fixed": "#00164e",
+                    "on-secondary-fixed-variant": "#264191",
+                    "tertiary": "#785a00",
+                    "on-primary": "#ffffff",
+                    "on-tertiary-container": "#473400",
+                    "on-tertiary-fixed": "#251a00",
+                    "background": "#f8f9fa",
+                    "primary-fixed": "#ffdbc8",
+                    "on-error-container": "#93000a",
+                    "outline": "#8c7263",
+                    "secondary-fixed-dim": "#b6c4ff",
+                    "surface-container-high": "#e7e8e9",
+                    "tertiary-container": "#c49b35",
+                    "secondary-container": "#8fa7fe",
+                    "on-primary-fixed-variant": "#753400",
+                    "primary-fixed-dim": "#ffb68b",
+                    "tertiary-fixed-dim": "#edc157",
+                    "surface-tint": "#994700",
+                    "surface-container-highest": "#e1e3e4",
+                    "surface": "#f8f9fa",
+                    "inverse-surface": "#2e3132",
+                    "surface-container": "#edeeef",
+                    "secondary": "#4059aa",
+                    "error": "#ba1a1a",
+                    "on-surface-variant": "#584235",
+                    "on-tertiary-fixed-variant": "#5b4300",
+                    "on-tertiary": "#ffffff"
+            },
+            "borderRadius": {
+                    "DEFAULT": "1rem",
+                    "lg": "2rem",
+                    "xl": "3rem",
+                    "full": "9999px"
+            },
+            "fontFamily": {
+                    "headline": ["Plus Jakarta Sans"],
+                    "body": ["Be Vietnam Pro"],
+                    "label": ["Be Vietnam Pro"]
+            }
+          },
+        },
+      }
+    </script>
+<style>
+        body { font-family: 'Be Vietnam Pro', sans-serif; }
+        h1, h2, h3 { font-family: 'Plus Jakarta Sans', sans-serif; }
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+            vertical-align: middle;
+        }
+        .bg-login-gradient {
+            background: radial-gradient(circle at top right, #ffdbc8 0%, #f8f9fa 40%);
+        }
+        .btn-gradient {
+            background: linear-gradient(135deg, #994700 0%, #ff7a00 100%);
+        }
+    </style>
+<style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+  </head>
+<body class="bg-surface text-on-surface min-h-screen flex flex-col selection:bg-primary-container selection:text-on-primary-container">
+<div class="flex-grow flex items-center justify-center p-6 bg-login-gradient relative overflow-hidden">
+<div class="absolute top-[-10%] right-[-10%] w-[40rem] h-[40rem] bg-orange-100/40 rounded-full blur-3xl"></div>
+<div class="absolute bottom-[-5%] left-[-5%] w-[30rem] h-[30rem] bg-blue-100/30 rounded-full blur-3xl"></div>
+<main class="relative w-full max-w-md">
+<div class="bg-surface-container-lowest rounded-xl shadow-[0_12px_32px_rgba(25,28,29,0.06)] overflow-hidden">
+<div class="p-8 md:p-12">
+<header class="flex flex-col items-center mb-10">
+<div class="w-16 h-16 bg-primary-container rounded-lg flex items-center justify-center mb-6 shadow-sm">
+<span class="material-symbols-outlined text-white text-3xl" style="font-variation-settings: 'FILL' 1;">restaurant_menu</span>
+</div>
+<h1 class="text-2xl font-extrabold tracking-tight text-on-surface text-center">
+                            Masoem University<br/>
+<span class="text-primary">Food Market</span>
+</h1>
+<p class="text-on-surface-variant text-sm mt-3 font-medium">The Academic Epicurean awaits you.</p>
+</header>
+<form class="space-y-6">
+<div class="space-y-2">
+<label class="block text-[11px] font-bold uppercase tracking-widest text-on-surface-variant ml-1" for="email">
+                                Academic Email
+                            </label>
+<div class="relative group">
+<div class="absolute inset-y-0 left-4 flex items-center pointer-events-none text-on-surface-variant group-focus-within:text-primary transition-colors">
+<span class="material-symbols-outlined text-[20px]">alternate_email</span>
+</div>
+<input class="w-full pl-12 pr-4 py-4 bg-surface-container-highest border-none rounded-lg focus:ring-2 focus:ring-primary/20 focus:bg-surface-container-lowest transition-all placeholder:text-outline/50" id="email" name="email" placeholder="name@masoem.ac.id" required="" type="email"/>
+</div>
+</div>
+<div class="space-y-2">
+<div class="flex justify-between items-center px-1">
+<label class="block text-[11px] font-bold uppercase tracking-widest text-on-surface-variant" for="password">
+                                    Password
+                                </label>
+<a class="text-xs font-semibold text-secondary hover:text-on-secondary-fixed-variant transition-colors" href="#">
+                                    Forgot password?
+                                </a>
+</div>
+<div class="relative group">
+<div class="absolute inset-y-0 left-4 flex items-center pointer-events-none text-on-surface-variant group-focus-within:text-primary transition-colors">
+<span class="material-symbols-outlined text-[20px]">lock</span>
+</div>
+<input class="w-full pl-12 pr-12 py-4 bg-surface-container-highest border-none rounded-lg focus:ring-2 focus:ring-primary/20 focus:bg-surface-container-lowest transition-all placeholder:text-outline/50" id="password" name="password" placeholder="••••••••" required="" type="password"/>
+<button class="absolute inset-y-0 right-4 flex items-center text-on-surface-variant hover:text-on-surface transition-colors" type="button">
+<span class="material-symbols-outlined text-[20px]">visibility</span>
+</button>
+</div>
+</div>
+<button class="w-full btn-gradient py-4 rounded-full text-on-primary font-bold text-sm tracking-wide shadow-lg shadow-primary/20 active:scale-95 transition-transform duration-200 mt-4" type="submit">
+                            Login to Market
+                        </button>
+</form>
+<div class="mt-10 pt-8 border-t border-outline-variant/15 text-center">
+<p class="text-on-surface-variant text-sm font-medium">
+                            New to the market? 
+                            <a class="text-primary font-bold ml-1 hover:underline decoration-2 underline-offset-4" href="#">Create account</a>
+</p>
+</div>
+</div>
+</div>
+<div class="mt-8 grid grid-cols-2 gap-4">
+<div class="bg-white/40 backdrop-blur-sm p-4 rounded-lg flex items-center gap-3">
+<div class="w-10 h-10 rounded-full bg-secondary-container/20 flex items-center justify-center">
+<span class="material-symbols-outlined text-secondary text-xl">school</span>
+</div>
+<div>
+<p class="text-[10px] uppercase font-bold text-on-surface-variant tracking-wider">Campus</p>
+<p class="text-xs font-bold text-on-surface">Verified Student</p>
+</div>
+</div>
+<div class="bg-white/40 backdrop-blur-sm p-4 rounded-lg flex items-center gap-3">
+<div class="w-10 h-10 rounded-full bg-primary-container/20 flex items-center justify-center">
+<span class="material-symbols-outlined text-primary text-xl">local_fire_department</span>
+</div>
+<div>
+<p class="text-[10px] uppercase font-bold text-on-surface-variant tracking-wider">Deals</p>
+<p class="text-xs font-bold text-on-surface">Daily Specials</p>
+</div>
+</div>
+</div>
+</main>
+</div>
+<footer class="w-full pt-12 pb-24 bg-slate-50 dark:bg-slate-900 border-t border-slate-100 dark:border-slate-800">
+<div class="max-w-7xl mx-auto px-8 grid grid-cols-1 md:grid-cols-4 gap-8">
+<div class="space-y-4">
+<div class="text-xl font-black text-blue-900 dark:text-blue-200">MU Food Market</div>
+<p class="text-slate-500 dark:text-slate-400 text-sm leading-relaxed font-['Be_Vietnam_Pro']">
+                    Bringing premium culinary experiences to the heart of Masoem University.
+                </p>
+</div>
+<div class="flex flex-col gap-3">
+<h4 class="font-bold text-slate-900 dark:text-white text-sm uppercase tracking-widest">Market</h4>
+<a class="text-slate-500 dark:text-slate-400 text-sm hover:text-orange-600 transition-colors" href="#">Privacy Policy</a>
+<a class="text-slate-500 dark:text-slate-400 text-sm hover:text-orange-600 transition-colors" href="#">Terms of Service</a>
+</div>
+<div class="flex flex-col gap-3">
+<h4 class="font-bold text-slate-900 dark:text-white text-sm uppercase tracking-widest">University</h4>
+<a class="text-slate-500 dark:text-slate-400 text-sm hover:text-orange-600 transition-colors" href="#">Campus Map</a>
+<a class="text-slate-500 dark:text-slate-400 text-sm hover:text-orange-600 transition-colors" href="#">Help Center</a>
+</div>
+<div class="flex flex-col justify-end">
+<p class="text-slate-400 text-xs font-['Be_Vietnam_Pro']">
+                    © 2024 Masoem University. All rights reserved.
+                </p>
+</div>
+</div>
+</footer>
+</body></html>

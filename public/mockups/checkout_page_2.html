@@ -1,0 +1,292 @@
+<!DOCTYPE html>
+
+<html class="light" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Masoem University Store - Checkout</title>
+<link href="https://fonts.googleapis.com/css2?family=Manrope:wght@200;400;600;800&amp;family=Inter:wght@300;400;500;600&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<script id="tailwind-config">
+        tailwind.config = {
+          darkMode: "class",
+          theme: {
+            extend: {
+              "colors": {
+                      "on-primary": "#ffffff",
+                      "surface-tint": "#4059aa",
+                      "tertiary-container": "#6e2c00",
+                      "outline-variant": "#c5c5d3",
+                      "surface-container": "#eeeeee",
+                      "surface-bright": "#f9f9f9",
+                      "primary-container": "#1e3a8a",
+                      "on-tertiary-container": "#f39461",
+                      "on-primary-container": "#90a8ff",
+                      "surface-container-highest": "#e2e2e2",
+                      "on-error": "#ffffff",
+                      "secondary-fixed-dim": "#adc6ff",
+                      "inverse-on-surface": "#f1f1f1",
+                      "on-background": "#1a1c1c",
+                      "inverse-surface": "#2f3131",
+                      "primary-fixed-dim": "#b6c4ff",
+                      "on-error-container": "#93000a",
+                      "secondary": "#0058be",
+                      "tertiary-fixed": "#ffdbcb",
+                      "surface-container-lowest": "#ffffff",
+                      "on-surface-variant": "#444651",
+                      "secondary-fixed": "#d8e2ff",
+                      "surface": "#f9f9f9",
+                      "secondary-container": "#2170e4",
+                      "on-secondary-container": "#fefcff",
+                      "inverse-primary": "#b6c4ff",
+                      "on-secondary-fixed": "#001a42",
+                      "background": "#f9f9f9",
+                      "primary": "#00236f",
+                      "surface-container-low": "#f3f3f3",
+                      "primary-fixed": "#dce1ff",
+                      "surface-dim": "#dadada",
+                      "on-tertiary": "#ffffff",
+                      "error-container": "#ffdad6",
+                      "on-secondary-fixed-variant": "#004395",
+                      "outline": "#757682",
+                      "error": "#ba1a1a",
+                      "on-primary-fixed-variant": "#264191",
+                      "on-tertiary-fixed-variant": "#773205",
+                      "on-secondary": "#ffffff",
+                      "surface-variant": "#e2e2e2",
+                      "on-tertiary-fixed": "#341100",
+                      "surface-container-high": "#e8e8e8",
+                      "on-surface": "#1a1c1c",
+                      "tertiary": "#4b1c00",
+                      "on-primary-fixed": "#00164e",
+                      "tertiary-fixed-dim": "#ffb691"
+              },
+              "borderRadius": {
+                      "DEFAULT": "0.25rem",
+                      "lg": "0.5rem",
+                      "xl": "0.75rem",
+                      "full": "9999px"
+              },
+              "fontFamily": {
+                      "headline": ["Manrope"],
+                      "body": ["Inter"],
+                      "label": ["Inter"]
+              }
+            },
+          },
+        }
+      </script>
+<style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+        body { font-family: 'Inter', sans-serif; background-color: #f9f9f9; }
+        h1, h2, h3 { font-family: 'Manrope', sans-serif; }
+    </style>
+<style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+  </head>
+<body class="bg-surface text-on-surface">
+<!-- TopAppBar -->
+<header class="bg-white/80 dark:bg-slate-900/80 backdrop-blur-xl fixed top-0 w-full z-50">
+<div class="flex justify-between items-center px-6 py-4 max-w-7xl mx-auto">
+<div class="flex items-center gap-4">
+<button class="p-2 hover:bg-slate-100/50 dark:hover:bg-slate-800/50 transition-colors rounded-full active:scale-95 duration-150">
+<span class="material-symbols-outlined text-blue-900 dark:text-blue-400" data-icon="menu">menu</span>
+</button>
+<h1 class="text-xl font-black text-blue-900 dark:text-white tracking-tight">Masoem University Store</h1>
+</div>
+<div class="flex items-center gap-6">
+<nav class="hidden md:flex gap-8 text-sm font-medium Inter">
+<a class="text-slate-600 dark:text-slate-400 hover:text-blue-600 transition-colors" href="#">Shop</a>
+<a class="text-slate-600 dark:text-slate-400 hover:text-blue-600 transition-colors" href="#">Categories</a>
+<a class="text-slate-600 dark:text-slate-400 hover:text-blue-600 transition-colors" href="#">About</a>
+</nav>
+<button class="p-2 hover:bg-slate-100/50 dark:hover:bg-slate-800/50 transition-colors rounded-full active:scale-95 duration-150">
+<span class="material-symbols-outlined text-blue-900 dark:text-blue-400" data-icon="shopping_cart">shopping_cart</span>
+</button>
+</div>
+</div>
+</header>
+<!-- Main Content -->
+<main class="pt-24 pb-32 px-6 max-w-7xl mx-auto">
+<div class="mb-12">
+<h2 class="text-4xl font-extrabold font-headline tracking-tight text-primary">Finalize Your Order</h2>
+<p class="text-on-surface-variant font-body mt-2">The Academic Atelier: Secure Checkout</p>
+</div>
+<div class="grid grid-cols-1 lg:grid-cols-12 gap-12">
+<!-- Left: Customer Information -->
+<div class="lg:col-span-7 space-y-10">
+<!-- Personal Info Section -->
+<section class="bg-surface-container-lowest rounded-xl p-8 space-y-6">
+<div class="flex items-center gap-3 mb-2">
+<span class="material-symbols-outlined text-primary" data-icon="person">person</span>
+<h3 class="text-xl font-bold font-headline">Customer Information</h3>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+<div class="space-y-2">
+<label class="text-sm font-medium text-on-surface-variant font-label">Full Name</label>
+<input class="w-full bg-surface-container-high border-none rounded-xl px-4 py-3 focus:ring-2 focus:ring-primary-container focus:bg-surface-container-lowest transition-all" placeholder="John Doe" type="text"/>
+</div>
+<div class="space-y-2">
+<label class="text-sm font-medium text-on-surface-variant font-label">Phone Number</label>
+<input class="w-full bg-surface-container-high border-none rounded-xl px-4 py-3 focus:ring-2 focus:ring-primary-container focus:bg-surface-container-lowest transition-all" placeholder="+62 812 3456 7890" type="tel"/>
+</div>
+<div class="md:col-span-2 space-y-2">
+<label class="text-sm font-medium text-on-surface-variant font-label">Email Address</label>
+<input class="w-full bg-surface-container-high border-none rounded-xl px-4 py-3 focus:ring-2 focus:ring-primary-container focus:bg-surface-container-lowest transition-all" placeholder="student@masoemuniversity.ac.id" type="email"/>
+</div>
+</div>
+</section>
+<!-- Shipping Address Section -->
+<section class="bg-surface-container-lowest rounded-xl p-8 space-y-6">
+<div class="flex items-center gap-3 mb-2">
+<span class="material-symbols-outlined text-primary" data-icon="local_shipping">local_shipping</span>
+<h3 class="text-xl font-bold font-headline">Shipping Address</h3>
+</div>
+<div class="grid grid-cols-1 gap-6">
+<div class="space-y-2">
+<label class="text-sm font-medium text-on-surface-variant font-label">Street Address</label>
+<input class="w-full bg-surface-container-high border-none rounded-xl px-4 py-3 focus:ring-2 focus:ring-primary-container focus:bg-surface-container-lowest transition-all" placeholder="Jl. Raya Cipacing No. 22" type="text"/>
+</div>
+<div class="grid grid-cols-2 md:grid-cols-3 gap-6">
+<div class="space-y-2">
+<label class="text-sm font-medium text-on-surface-variant font-label">City</label>
+<input class="w-full bg-surface-container-high border-none rounded-xl px-4 py-3 focus:ring-2 focus:ring-primary-container focus:bg-surface-container-lowest transition-all" placeholder="Sumedang" type="text"/>
+</div>
+<div class="space-y-2">
+<label class="text-sm font-medium text-on-surface-variant font-label">Province</label>
+<input class="w-full bg-surface-container-high border-none rounded-xl px-4 py-3 focus:ring-2 focus:ring-primary-container focus:bg-surface-container-lowest transition-all" placeholder="West Java" type="text"/>
+</div>
+<div class="space-y-2 col-span-2 md:col-span-1">
+<label class="text-sm font-medium text-on-surface-variant font-label">Postal Code</label>
+<input class="w-full bg-surface-container-high border-none rounded-xl px-4 py-3 focus:ring-2 focus:ring-primary-container focus:bg-surface-container-lowest transition-all" placeholder="45363" type="text"/>
+</div>
+</div>
+</div>
+</section>
+</div>
+<!-- Right: Order Summary -->
+<div class="lg:col-span-5">
+<div class="sticky top-28 space-y-6">
+<section class="bg-surface-container-low rounded-xl p-8 shadow-sm">
+<h3 class="text-xl font-bold font-headline mb-6">Order Summary</h3>
+<div class="space-y-6 mb-8">
+<!-- Item 1 -->
+<div class="flex gap-4">
+<div class="w-20 h-20 bg-white rounded-lg overflow-hidden flex-shrink-0">
+<img alt="University Hoodie" class="w-full h-full object-cover" data-alt="Premium navy blue university hoodie with high-quality embroidery on a clean white background with soft studio lighting" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBQRiof9x1r2cueSB3x1rTXYyrBdruJJ_WYKkQUXREd3tgzkPQxVHwEZn3TpcXCh2TzJxa-zFlAjbcm3vQsVCxjG7-Ci7DRu17osWjrF-Dqm4WU-NDd-6mPEm1gfwy9Ued4HBMUJpTjWAjQJSepUyU0QibQozTlbHu4By3C2gj31FTJdXGeArdL15Hl-W6JddWv8589yAbk0FaVHWkAsKds_Rx0-UyRgrIYXm88iVlcFbN8XXkS8eGhu8uxWkWwVJMdTY8n1wjB2IBR"/>
+</div>
+<div class="flex-grow">
+<h4 class="font-semibold text-sm">Masoem Classic Hoodie</h4>
+<p class="text-xs text-on-surface-variant">Size: L | Qty: 1</p>
+<p class="text-sm font-bold text-primary mt-1">Rp 350.000</p>
+</div>
+</div>
+<!-- Item 2 -->
+<div class="flex gap-4">
+<div class="w-20 h-20 bg-white rounded-lg overflow-hidden flex-shrink-0">
+<img alt="Textbook" class="w-full h-full object-cover" data-alt="Thick academic textbook titled Advanced Mathematics on a wooden desk with soft natural window light" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCFkjV4d4AthuVeGjl3oexxC7B78X3KITI_L6yrkzovuG2gR9Re-KUmrT6RJ_84d0QQyxpslO03xOE3syebOmdBjdy4ecHJleQhJoZgeNgWRMhB8VYoxcOUyW6mYjc-83yT80Rd0XtigbyuF9SfPekOwG3L-gL-FYao9vVRr4KfQ5gbQ0v9C7PwdnGaOT6G3YlZLVL1Z7ctwoi0bGjXUwgD9nC0MI7j01wHmyYiHD7Pr0bOW_r9_aSrDgLOFu-VvqLIBYDqKXaRFVYN"/>
+</div>
+<div class="flex-grow">
+<h4 class="font-semibold text-sm">Data Science Essentials</h4>
+<p class="text-xs text-on-surface-variant">Hardcover | Qty: 1</p>
+<p class="text-sm font-bold text-primary mt-1">Rp 225.000</p>
+</div>
+</div>
+</div>
+<div class="border-t border-outline-variant/30 pt-6 space-y-3">
+<div class="flex justify-between text-sm">
+<span class="text-on-surface-variant">Subtotal</span>
+<span>Rp 575.000</span>
+</div>
+<div class="flex justify-between text-sm">
+<span class="text-on-surface-variant">Shipping Fee</span>
+<span>Rp 25.000</span>
+</div>
+<div class="flex justify-between text-lg font-bold pt-3">
+<span>Total Price</span>
+<span class="text-primary">Rp 600.000</span>
+</div>
+</div>
+</section>
+<!-- Payment Method -->
+<section class="bg-surface-container-low rounded-xl p-8">
+<h3 class="text-xl font-bold font-headline mb-6">Payment Method</h3>
+<div class="space-y-3">
+<label class="flex items-center gap-4 p-4 bg-white rounded-xl cursor-pointer hover:ring-2 ring-primary transition-all">
+<input checked="" class="text-primary focus:ring-primary" name="payment" type="radio"/>
+<div class="flex items-center gap-3">
+<span class="material-symbols-outlined text-secondary" data-icon="account_balance">account_balance</span>
+<span class="text-sm font-semibold">Bank Transfer (VA)</span>
+</div>
+</label>
+<label class="flex items-center gap-4 p-4 bg-white rounded-xl cursor-pointer hover:ring-2 ring-primary transition-all">
+<input class="text-primary focus:ring-primary" name="payment" type="radio"/>
+<div class="flex items-center gap-3">
+<span class="material-symbols-outlined text-secondary" data-icon="account_balance_wallet">account_balance_wallet</span>
+<span class="text-sm font-semibold">Digital Wallet (OVO/Gopay)</span>
+</div>
+</label>
+</div>
+<button class="w-full mt-8 bg-primary text-on-primary py-4 rounded-xl font-bold text-lg hover:brightness-110 active:scale-95 duration-200 transition-all shadow-lg shadow-primary/20">
+                            Place Order
+                        </button>
+</section>
+</div>
+</div>
+</div>
+</main>
+<!-- BottomNavBar (Mobile Only) -->
+<nav class="fixed bottom-0 left-0 w-full z-50 flex justify-around items-center px-4 py-3 md:hidden bg-white/90 dark:bg-slate-900/90 backdrop-blur-lg border-t border-slate-100 dark:border-slate-800 shadow-[0_-8px_24px_rgba(0,0,0,0.05)] rounded-t-2xl">
+<div class="flex flex-col items-center justify-center text-slate-400 dark:text-slate-500">
+<span class="material-symbols-outlined" data-icon="storefront">storefront</span>
+<span class="text-[10px] font-bold font-manrope">Shop</span>
+</div>
+<div class="flex flex-col items-center justify-center text-slate-400 dark:text-slate-500">
+<span class="material-symbols-outlined" data-icon="search">search</span>
+<span class="text-[10px] font-bold font-manrope">Search</span>
+</div>
+<div class="flex flex-col items-center justify-center text-slate-400 dark:text-slate-500">
+<span class="material-symbols-outlined" data-icon="receipt_long">receipt_long</span>
+<span class="text-[10px] font-bold font-manrope">Orders</span>
+</div>
+<div class="flex flex-col items-center justify-center text-slate-400 dark:text-slate-500">
+<span class="material-symbols-outlined" data-icon="person">person</span>
+<span class="text-[10px] font-bold font-manrope">Profile</span>
+</div>
+</nav>
+<!-- Footer -->
+<footer class="w-full border-t border-slate-200 dark:border-slate-800 bg-slate-50 dark:bg-slate-950 mt-20">
+<div class="grid grid-cols-1 md:grid-cols-4 gap-12 px-8 py-16 max-w-7xl mx-auto">
+<div class="col-span-1 md:col-span-1">
+<h3 class="text-2xl font-black text-blue-900 dark:text-white mb-6">MU Store</h3>
+<p class="text-sm font-inter text-slate-500 dark:text-slate-400">Premium apparel and academic supplies for the Masoem University community.</p>
+</div>
+<div>
+<h4 class="text-lg font-manrope font-bold text-blue-900 dark:text-blue-400 mb-6">Navigation</h4>
+<ul class="space-y-3 text-sm font-inter">
+<li><a class="text-slate-500 dark:text-slate-400 hover:text-blue-600 transition-all" href="#">Home</a></li>
+<li><a class="text-slate-500 dark:text-slate-400 hover:text-blue-600 transition-all" href="#">Products</a></li>
+<li><a class="text-slate-500 dark:text-slate-400 hover:text-blue-600 transition-all" href="#">Categories</a></li>
+</ul>
+</div>
+<div>
+<h4 class="text-lg font-manrope font-bold text-blue-900 dark:text-blue-400 mb-6">Customer Service</h4>
+<ul class="space-y-3 text-sm font-inter">
+<li><a class="text-slate-500 dark:text-slate-400 hover:text-blue-600 transition-all" href="#">Shipping Info</a></li>
+<li><a class="text-slate-500 dark:text-slate-400 hover:text-blue-600 transition-all" href="#">Returns</a></li>
+<li><a class="text-slate-500 dark:text-slate-400 hover:text-blue-600 transition-all" href="#">Contact Us</a></li>
+</ul>
+</div>
+<div>
+<h4 class="text-lg font-manrope font-bold text-blue-900 dark:text-blue-400 mb-6">Legal</h4>
+<p class="text-sm font-inter text-slate-500 dark:text-slate-400">© 2024 Masoem University. All rights reserved.</p>
+</div>
+</div>
+</footer>
+</body></html>

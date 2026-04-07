@@ -1,0 +1,182 @@
+{
+  "users": [],
+  "sessions": [],
+  "carts": [],
+  "orders": [],
+  "categories": [
+    {
+      "slug": "food",
+      "name": "Campus Dining",
+      "description": "Fresh meals and drinks crafted for busy academic days."
+    },
+    {
+      "slug": "stationery",
+      "name": "Study Essentials",
+      "description": "Notebooks, planners, and tools for productive classes."
+    },
+    {
+      "slug": "merchandise",
+      "name": "University Merchandise",
+      "description": "Official apparel and branded lifestyle products."
+    },
+    {
+      "slug": "technology",
+      "name": "Tech & Gadgets",
+      "description": "Devices and accessories for learning, collaboration, and focus."
+    }
+  ],
+  "products": [
+    {
+      "id": "prd_001",
+      "slug": "signature-nasi-goreng",
+      "name": "Signature Nasi Goreng",
+      "category": "food",
+      "price": 32000,
+      "rating": 4.9,
+      "reviews": 182,
+      "featured": true,
+      "inventory": 25,
+      "tagline": "Smoky wok-fried rice with campus favorite spices.",
+      "description": "A hearty plate of signature nasi goreng topped with ayam suwir, telur mata sapi, acar segar, and crunchy crackers. Built to keep you energized from the first lecture to the final assignment.",
+      "features": [
+        "Prepared fresh every order",
+        "Includes egg and crispy crackers",
+        "Popular lunch choice across faculties"
+      ],
+      "image": "https://lh3.googleusercontent.com/aida-public/AB6AXuBrZwPqVU5e1TTbwWpDAevskmP9mRFnjU8bzbNlonUKggkgn_fBeXXabHt1Dwq1EdRUQpgi3dRMxOsG3Tn8W7tEUiVBvuSXJeM4VKT2RvPYxq_ivNc4pQRyZ2LNrKA-uSTjaxUKmMw4nZOodS5oLD-SwiGlOQNkns0qpAf8KOhwh5FlgDHlrk136S2Jz6stlJa1PjYFZMv4WnLjbXIDAQq3QmQwjlC2JdKPBx2mCRVKBCIi7EspeyCZ8wHNdc2x5akXEGFuSXwOztEZ"
+    },
+    {
+      "id": "prd_002",
+      "slug": "sate-ayam-madura",
+      "name": "Sate Ayam Madura",
+      "category": "food",
+      "price": 28000,
+      "rating": 4.8,
+      "reviews": 146,
+      "featured": true,
+      "inventory": 20,
+      "tagline": "Tender grilled skewers with rich peanut sauce.",
+      "description": "Chicken satay marinated overnight and grilled to order. Served with creamy peanut sauce, lontong, and a bright sambal finish for a balanced, satisfying plate.",
+      "features": [
+        "House-made peanut sauce",
+        "Served with lontong",
+        "Reliable dinner bestseller"
+      ],
+      "image": "https://lh3.googleusercontent.com/aida-public/AB6AXuBTWTk4_W1ayaSDi_GaHJhsDY-vFF0fPQUVJ-j3HhbpZJffNA5zmcNPVdy1fzEqiBQ6JMEQ6GPH1ms3wLBxJxUUt5VxynY5FWnpPLoB6p43lAjHdHYFDRJijfNoBmvUJ3Cd0rP7cnnnuxx6WIMOnR9B0KzHgKl-MBYbplNWEBDdAsy0eyfwi-bsCNeX-5G9yTNMrmcapLtryPZIIm1MWad47bcdbqKv1x10buE3GN_Kn76MRWg-zQAUlVujGA_cqjn4QdVp3kDdp6VG"
+    },
+    {
+      "id": "prd_003",
+      "slug": "signature-matcha-latte",
+      "name": "Signature Matcha Latte",
+      "category": "food",
+      "price": 18000,
+      "rating": 4.7,
+      "reviews": 121,
+      "featured": true,
+      "inventory": 40,
+      "tagline": "Creamy ceremonial-style matcha with balanced sweetness.",
+      "description": "A smooth iced matcha latte with gentle earthy notes, creamy milk texture, and customizable sweetness. Great as a study session companion or post-class refreshment.",
+      "features": [
+        "Made with premium matcha",
+        "Customizable sweetness",
+        "Perfect for warm afternoons"
+      ],
+      "image": "https://lh3.googleusercontent.com/aida-public/AB6AXuB_bmTcRcxCcAkxFt9J9_FN1r4EdgTD4-OYWyvoCtN1jBiR2_N7u3IGs4zaYH9L77RQNm0LaRX6uTAUt5Oxd-JKqcCov7lV-IY6g6UA1Eog13_x7QEN1Mf8UMf-GH8scfkcGvnaDLPVUNtEFW3TpwdMF9B0yE3WbdDuvG3kMxXidJwiA2ObVHIlLbhRlnN2Ovn1APHRqh0vP-gK2U1ZSA1uXhXivrksLm8ICiZEYM2O2FmmsTLs3jRHFodQgVG2WzFGPWDE_iiHJZio"
+    },
+    {
+      "id": "prd_004",
+      "slug": "campus-study-bundle",
+      "name": "Campus Study Bundle",
+      "category": "stationery",
+      "price": 89000,
+      "rating": 4.8,
+      "reviews": 64,
+      "featured": true,
+      "inventory": 18,
+      "tagline": "Notebook, planner, sticky tabs, and pen set in one kit.",
+      "description": "A curated starter pack for students who want a cleaner semester workflow. Includes a weekly planner, premium notebook, color tabs, and smooth-writing pens in a branded pouch.",
+      "features": [
+        "All-in-one productivity kit",
+        "Branded reusable pouch",
+        "Ideal for new semester preparation"
+      ],
+      "image": "https://images.unsplash.com/photo-1517842645767-c639042777db?auto=format&fit=crop&w=1200&q=80"
+    },
+    {
+      "id": "prd_005",
+      "slug": "varsity-hoodie-masoem",
+      "name": "Masoem Varsity Hoodie",
+      "category": "merchandise",
+      "price": 245000,
+      "rating": 4.9,
+      "reviews": 97,
+      "featured": false,
+      "inventory": 12,
+      "tagline": "Heavyweight campus hoodie with refined embroidery.",
+      "description": "Premium fleece varsity hoodie designed for comfort in lecture halls, libraries, and travel. Finished with embroidered branding and a relaxed unisex fit.",
+      "features": [
+        "Soft heavyweight fleece",
+        "Embroidered university mark",
+        "Relaxed everyday fit"
+      ],
+      "image": "https://images.unsplash.com/photo-1521572163474-6864f9cf17ab?auto=format&fit=crop&w=1200&q=80"
+    },
+    {
+      "id": "prd_006",
+      "slug": "wireless-focus-headset",
+      "name": "Wireless Focus Headset",
+      "category": "technology",
+      "price": 375000,
+      "rating": 4.6,
+      "reviews": 58,
+      "featured": false,
+      "inventory": 9,
+      "tagline": "Reliable wireless audio for class, calls, and deep work.",
+      "description": "Comfortable over-ear headset with long battery life, low-latency pairing, and a clean microphone profile suitable for online learning and collaborative meetings.",
+      "features": [
+        "Noise-reducing ear cups",
+        "Long battery life",
+        "Built-in microphone for meetings"
+      ],
+      "image": "https://images.unsplash.com/photo-1505740420928-5e560c06d30e?auto=format&fit=crop&w=1200&q=80"
+    },
+    {
+      "id": "prd_007",
+      "slug": "executive-journal-set",
+      "name": "Executive Journal Set",
+      "category": "stationery",
+      "price": 69000,
+      "rating": 4.7,
+      "reviews": 44,
+      "featured": false,
+      "inventory": 22,
+      "tagline": "Minimal desk companion for notes, plans, and reflections.",
+      "description": "A premium ruled journal paired with a sturdy pen and divider cards. Ideal for students, lecturers, and campus organizations managing polished notes.",
+      "features": [
+        "Premium textured cover",
+        "Includes matching pen",
+        "Suitable for formal meeting notes"
+      ],
+      "image": "https://images.unsplash.com/photo-1513258496099-48168024aec0?auto=format&fit=crop&w=1200&q=80"
+    },
+    {
+      "id": "prd_008",
+      "slug": "scholar-salmon-bowl",
+      "name": "Scholar Salmon Bowl",
+      "category": "food",
+      "price": 45000,
+      "rating": 4.8,
+      "reviews": 88,
+      "featured": false,
+      "inventory": 15,
+      "tagline": "Protein-packed bowl for long productive afternoons.",
+      "description": "Grilled salmon served over quinoa, sweet potato, and fresh greens with tahini dressing. A balanced, premium option for health-focused campus dining.",
+      "features": [
+        "High-protein meal",
+        "Fresh greens and roasted vegetables",
+        "Tahini dressing included"
+      ],
+      "image": "https://lh3.googleusercontent.com/aida-public/AB6AXuCpHhPGKwAH3Xu6E_olNBr8_3MvgpLQAnfAs7ylqNuvvVI4-nPfUKA9pajCrXPcqvUHCAI12actKKYy1MXeZOxaEqL3nNypJXKBIiK-kniKnVOcRWoOY3wzeGESlq4tqZT3W3zJfTG0JiYArBWIvjKnrM17fSMXJuAsyyw6hS6u3qxBhXcCbddp3aNN-iyhSDjd30KfJdPAl7INdSInAZaetFzsSZjzKs6YyQAZX0fOvU9BLPhUVgxrk5HGjejmsu32DH0gY3pyqfBe"
+    }
+  ]
+}

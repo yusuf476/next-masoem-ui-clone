@@ -1,0 +1,426 @@
+<!DOCTYPE html>
+
+<html class="light" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Masoem University Store - Product Details</title>
+<link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&amp;family=Inter:wght@400;500;600&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<script id="tailwind-config">
+        tailwind.config = {
+          darkMode: "class",
+          theme: {
+            extend: {
+              "colors": {
+                      "on-primary": "#ffffff",
+                      "surface-tint": "#4059aa",
+                      "tertiary-container": "#6e2c00",
+                      "outline-variant": "#c5c5d3",
+                      "surface-container": "#eeeeee",
+                      "surface-bright": "#f9f9f9",
+                      "primary-container": "#1e3a8a",
+                      "on-tertiary-container": "#f39461",
+                      "on-primary-container": "#90a8ff",
+                      "surface-container-highest": "#e2e2e2",
+                      "on-error": "#ffffff",
+                      "secondary-fixed-dim": "#adc6ff",
+                      "inverse-on-surface": "#f1f1f1",
+                      "on-background": "#1a1c1c",
+                      "inverse-surface": "#2f3131",
+                      "primary-fixed-dim": "#b6c4ff",
+                      "on-error-container": "#93000a",
+                      "secondary": "#0058be",
+                      "tertiary-fixed": "#ffdbcb",
+                      "surface-container-lowest": "#ffffff",
+                      "on-surface-variant": "#444651",
+                      "secondary-fixed": "#d8e2ff",
+                      "surface": "#f9f9f9",
+                      "secondary-container": "#2170e4",
+                      "on-secondary-container": "#fefcff",
+                      "inverse-primary": "#b6c4ff",
+                      "on-secondary-fixed": "#001a42",
+                      "background": "#f9f9f9",
+                      "primary": "#00236f",
+                      "surface-container-low": "#f3f3f3",
+                      "primary-fixed": "#dce1ff",
+                      "surface-dim": "#dadada",
+                      "on-tertiary": "#ffffff",
+                      "error-container": "#ffdad6",
+                      "on-secondary-fixed-variant": "#004395",
+                      "outline": "#757682",
+                      "error": "#ba1a1a",
+                      "on-primary-fixed-variant": "#264191",
+                      "on-tertiary-fixed-variant": "#773205",
+                      "on-secondary": "#ffffff",
+                      "surface-variant": "#e2e2e2",
+                      "on-tertiary-fixed": "#341100",
+                      "surface-container-high": "#e8e8e8",
+                      "on-surface": "#1a1c1c",
+                      "tertiary": "#4b1c00",
+                      "on-primary-fixed": "#00164e",
+                      "tertiary-fixed-dim": "#ffb691"
+              },
+              "borderRadius": {
+                      "DEFAULT": "0.25rem",
+                      "lg": "0.5rem",
+                      "xl": "0.75rem",
+                      "full": "9999px"
+              },
+              "fontFamily": {
+                      "headline": ["Manrope"],
+                      "body": ["Inter"],
+                      "label": ["Inter"]
+              }
+            },
+          }
+        }
+    </script>
+<style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+        body { font-family: 'Inter', sans-serif; }
+        h1, h2, h3, h4 { font-family: 'Manrope', sans-serif; }
+    </style>
+<style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+  </head>
+<body class="bg-surface text-on-surface selection:bg-primary-container selection:text-on-primary-container">
+<!-- TopAppBar -->
+<header class="bg-white/80 dark:bg-slate-900/80 backdrop-blur-xl fixed top-0 w-full z-50">
+<div class="flex justify-between items-center px-6 py-4 max-w-7xl mx-auto">
+<div class="flex items-center gap-4">
+<button class="material-symbols-outlined text-blue-900 dark:text-blue-400 p-2 hover:bg-slate-100/50 dark:hover:bg-slate-800/50 transition-colors rounded-full" data-icon="menu">menu</button>
+<span class="text-xl font-black text-blue-900 dark:text-white tracking-tight">Masoem University Store</span>
+</div>
+<div class="hidden md:flex gap-8 items-center">
+<a class="text-slate-600 dark:text-slate-400 text-sm font-medium Inter hover:bg-slate-100/50 transition-colors px-2 py-1 rounded" href="#">Shop</a>
+<a class="text-slate-600 dark:text-slate-400 text-sm font-medium Inter hover:bg-slate-100/50 transition-colors px-2 py-1 rounded" href="#">Categories</a>
+<a class="text-slate-600 dark:text-slate-400 text-sm font-medium Inter hover:bg-slate-100/50 transition-colors px-2 py-1 rounded" href="#">About</a>
+</div>
+<div class="flex items-center gap-2">
+<button class="material-symbols-outlined text-blue-900 dark:text-blue-400 p-2 hover:bg-slate-100/50 transition-colors rounded-full" data-icon="search">search</button>
+<button class="material-symbols-outlined text-blue-900 dark:text-blue-400 p-2 hover:bg-slate-100/50 transition-colors rounded-full" data-icon="shopping_cart">shopping_cart</button>
+</div>
+</div>
+</header>
+<main class="pt-24 pb-20 max-w-7xl mx-auto px-6">
+<!-- Breadcrumbs -->
+<nav class="flex items-center gap-2 text-xs font-medium text-outline mb-8 uppercase tracking-widest">
+<a class="hover:text-primary transition-colors" href="#">Home</a>
+<span class="material-symbols-outlined text-[12px]">chevron_right</span>
+<a class="hover:text-primary transition-colors" href="#">Apparel</a>
+<span class="material-symbols-outlined text-[12px]">chevron_right</span>
+<span class="text-on-surface-variant">Signature Varsity Jacket</span>
+</nav>
+<!-- Product Gallery & Details Section -->
+<div class="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-20">
+<!-- Gallery Block (Asymmetric Layout) -->
+<div class="lg:col-span-7 grid grid-cols-6 gap-4">
+<div class="col-span-6 rounded-xl overflow-hidden bg-surface-container-low aspect-[4/5] relative group">
+<img alt="Varsity Jacket Main" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105" data-alt="Premium navy blue and white university varsity jacket with embroidered crest, studio lighting on a neutral minimal background" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCVRCmHX01ipiryWtS9UqBhcwzmZ0fPYHnG10BycuS1RW3EA_1oC0KMNG2mc4lNEI3BRHkei1izrC0EGmw5Uabxf1pdq8Za18Bp5V_o7ak_Qv58HerGGY_3vi1rK8w6jBuhJkV7CdNd9bB5CUTtSaw4Dj2vnhFxu21-6hcvffGKIhfP9TIxsHqPFZ0q7lA-hT_UskFzO58BCZO1i1s20dwx79alz2ukCWX96DC_ANhH5za2JY6_tMrosaDTF1x9PaBKumOyIIlLc4dJ"/>
+<div class="absolute top-4 left-4 bg-primary text-on-primary text-[10px] font-bold px-3 py-1 rounded-full tracking-tighter uppercase">Academic Collection</div>
+</div>
+<div class="col-span-2 rounded-lg overflow-hidden bg-surface-container-low aspect-square">
+<img alt="Thumbnail 1" class="w-full h-full object-cover grayscale hover:grayscale-0 transition-all cursor-pointer" data-alt="Close up of a leather sleeve detail on a varsity jacket with heavy stitching and metal buttons" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBQCpIsbyd3iYA5i9nMSldZYvWl-p5K6LlljzoLwPlTCxCI3oHgHcnWl5KHiZazTkbtD841tvuYo40E2J9sa-KbasY0Zu0Xvry73B6Zf7BPyL43-JiNRD4TU87LXss5OrLEHDfRD8ScbjQCR8iRwX66qphtab39NeZi1l9CjXfdTPh42kLKw_MzLzl9S5MIwlkRc-_v2IT9FW0nWA3sJgtgjZRIJ60o25tU9ggNApRKu4rZFUmAh4ofPOlAW523Qxggrrc0kgzXrGK_"/>
+</div>
+<div class="col-span-2 rounded-lg overflow-hidden bg-surface-container-low aspect-square">
+<img alt="Thumbnail 2" class="w-full h-full object-cover grayscale hover:grayscale-0 transition-all cursor-pointer" data-alt="Back view of a person wearing a university jacket in a campus setting with soft architectural bokeh" src="https://lh3.googleusercontent.com/aida-public/AB6AXuD6daaXMPaF2sF6a-J1dz9m6plhtiRcM5cIjS3l-6zvLGMbzA4FWe1y528z5WTv5vXnWuQWpWf_HvCzWqbC3KVonJYjWWL8r5Jx6_Sk2Aq_s1lU6E-Ne3Q7lrL9l-nfmxPgg92n3239hGIN54Obxy9bcCryI39wlbWRKHp1G-d5kgt5JzLupcDGws0zMHeeVA0byZfvGgTU8VGUuJ6LSqK7hSDPyjnXYy2eKmfIxNP4wdSLlTI9U_5Eae3zotIT-0UzB2zHrDShE_I9"/>
+</div>
+<div class="col-span-2 rounded-lg overflow-hidden bg-surface-container-low aspect-square border-2 border-primary-container p-0.5">
+<img alt="Thumbnail 3" class="w-full h-full object-cover grayscale hover:grayscale-0 transition-all cursor-pointer" data-alt="Detailed view of embroidered university crest on the chest of a navy wool garment" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBSWv63fZMnuWIaqgaDtTFNfjv4ZnTlfikqLRWnoxtKKDHfsUXHIH1DlrW8a1JFDWLf385NlZznZu9BTwGYbQqx6MwTN29rLhT7g4eodGM-ZBsjRQ3V6ngyzDzU-jKYelO-sX2WHY-RzzpZua2WFFTJ2lAnsmdcPWXGg_Pq82fTLfisoVcMvtW_NvXq0a_dKF8w_AUPVLYfCcUSa2ORvgCVbQj835mjQt8a6yQ1B36hgoUyXhuMuFQJJnnNukthre5-3LGhys1Kg7S9"/>
+</div>
+</div>
+<!-- Content Block -->
+<div class="lg:col-span-5 flex flex-col">
+<div class="mb-2">
+<span class="text-tertiary font-bold text-xs tracking-[0.2em] uppercase">Limited Edition</span>
+</div>
+<h1 class="text-4xl md:text-5xl font-extrabold text-primary tracking-tight leading-[1.1] mb-4">
+                    Signature Varsity Jacket "Masoem Elite"
+                </h1>
+<div class="flex items-center gap-4 mb-8">
+<div class="flex items-center bg-surface-container-high px-3 py-1 rounded-full">
+<span class="material-symbols-outlined text-sm text-amber-500" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="text-sm font-bold ml-1 text-on-surface">4.9</span>
+<span class="text-xs text-on-surface-variant ml-2 border-l border-outline-variant pl-2">124 Reviews</span>
+</div>
+<span class="text-xs text-green-600 font-semibold flex items-center gap-1">
+<span class="material-symbols-outlined text-sm">inventory_2</span> In Stock
+                    </span>
+</div>
+<div class="mb-10">
+<span class="text-3xl font-black text-on-surface tracking-tighter">Rp 899.000</span>
+<p class="text-on-surface-variant mt-4 leading-relaxed font-body">
+                        Elevate your academic heritage with the Masoem Elite Varsity Jacket. Crafted from premium wool blends and supple vegan leather sleeves, featuring the 2024 commemorative crest. Designed for the modern scholar.
+                    </p>
+</div>
+<!-- Product Selectors -->
+<div class="space-y-6 mb-10">
+<div>
+<label class="block text-xs font-bold text-outline mb-3 uppercase tracking-widest">Select Size</label>
+<div class="flex flex-wrap gap-2">
+<button class="w-12 h-12 rounded-xl border border-outline-variant flex items-center justify-center text-sm font-bold hover:border-primary transition-all">S</button>
+<button class="w-12 h-12 rounded-xl border-2 border-primary bg-primary-fixed-dim flex items-center justify-center text-sm font-bold">M</button>
+<button class="w-12 h-12 rounded-xl border border-outline-variant flex items-center justify-center text-sm font-bold hover:border-primary transition-all">L</button>
+<button class="w-12 h-12 rounded-xl border border-outline-variant flex items-center justify-center text-sm font-bold hover:border-primary transition-all">XL</button>
+</div>
+</div>
+<div class="flex items-center gap-6">
+<div class="flex-1">
+<label class="block text-xs font-bold text-outline mb-3 uppercase tracking-widest">Quantity</label>
+<div class="flex items-center justify-between bg-surface-container-low rounded-xl px-4 py-3">
+<button class="material-symbols-outlined text-on-surface-variant hover:text-primary">remove</button>
+<span class="font-bold text-on-surface">1</span>
+<button class="material-symbols-outlined text-on-surface-variant hover:text-primary">add</button>
+</div>
+</div>
+<div class="flex-none pt-7">
+<button class="w-14 h-14 rounded-xl border border-outline-variant flex items-center justify-center hover:bg-error-container hover:text-error hover:border-error transition-all group">
+<span class="material-symbols-outlined transition-transform group-active:scale-90" data-icon="favorite">favorite</span>
+</button>
+</div>
+</div>
+</div>
+<!-- CTA Buttons -->
+<div class="flex flex-col gap-3">
+<button class="w-full py-5 bg-primary text-on-primary rounded-xl font-bold text-lg hover:bg-primary-container transition-all active:scale-[0.98] duration-150 flex items-center justify-center gap-2">
+<span class="material-symbols-outlined">shopping_bag</span>
+                        Add to Cart
+                    </button>
+<button class="w-full py-4 border border-outline-variant text-on-surface font-bold rounded-xl hover:bg-surface-container transition-all">
+                        Find in Campus Store
+                    </button>
+</div>
+<div class="mt-8 pt-8 border-t border-outline-variant/30 grid grid-cols-2 gap-4">
+<div class="flex items-center gap-3">
+<span class="material-symbols-outlined text-secondary">local_shipping</span>
+<div class="text-[10px] font-bold text-outline leading-tight">
+                            FAST SHIPPING<br/><span class="text-on-surface">Next day campus delivery</span>
+</div>
+</div>
+<div class="flex items-center gap-3">
+<span class="material-symbols-outlined text-secondary">verified</span>
+<div class="text-[10px] font-bold text-outline leading-tight">
+                            AUTHENTIC<br/><span class="text-on-surface">Official University Merchandise</span>
+</div>
+</div>
+</div>
+</div>
+</div>
+<!-- Related Products Section -->
+<section class="mt-32">
+<div class="flex items-end justify-between mb-10">
+<div>
+<h2 class="text-3xl font-black text-primary tracking-tight">Academic Essentials</h2>
+<p class="text-on-surface-variant text-sm mt-1">Curated pairings for your collegiate wardrobe.</p>
+</div>
+<a class="text-sm font-bold text-secondary flex items-center gap-1 group" href="#">
+                    View Gallery <span class="material-symbols-outlined text-sm group-hover:translate-x-1 transition-transform">arrow_forward</span>
+</a>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-4 gap-6">
+<!-- Product Card 1 -->
+<div class="group cursor-pointer">
+<div class="bg-surface-container-lowest rounded-xl overflow-hidden aspect-[3/4] mb-4 transition-all group-hover:shadow-[0_12px_32px_rgba(26,28,28,0.06)] relative">
+<img alt="Related 1" class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110" data-alt="Classic grey university hoodie with minimal front typography on a hanger" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAH1ZdC6NNfs15ynUcVAOsTHqn8YLMfSs_dgjlxwfIRvExZtLAK96GymswIK4C4HMLDJGrZdWM6Tj1YGnJhMO1Xbrbrm5HHoEvrwfpyQnnKgS5pzFn7He7PT0bxo9-bX-OuVH6IpK2U9fHwct3mScV_Edi39iDVyjwh-9wJ4TR7bO913Uu3EDDne8S_z5oLR6q513PAf3HM-Ie2hjzLYkTNFUFMq2zhFNL7uW6LADIB3VO_LB6BG7y3Q474h6j5CgcihEiSq3GL363Z"/>
+</div>
+<h3 class="font-bold text-on-surface group-hover:text-primary transition-colors">Core Logo Hoodie</h3>
+<div class="flex justify-between items-center mt-1">
+<span class="text-sm text-on-surface-variant">Rp 349.000</span>
+<span class="text-[10px] font-bold text-outline-variant uppercase">New Arrival</span>
+</div>
+</div>
+<!-- Product Card 2 -->
+<div class="group cursor-pointer">
+<div class="bg-surface-container-lowest rounded-xl overflow-hidden aspect-[3/4] mb-4 transition-all group-hover:shadow-[0_12px_32px_rgba(26,28,28,0.06)] relative">
+<img alt="Related 2" class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110" data-alt="Black heavyweight cotton t-shirt with a discreet university logo on the chest" src="https://lh3.googleusercontent.com/aida-public/AB6AXuD_cHaWqZUdzXOXpyeGRUfwXjz-4nJk4_KAA3GvuWZdOohjharu9KrROwRs-OcwrF5D75Y25bbieYo-EwsjJxvrQZwoQMotV8z1hzet_PyXqffrhFewojSrPW92UMm3KDEvCEuQiYfQtZu2IGmf8FLJpbaLYsjQGCu6d6TdeU3zmCrIfja0-bslhD0z31FJgrSOYIpoqt3Z4JSojhgIycqtrR9eqR_yKBcY1ov_Vmzx5ZVCZrIAE3FdWxH0Ex9gYuchofGctv973DBZ"/>
+</div>
+<h3 class="font-bold text-on-surface group-hover:text-primary transition-colors">Lecture Series Tee</h3>
+<div class="flex justify-between items-center mt-1">
+<span class="text-sm text-on-surface-variant">Rp 189.000</span>
+<span class="text-[10px] font-bold text-outline-variant uppercase">Best Seller</span>
+</div>
+</div>
+<!-- Product Card 3 -->
+<div class="group cursor-pointer">
+<div class="bg-surface-container-lowest rounded-xl overflow-hidden aspect-[3/4] mb-4 transition-all group-hover:shadow-[0_12px_32px_rgba(26,28,28,0.06)] relative">
+<img alt="Related 3" class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110" data-alt="Tan canvas tote bag with a minimalist university print and heavy webbed handles" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBgLkiHBbRAGir-zhcAolXimYnXSoGIKrDUvanWIAMVGq0fje26oTXxckc1RPvetJGBu0SB0F5FszwlGpbYmkSgmOTxEV4nG2qCVlGETjPSqD2aUYN9OXAtca6slgiG5-U4HhKYJ3_7COEy-x35hXRNWEKKvXuyGkaimB3bCmvZ_GrKTuUIS9aze6ih3al_9Kp9GGiI3n24PKnV9uMA-0VHaUd3OoC1WVUOu8X39wff6v6cZ_f9NOPq3ojHkHN4ltfEkM0jHeUsv-l3"/>
+</div>
+<h3 class="font-bold text-on-surface group-hover:text-primary transition-colors">Canvas Library Tote</h3>
+<div class="flex justify-between items-center mt-1">
+<span class="text-sm text-on-surface-variant">Rp 99.000</span>
+<span class="text-[10px] font-bold text-outline-variant uppercase">Essential</span>
+</div>
+</div>
+<!-- Product Card 4 -->
+<div class="group cursor-pointer">
+<div class="bg-surface-container-lowest rounded-xl overflow-hidden aspect-[3/4] mb-4 transition-all group-hover:shadow-[0_12px_32px_rgba(26,28,28,0.06)] relative">
+<img alt="Related 4" class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110" data-alt="Navy blue embroidered baseball cap with 'M' logo on the front panel" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAFRjeiPUJhwyBEWGrvBP6u1DQaoIrsSrQke7UhRImNskLwkpnG8ogmoVZFdHOQyu80_6ALP6loJeFU49lPeeqE3ESHLEs0G3BOaqtmG53u5xL7KlGxp5YnQS7w4uljLU-8x-9hZd440QrBTXqSzJWHkzf9uC0VKr3R94vSxBdsw8Me-fezoBuIvmEDV0FlOihxV6dZxm3KYvujGA__RBTOogpK68eOJ2wDABnbgHmY66GvCqe0IOFldXrz13IYBEi-N7n9ifR5L5ff"/>
+</div>
+<h3 class="font-bold text-on-surface group-hover:text-primary transition-colors">Legacy Campus Cap</h3>
+<div class="flex justify-between items-center mt-1">
+<span class="text-sm text-on-surface-variant">Rp 149.000</span>
+<span class="text-[10px] font-bold text-outline-variant uppercase">Unisex</span>
+</div>
+</div>
+</div>
+</section>
+<!-- Product Reviews Section -->
+<section class="mt-32 bg-surface-container-low rounded-3xl p-8 md:p-12">
+<div class="grid grid-cols-1 lg:grid-cols-12 gap-12">
+<div class="lg:col-span-4">
+<h2 class="text-3xl font-black text-primary tracking-tight mb-6">Alumni &amp; Student Voices</h2>
+<div class="flex items-center gap-4 mb-4">
+<span class="text-6xl font-black text-on-surface">4.9</span>
+<div>
+<div class="flex text-amber-500">
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">star</span>
+</div>
+<span class="text-xs font-bold text-on-surface-variant uppercase tracking-widest mt-1 block">Based on 124 reviews</span>
+</div>
+</div>
+<div class="space-y-3">
+<div class="flex items-center gap-3">
+<span class="text-xs font-bold w-4">5</span>
+<div class="flex-1 h-2 bg-surface rounded-full overflow-hidden">
+<div class="h-full bg-primary w-[92%]"></div>
+</div>
+</div>
+<div class="flex items-center gap-3">
+<span class="text-xs font-bold w-4">4</span>
+<div class="flex-1 h-2 bg-surface rounded-full overflow-hidden">
+<div class="h-full bg-primary w-[6%]"></div>
+</div>
+</div>
+<div class="flex items-center gap-3">
+<span class="text-xs font-bold w-4">3</span>
+<div class="flex-1 h-2 bg-surface rounded-full overflow-hidden">
+<div class="h-full bg-primary w-[2%]"></div>
+</div>
+</div>
+</div>
+<button class="mt-8 w-full py-4 border border-primary text-primary font-bold rounded-xl hover:bg-primary-container hover:text-on-primary transition-all">Write a Review</button>
+</div>
+<div class="lg:col-span-8 space-y-10">
+<!-- Review Item 1 -->
+<div class="bg-surface-container-lowest p-6 rounded-2xl shadow-sm">
+<div class="flex justify-between mb-4">
+<div class="flex items-center gap-3">
+<div class="w-10 h-10 rounded-full bg-primary-fixed flex items-center justify-center text-primary font-bold text-xs">AS</div>
+<div>
+<h4 class="font-bold text-sm text-on-surface">Ari Setiawan</h4>
+<span class="text-[10px] text-on-surface-variant font-medium">Faculty of Economics • Verified Buyer</span>
+</div>
+</div>
+<span class="text-[10px] font-bold text-outline">Oct 24, 2024</span>
+</div>
+<div class="flex text-amber-500 mb-2">
+<span class="material-symbols-outlined text-sm" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined text-sm" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined text-sm" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined text-sm" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined text-sm" style="font-variation-settings: 'FILL' 1;">star</span>
+</div>
+<p class="text-sm text-on-surface-variant leading-relaxed">
+                            The quality is actually much better than I expected. The wool is heavy and the embroidery is sharp. Fits perfectly according to the size chart. Proud to wear this on graduation day!
+                        </p>
+</div>
+<!-- Review Item 2 -->
+<div class="bg-surface-container-lowest p-6 rounded-2xl shadow-sm">
+<div class="flex justify-between mb-4">
+<div class="flex items-center gap-3">
+<div class="w-10 h-10 rounded-full bg-secondary-fixed flex items-center justify-center text-secondary font-bold text-xs">LN</div>
+<div>
+<h4 class="font-bold text-sm text-on-surface">Lia Nuraini</h4>
+<span class="text-[10px] text-on-surface-variant font-medium">Alumni Class of 2019 • Verified Buyer</span>
+</div>
+</div>
+<span class="text-[10px] font-bold text-outline">Sep 15, 2024</span>
+</div>
+<div class="flex text-amber-500 mb-2">
+<span class="material-symbols-outlined text-sm" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined text-sm" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined text-sm" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined text-sm" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined text-sm" style="font-variation-settings: 'FILL' 1;">star_half</span>
+</div>
+<p class="text-sm text-on-surface-variant leading-relaxed">
+                            A great way to keep the university spirit alive. The leather sleeves feel very high-end. Delivery was fast to Jakarta. Only wish there were more color options!
+                        </p>
+</div>
+</div>
+</div>
+</section>
+</main>
+<!-- Footer -->
+<footer class="w-full border-t border-slate-200 dark:border-slate-800 bg-slate-50 dark:bg-slate-950">
+<div class="grid grid-cols-1 md:grid-cols-4 gap-12 px-8 py-16 max-w-7xl mx-auto">
+<div class="col-span-1 md:col-span-1">
+<span class="text-2xl font-black text-blue-900 dark:text-white block mb-6">Masoem University</span>
+<p class="text-sm font-inter text-slate-500 dark:text-slate-400 leading-relaxed">
+                    The official destination for university merchandise, apparel, and academic essentials. Reflecting the excellence of Masoem University.
+                </p>
+</div>
+<div>
+<h4 class="text-lg font-manrope font-bold text-blue-900 dark:text-blue-400 mb-6">Quick Links</h4>
+<ul class="space-y-4">
+<li><a class="text-slate-500 dark:text-slate-400 text-sm hover:text-blue-600 transition-all" href="#">Home</a></li>
+<li><a class="text-slate-500 dark:text-slate-400 text-sm hover:text-blue-600 transition-all" href="#">Products</a></li>
+<li><a class="text-slate-500 dark:text-slate-400 text-sm hover:text-blue-600 transition-all text-blue-700 dark:text-blue-300 underline underline-offset-8" href="#">Categories</a></li>
+<li><a class="text-slate-500 dark:text-slate-400 text-sm hover:text-blue-600 transition-all" href="#">About</a></li>
+</ul>
+</div>
+<div>
+<h4 class="text-lg font-manrope font-bold text-blue-900 dark:text-blue-400 mb-6">Help &amp; Support</h4>
+<ul class="space-y-4">
+<li><a class="text-slate-500 dark:text-slate-400 text-sm hover:text-blue-600 transition-all" href="#">Customer Service</a></li>
+<li><a class="text-slate-500 dark:text-slate-400 text-sm hover:text-blue-600 transition-all" href="#">Shipping Policy</a></li>
+<li><a class="text-slate-500 dark:text-slate-400 text-sm hover:text-blue-600 transition-all" href="#">Returns</a></li>
+<li><a class="text-slate-500 dark:text-slate-400 text-sm hover:text-blue-600 transition-all" href="#">FAQ</a></li>
+</ul>
+</div>
+<div>
+<h4 class="text-lg font-manrope font-bold text-blue-900 dark:text-blue-400 mb-6">Newsletter</h4>
+<p class="text-xs text-slate-500 mb-4">Stay updated on new collections and exclusive discounts.</p>
+<div class="flex gap-2">
+<input class="flex-1 bg-white border-none rounded-lg text-sm px-4 focus:ring-2 focus:ring-primary" placeholder="Email" type="email"/>
+<button class="p-3 bg-primary text-on-primary rounded-lg">
+<span class="material-symbols-outlined text-sm">send</span>
+</button>
+</div>
+</div>
+</div>
+<div class="max-w-7xl mx-auto px-8 py-6 border-t border-slate-200/30 text-center">
+<span class="text-xs text-slate-400">© 2024 Masoem University. All rights reserved.</span>
+</div>
+</footer>
+<!-- BottomNavBar (Mobile Only) -->
+<nav class="fixed bottom-0 left-0 w-full z-50 flex justify-around items-center px-4 py-3 md:hidden bg-white/90 dark:bg-slate-900/90 backdrop-blur-lg border-t border-slate-100 dark:border-slate-800 shadow-[0_-8px_24px_rgba(0,0,0,0.05)] rounded-t-2xl">
+<a class="flex flex-col items-center justify-center bg-blue-100 dark:bg-blue-900/50 text-blue-900 dark:text-blue-100 rounded-2xl px-4 py-1" href="#">
+<span class="material-symbols-outlined text-[20px]" data-icon="storefront">storefront</span>
+<span class="text-[10px] font-bold font-manrope">Shop</span>
+</a>
+<a class="flex flex-col items-center justify-center text-slate-400 dark:text-slate-500" href="#">
+<span class="material-symbols-outlined text-[20px]" data-icon="search">search</span>
+<span class="text-[10px] font-bold font-manrope">Search</span>
+</a>
+<a class="flex flex-col items-center justify-center text-slate-400 dark:text-slate-500" href="#">
+<span class="material-symbols-outlined text-[20px]" data-icon="receipt_long">receipt_long</span>
+<span class="text-[10px] font-bold font-manrope">Orders</span>
+</a>
+<a class="flex flex-col items-center justify-center text-slate-400 dark:text-slate-500" href="#">
+<span class="material-symbols-outlined text-[20px]" data-icon="person">person</span>
+<span class="text-[10px] font-bold font-manrope">Profile</span>
+</a>
+</nav>
+</body></html>

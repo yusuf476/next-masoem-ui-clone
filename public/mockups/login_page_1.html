@@ -1,0 +1,224 @@
+<!DOCTYPE html>
+
+<html class="light" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Login | Masoem University Store</title>
+<link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;600;700;800&amp;family=Inter:wght@400;500;600&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<script id="tailwind-config">
+        tailwind.config = {
+          darkMode: "class",
+          theme: {
+            extend: {
+              "colors": {
+                      "on-primary": "#ffffff",
+                      "surface-tint": "#4059aa",
+                      "tertiary-container": "#6e2c00",
+                      "outline-variant": "#c5c5d3",
+                      "surface-container": "#eeeeee",
+                      "surface-bright": "#f9f9f9",
+                      "primary-container": "#1e3a8a",
+                      "on-tertiary-container": "#f39461",
+                      "on-primary-container": "#90a8ff",
+                      "surface-container-highest": "#e2e2e2",
+                      "on-error": "#ffffff",
+                      "secondary-fixed-dim": "#adc6ff",
+                      "inverse-on-surface": "#f1f1f1",
+                      "on-background": "#1a1c1c",
+                      "inverse-surface": "#2f3131",
+                      "primary-fixed-dim": "#b6c4ff",
+                      "on-error-container": "#93000a",
+                      "secondary": "#0058be",
+                      "tertiary-fixed": "#ffdbcb",
+                      "surface-container-lowest": "#ffffff",
+                      "on-surface-variant": "#444651",
+                      "secondary-fixed": "#d8e2ff",
+                      "surface": "#f9f9f9",
+                      "secondary-container": "#2170e4",
+                      "on-secondary-container": "#fefcff",
+                      "inverse-primary": "#b6c4ff",
+                      "on-secondary-fixed": "#001a42",
+                      "background": "#f9f9f9",
+                      "primary": "#00236f",
+                      "surface-container-low": "#f3f3f3",
+                      "primary-fixed": "#dce1ff",
+                      "surface-dim": "#dadada",
+                      "on-tertiary": "#ffffff",
+                      "error-container": "#ffdad6",
+                      "on-secondary-fixed-variant": "#004395",
+                      "outline": "#757682",
+                      "error": "#ba1a1a",
+                      "on-primary-fixed-variant": "#264191",
+                      "on-tertiary-fixed-variant": "#773205",
+                      "on-secondary": "#ffffff",
+                      "surface-variant": "#e2e2e2",
+                      "on-tertiary-fixed": "#341100",
+                      "surface-container-high": "#e8e8e8",
+                      "on-surface": "#1a1c1c",
+                      "tertiary": "#4b1c00",
+                      "on-primary-fixed": "#00164e",
+                      "tertiary-fixed-dim": "#ffb691"
+              },
+              "borderRadius": {
+                      "DEFAULT": "0.25rem",
+                      "lg": "0.5rem",
+                      "xl": "0.75rem",
+                      "full": "9999px"
+              },
+              "fontFamily": {
+                      "headline": ["Manrope"],
+                      "body": ["Inter"],
+                      "label": ["Inter"]
+              }
+            },
+          },
+        }
+    </script>
+<style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+            display: inline-block;
+            line-height: 1;
+            text-transform: none;
+            letter-spacing: normal;
+            word-wrap: normal;
+            white-space: nowrap;
+            direction: ltr;
+        }
+        body { font-family: 'Inter', sans-serif; }
+        h1, h2, h3 { font-family: 'Manrope', sans-serif; }
+    </style>
+<style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+  </head>
+<body class="bg-surface text-on-surface min-h-screen flex flex-col">
+<!-- TopAppBar as per JSON Guidance (Suppressed navigation items for linear journey) -->
+<header class="bg-white/80 backdrop-blur-xl fixed top-0 w-full z-50">
+<div class="flex justify-between items-center px-6 py-4 max-w-7xl mx-auto">
+<div class="flex items-center gap-4">
+<span class="text-xl font-black text-blue-900 tracking-tight">Masoem University Store</span>
+</div>
+<div class="flex items-center gap-4">
+<button class="p-2 text-slate-600 hover:bg-slate-100/50 transition-colors rounded-full">
+<span class="material-symbols-outlined">help_outline</span>
+</button>
+</div>
+</div>
+</header>
+<main class="flex-grow flex items-center justify-center px-4 pt-24 pb-12">
+<!-- Asymmetric Background Decorative Elements -->
+<div class="fixed inset-0 pointer-events-none overflow-hidden">
+<div class="absolute -top-[10%] -left-[10%] w-[40%] h-[40%] bg-primary-fixed opacity-20 blur-[120px] rounded-full"></div>
+<div class="absolute bottom-[5%] right-[-5%] w-[30%] h-[30%] bg-secondary-fixed opacity-30 blur-[100px] rounded-full"></div>
+</div>
+<!-- Authentication Card -->
+<div class="relative w-full max-w-md">
+<div class="bg-surface-container-lowest p-10 rounded-[2rem] shadow-[0_12px_32px_rgba(26,28,28,0.06)] border border-outline-variant/15">
+<!-- Branding Header -->
+<div class="text-center mb-10">
+<div class="inline-flex items-center justify-center w-16 h-16 bg-primary-container rounded-2xl mb-6 shadow-lg shadow-primary/10">
+<span class="material-symbols-outlined text-white text-3xl" style="font-variation-settings: 'FILL' 1;">school</span>
+</div>
+<h1 class="text-3xl font-extrabold text-primary tracking-tight mb-2">Welcome Back</h1>
+<p class="text-on-surface-variant font-medium">Academic Atelier Login</p>
+</div>
+<form class="space-y-6">
+<!-- Email Input -->
+<div class="space-y-2">
+<label class="block text-sm font-semibold text-on-surface-variant px-1" for="email">Email Address</label>
+<div class="relative group">
+<span class="material-symbols-outlined absolute left-4 top-1/2 -translate-y-1/2 text-outline group-focus-within:text-primary transition-colors">mail</span>
+<input class="w-full pl-12 pr-4 py-4 bg-surface-container-high border-none rounded-xl focus:ring-2 focus:ring-primary-fixed focus:bg-surface-container-lowest transition-all placeholder:text-outline" id="email" name="email" placeholder="student@masoem.edu" required="" type="email"/>
+</div>
+</div>
+<!-- Password Input -->
+<div class="space-y-2">
+<label class="block text-sm font-semibold text-on-surface-variant px-1" for="password">Password</label>
+<div class="relative group">
+<span class="material-symbols-outlined absolute left-4 top-1/2 -translate-y-1/2 text-outline group-focus-within:text-primary transition-colors">lock</span>
+<input class="w-full pl-12 pr-4 py-4 bg-surface-container-high border-none rounded-xl focus:ring-2 focus:ring-primary-fixed focus:bg-surface-container-lowest transition-all placeholder:text-outline" id="password" name="password" placeholder="••••••••" required="" type="password"/>
+<button class="absolute right-4 top-1/2 -translate-y-1/2 text-outline hover:text-on-surface" type="button">
+<span class="material-symbols-outlined text-xl">visibility</span>
+</button>
+</div>
+</div>
+<!-- Actions Row -->
+<div class="flex items-center justify-between px-1">
+<label class="flex items-center gap-2 cursor-pointer group">
+<div class="relative">
+<input class="peer sr-only" type="checkbox"/>
+<div class="w-5 h-5 border-2 border-outline rounded flex items-center justify-center peer-checked:bg-primary peer-checked:border-primary transition-all">
+<span class="material-symbols-outlined text-white text-sm scale-0 peer-checked:scale-100 transition-transform">check</span>
+</div>
+</div>
+<span class="text-sm font-medium text-on-surface-variant group-hover:text-on-surface transition-colors">Remember me</span>
+</label>
+<a class="text-sm font-bold text-secondary hover:text-primary transition-colors" href="#">Forgot password?</a>
+</div>
+<!-- Login Button -->
+<button class="w-full py-4 bg-primary text-on-primary font-bold text-lg rounded-xl shadow-xl shadow-primary/20 hover:bg-primary-container active:scale-[0.98] transition-all flex items-center justify-center gap-2" type="submit">
+                        Sign In
+                        <span class="material-symbols-outlined text-xl">arrow_forward</span>
+</button>
+</form>
+<!-- Footer Link -->
+<div class="mt-10 pt-8 border-t border-outline-variant/15 text-center">
+<p class="text-on-surface-variant font-medium">
+                        Don't have an account? 
+                        <a class="text-secondary font-bold hover:underline underline-offset-4 ml-1" href="#">Register Page</a>
+</p>
+</div>
+</div>
+<!-- Subtle Product Teaser (Asymmetric Atelier Element) -->
+<div class="absolute -right-24 top-1/2 -translate-y-1/2 hidden lg:block w-48 h-64 bg-surface-container-low rounded-2xl rotate-6 -z-10 overflow-hidden shadow-lg border border-white/50">
+<img class="w-full h-full object-cover opacity-60 grayscale hover:grayscale-0 transition-all duration-700" data-alt="a curated stack of premium academic textbooks on a clean minimalist desk with soft morning light from a nearby window" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCnQ3F7DKMJSGgG-xMbY07uUwPtU1HwditV3BQIgwILOwAchQXPPbuwBoZTJ8HW50Bpo2k_vyD5HnsSXIke65d9RiOmdD0u_Ja-0EQKx1dG9TkY0c6gdsZGo1Y0ldqTddbd5aOUwvjbJM_bQvR32R0o_ZcQQdu42VBqWhAVI-GfDNiayYMeTbeD_doIhAHVrTAal4anzQ8p9em98NsS_Jn9QlWm68CrbNwiwosAbVXvGNJWpSSa_MN1G1GXijumMw-i3ALXz1IIRU56"/>
+</div>
+</div>
+</main>
+<!-- Footer as per JSON Guidance -->
+<footer class="w-full border-t border-slate-200 bg-slate-50 mt-auto">
+<div class="grid grid-cols-1 md:grid-cols-4 gap-12 px-8 py-16 max-w-7xl mx-auto">
+<div class="md:col-span-1">
+<span class="text-2xl font-black text-blue-900 tracking-tight">Masoem University Store</span>
+<p class="mt-4 text-sm font-inter text-slate-500 leading-relaxed">
+                    Official marketplace for all your academic and lifestyle needs at Masoem University.
+                </p>
+</div>
+<div>
+<h4 class="text-lg font-manrope font-bold text-blue-900 mb-6">Quick Links</h4>
+<ul class="space-y-4">
+<li><a class="text-sm font-inter text-slate-500 hover:text-blue-600 transition-all" href="#">Home</a></li>
+<li><a class="text-sm font-inter text-slate-500 hover:text-blue-600 transition-all" href="#">Products</a></li>
+<li><a class="text-sm font-inter text-slate-500 hover:text-blue-600 transition-all" href="#">Categories</a></li>
+</ul>
+</div>
+<div>
+<h4 class="text-lg font-manrope font-bold text-blue-900 mb-6">Support</h4>
+<ul class="space-y-4">
+<li><a class="text-sm font-inter text-slate-500 hover:text-blue-600 transition-all" href="#">About</a></li>
+<li><a class="text-sm font-inter text-slate-500 hover:text-blue-600 transition-all" href="#">Customer Service</a></li>
+</ul>
+</div>
+<div>
+<h4 class="text-lg font-manrope font-bold text-blue-900 mb-6">Connect</h4>
+<div class="flex gap-4">
+<button class="w-10 h-10 rounded-full bg-slate-200 flex items-center justify-center text-blue-900 hover:bg-blue-900 hover:text-white transition-all">
+<span class="material-symbols-outlined text-sm">share</span>
+</button>
+<button class="w-10 h-10 rounded-full bg-slate-200 flex items-center justify-center text-blue-900 hover:bg-blue-900 hover:text-white transition-all">
+<span class="material-symbols-outlined text-sm">public</span>
+</button>
+</div>
+</div>
+</div>
+<div class="max-w-7xl mx-auto px-8 py-6 border-t border-slate-200 text-center text-sm text-slate-500">
+            © 2024 Masoem University. All rights reserved.
+        </div>
+</footer>
+</body></html>

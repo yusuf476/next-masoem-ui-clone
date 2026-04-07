@@ -1,0 +1,300 @@
+<!DOCTYPE html>
+
+<html class="light" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;600;700;800&amp;family=Be+Vietnam+Pro:wght@400;500;600&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    "colors": {
+                        "on-secondary": "#ffffff",
+                        "surface-bright": "#f8f9fa",
+                        "on-primary-container": "#5c2800",
+                        "inverse-primary": "#ffb68b",
+                        "on-secondary-container": "#1d3989",
+                        "surface-container-lowest": "#ffffff",
+                        "secondary-fixed": "#dce1ff",
+                        "error-container": "#ffdad6",
+                        "on-primary-fixed": "#321200",
+                        "tertiary-fixed": "#ffdf9b",
+                        "primary": "#994700",
+                        "surface-variant": "#e1e3e4",
+                        "primary-container": "#ff7a00",
+                        "on-error": "#ffffff",
+                        "on-surface": "#191c1d",
+                        "on-background": "#191c1d",
+                        "outline-variant": "#e0c0af",
+                        "surface-dim": "#d9dadb",
+                        "surface-container-low": "#f3f4f5",
+                        "inverse-on-surface": "#f0f1f2",
+                        "on-secondary-fixed": "#00164e",
+                        "on-secondary-fixed-variant": "#264191",
+                        "tertiary": "#785a00",
+                        "on-primary": "#ffffff",
+                        "on-tertiary-container": "#473400",
+                        "on-tertiary-fixed": "#251a00",
+                        "background": "#f8f9fa",
+                        "primary-fixed": "#ffdbc8",
+                        "on-error-container": "#93000a",
+                        "outline": "#8c7263",
+                        "secondary-fixed-dim": "#b6c4ff",
+                        "surface-container-high": "#e7e8e9",
+                        "tertiary-container": "#c49b35",
+                        "secondary-container": "#8fa7fe",
+                        "on-primary-fixed-variant": "#753400",
+                        "primary-fixed-dim": "#ffb68b",
+                        "tertiary-fixed-dim": "#edc157",
+                        "surface-tint": "#994700",
+                        "surface-container-highest": "#e1e3e4",
+                        "surface": "#f8f9fa",
+                        "inverse-surface": "#2e3132",
+                        "surface-container": "#edeeef",
+                        "secondary": "#4059aa",
+                        "error": "#ba1a1a",
+                        "on-surface-variant": "#584235",
+                        "on-tertiary-fixed-variant": "#5b4300",
+                        "on-tertiary": "#ffffff"
+                    },
+                    "borderRadius": {
+                        "DEFAULT": "1rem",
+                        "lg": "2rem",
+                        "xl": "3rem",
+                        "full": "9999px"
+                    },
+                    "fontFamily": {
+                        "headline": ["Plus Jakarta Sans"],
+                        "body": ["Be Vietnam Pro"],
+                        "label": ["Be Vietnam Pro"]
+                    }
+                },
+            }
+        }
+    </script>
+<style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+        .hide-scrollbar::-webkit-scrollbar { display: none; }
+        .hide-scrollbar { -ms-overflow-style: none; scrollbar-width: none; }
+    </style>
+<style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+  </head>
+<body class="bg-surface font-body text-on-surface antialiased">
+<!-- TopAppBar -->
+<header class="fixed top-0 w-full z-50 bg-white/70 backdrop-blur-md shadow-sm flex justify-between items-center px-6 h-16 w-full">
+<div class="flex items-center gap-4">
+<button class="text-orange-600 hover:bg-slate-100 transition-colors p-2 rounded-full active:scale-90 duration-200">
+<span class="material-symbols-outlined">menu</span>
+</button>
+<h1 class="font-['Plus_Jakarta_Sans'] font-bold tracking-tight text-lg text-slate-900">Masoem University Food Market</h1>
+</div>
+<div class="flex items-center gap-2">
+<button class="text-orange-600 hover:bg-slate-100 transition-colors p-2 rounded-full active:scale-90 duration-200">
+<span class="material-symbols-outlined">shopping_cart</span>
+</button>
+</div>
+</header>
+<main class="pt-20 pb-32 px-4 md:px-8 max-w-7xl mx-auto">
+<!-- Hero Section: Asymmetric Gallery & Product Info -->
+<div class="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-12">
+<!-- Gallery: Bento Grid Style -->
+<div class="lg:col-span-7 grid grid-cols-4 grid-rows-2 gap-4 h-[400px] md:h-[600px]">
+<div class="col-span-4 row-span-1 md:col-span-3 md:row-span-2 overflow-hidden rounded-xl bg-surface-container-low">
+<img alt="Gourmet Salad Bowl" class="w-full h-full object-cover" data-alt="Close-up of a premium artisan salad bowl with roasted chicken, avocado, and fresh greens under bright natural morning light" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDvBoUOMTfNHmtFYOSSZOT57Lv2cd7AV8FEGUh5SDkbSSlq6ASHJPmWdf_cSRbUFhER8jX_Glut66fy95WgrUWLdR8lDWaLpuTxJbF1S3UXaMOoAbpz37P4ZLsUAlnW14G2YAjwOp37_ajcUI8ouw9GyTZk-r3Sl9QffgO1vYRxmxP9XyLGEXGKtCbe5oiQlQGOBbHzo0y9lcx_jG_g-SwMhcrZ3iqEGG11CQ9RWZXqSMgSp4qN8jM4aNdus-8SphRy7A88Dq7CnsVK"/>
+</div>
+<div class="col-span-2 row-span-1 md:col-span-1 md:row-span-1 overflow-hidden rounded-xl bg-surface-container-low">
+<img alt="Salad detail" class="w-full h-full object-cover" data-alt="Top down view of fresh organic ingredients including cherry tomatoes and balsamic glaze on a textured ceramic plate" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBnvOFcfOrRd-n4pchE2pAspIWu6ZHlm07bXHkzD9IvlUqf_0L2LRg0uyCDbJyLeJvEX4-JFFMIPgJodPg_OJ3Ty8DK-OPFXTSaDAIl6-ysZ8zibfjWIGCPHgZcbuCiQjmUoE6ZPAMuLZi36ez6ZD78tiQw8jyrFuLozb4ghfBE3TSk0bZfaVIkgVeQKI7Cth0HUKf8Xs3CZA1DbWZt3QkzuLYYYxO2Zml-ZrZQmOdZHrAmuQWh2Giaaieh8cziJD962Phmlx_I2_hK"/>
+</div>
+<div class="col-span-2 row-span-1 md:col-span-1 md:row-span-1 overflow-hidden rounded-xl bg-surface-container-low">
+<img alt="Salad assembly" class="w-full h-full object-cover" data-alt="Artistic side view of a healthy meal prep with vibrant colors and soft background blur in a bright kitchen" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAUspR8YuitvObf8xnDghXSLZDITSEH70e3jqUm-cUP7nkV8xcgATZ83MABWYmevjgU5WqbfkLpD50Ym6OyuMYEtiOgd_5W_Hwe60jS7QrZJ76ENpzTHk8-ybCd9HrCnGmMGhW9wezia_sUIrznkbI9n6KvJS4UikfXiYDxjbVdgnQNCGWcF9rJUDCvdB2tgsp6UYWpiE48mRwj8LeyqryDK7vg3Lr0l-VAJ3Qgpv2-BBtrtVn9gOA64GlQUL-Xbc3cIwFHwav39qSS"/>
+</div>
+</div>
+<!-- Product Info -->
+<div class="lg:col-span-5 flex flex-col justify-center">
+<nav class="flex gap-2 mb-6 text-sm font-medium text-on-surface-variant">
+<span>Menu</span>
+<span>/</span>
+<span class="text-primary">Healthy Bowls</span>
+</nav>
+<h2 class="font-headline text-4xl md:text-5xl font-extrabold tracking-tight text-on-surface mb-2">Signature Teriyaki Salmon Bowl</h2>
+<div class="flex items-center gap-4 mb-6">
+<div class="flex items-center bg-tertiary-fixed text-on-tertiary-fixed px-3 py-1 rounded-full text-sm font-bold">
+<span class="material-symbols-outlined text-sm mr-1" style="font-variation-settings: 'FILL' 1;">star</span>
+                        4.9
+                    </div>
+<span class="text-on-surface-variant font-medium">(128 Reviews)</span>
+<span class="w-1 h-1 bg-outline-variant rounded-full"></span>
+<span class="text-secondary font-bold">University Choice</span>
+</div>
+<div class="text-3xl font-black text-on-surface mb-8">
+                    Rp 45.000 <span class="text-lg font-normal text-on-surface-variant">/ portion</span>
+</div>
+<p class="text-lg text-on-surface-variant leading-relaxed mb-8">
+                    An academic fuel favorite. Freshly grilled Atlantic salmon glazed with our house-made low-sodium teriyaki sauce, served on a bed of organic quinoa and steamed kale.
+                </p>
+<!-- Ingredients -->
+<div class="mb-10">
+<h3 class="font-headline text-sm uppercase tracking-widest font-bold text-outline mb-4">Core Ingredients</h3>
+<div class="flex flex-wrap gap-2">
+<span class="px-4 py-2 bg-surface-container-high rounded-full text-sm font-medium">Atlantic Salmon</span>
+<span class="px-4 py-2 bg-surface-container-high rounded-full text-sm font-medium">Organic Quinoa</span>
+<span class="px-4 py-2 bg-surface-container-high rounded-full text-sm font-medium">Steamed Kale</span>
+<span class="px-4 py-2 bg-surface-container-high rounded-full text-sm font-medium">Avocado</span>
+<span class="px-4 py-2 bg-surface-container-high rounded-full text-sm font-medium">Sesame Seeds</span>
+</div>
+</div>
+<!-- Actions -->
+<div class="flex flex-col sm:flex-row gap-4">
+<button class="flex-1 bg-gradient-to-br from-primary to-primary-container text-on-primary font-bold py-4 px-8 rounded-full shadow-lg shadow-primary/20 active:scale-95 transition-transform flex items-center justify-center gap-2">
+<span class="material-symbols-outlined">add_shopping_cart</span>
+                        Add to Cart
+                    </button>
+<button class="px-8 py-4 bg-surface-container-high text-on-surface font-bold rounded-full active:scale-95 transition-transform flex items-center justify-center gap-2">
+<span class="material-symbols-outlined">favorite</span>
+                        Wishlist
+                    </button>
+</div>
+</div>
+</div>
+<!-- Related Foods Section -->
+<section class="mt-24">
+<div class="flex items-end justify-between mb-10">
+<div>
+<h3 class="font-headline text-3xl font-extrabold text-on-surface">Curated Pairings</h3>
+<p class="text-on-surface-variant mt-2">Selected by campus nutritionists for a balanced meal.</p>
+</div>
+<button class="text-primary font-bold flex items-center gap-1 hover:underline">
+                    Explore All <span class="material-symbols-outlined text-sm">arrow_forward</span>
+</button>
+</div>
+<!-- Related Foods Grid -->
+<div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
+<!-- Card 1 -->
+<div class="group bg-surface-container-lowest rounded-lg p-4 transition-all hover:shadow-xl hover:shadow-on-surface/5 hover:scale-[1.02]">
+<div class="relative aspect-square overflow-hidden rounded-lg mb-4 bg-surface-container-low">
+<img alt="Green smoothie" class="w-full h-full object-cover" data-alt="Vibrant green smoothie in a glass with mint garnish on a clean white surface with soft shadows" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBu5UQcdQIf-PNEjO-r8ALn8Jb4XYeGY_mPH8gyiwU1TuY5Lsxpnqlsec5siqh0rd5W3nJ1hmRJepKskrULb4n3SrBklNcC3iyVDpJ40i69Ny6mFUoy4so_g9eBuDnXyfN3l5FmO9d3c7NBILrRpbpM0QcjE-nbN6Wid9-CZg_A575WIf7E8lwGWOzyR4xiK8T_wfp9RqqVgNlCJX32Y_Rv93vo8IRbkADUcUhkwK8_wwlWoc1etFo1mW09ebgj4hsFQXvVlUC-dcuq"/>
+<button class="absolute top-3 right-3 p-2 bg-white/80 backdrop-blur-md rounded-full text-on-surface shadow-sm active:scale-90 transition-transform">
+<span class="material-symbols-outlined text-lg">favorite</span>
+</button>
+</div>
+<div class="flex justify-between items-start mb-1">
+<h4 class="font-headline font-bold text-on-surface">Masoem Power Green</h4>
+<span class="text-primary font-bold">Rp 22k</span>
+</div>
+<p class="text-sm text-on-surface-variant mb-4">Spinach, Apple, &amp; Ginger</p>
+<div class="flex items-center text-xs font-bold text-tertiary">
+<span class="material-symbols-outlined text-xs mr-1" style="font-variation-settings: 'FILL' 1;">star</span>
+                        4.8
+                    </div>
+</div>
+<!-- Card 2 -->
+<div class="group bg-surface-container-lowest rounded-lg p-4 transition-all hover:shadow-xl hover:shadow-on-surface/5 hover:scale-[1.02]">
+<div class="relative aspect-square overflow-hidden rounded-lg mb-4 bg-surface-container-low">
+<img alt="Fruit Bowl" class="w-full h-full object-cover" data-alt="Colorful fruit salad with berries, mango and kiwi in a minimalist white bowl on a light blue background" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAwKtTumzLceVn6J6hmoDcy9Aeiu2ibBKjWpORyf1cAp1v1hgsCgu2sNgm6edJPtzDVnKj5oiWY4G5ROUlineOJsET2nK-RSqXcsNC8wl-SIb1zCPkmFC8-cK6PJp6YZMM7byErWtYfH0N7hi4WxaPe4adGnsqTMwHAkfhSZVbhlTjWcCEqz5cT5pVzLJMT3Y5SWirZyxrsjwojSv0T0U0gw28APbmij9l8tXzSF4343HCQMS5isBqpHLLmbuuKTwwgA3ty8FDkqb36"/>
+<button class="absolute top-3 right-3 p-2 bg-white/80 backdrop-blur-md rounded-full text-on-surface shadow-sm active:scale-90 transition-transform">
+<span class="material-symbols-outlined text-lg">favorite</span>
+</button>
+</div>
+<div class="flex justify-between items-start mb-1">
+<h4 class="font-headline font-bold text-on-surface">Sunrise Berry Bowl</h4>
+<span class="text-primary font-bold">Rp 30k</span>
+</div>
+<p class="text-sm text-on-surface-variant mb-4">Mixed Berries &amp; Greek Yogurt</p>
+<div class="flex items-center text-xs font-bold text-tertiary">
+<span class="material-symbols-outlined text-xs mr-1" style="font-variation-settings: 'FILL' 1;">star</span>
+                        4.9
+                    </div>
+</div>
+<!-- Card 3 -->
+<div class="group bg-surface-container-lowest rounded-lg p-4 transition-all hover:shadow-xl hover:shadow-on-surface/5 hover:scale-[1.02]">
+<div class="relative aspect-square overflow-hidden rounded-lg mb-4 bg-surface-container-low">
+<img alt="Miso Soup" class="w-full h-full object-cover" data-alt="Traditional hot miso soup in a black bowl with steam rising, tofu cubes and green onions visible" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAH-924VAZWT109bju7ouW-FktvQx6yP6csHBQg676vWIfprHBxmZGBNgKtCtemwyYs3ruvuKkzSgzR8M62Y1-Sr-46WIwbyWTllYAP7a_5Vjxx5CeAAfYpdWJz7iXmk2WiU4LyNLmisJJccge30-ZkG7qVt3JvNYmFaK8ESZAwvvGY5-aF_A-02gqECZ_IOdv3zIp9FrBnUSzWhGXNdnakHV7edLrS8_XpoZYC7ykuOqj8hyoKq9HtRpLxlrTxhxRqJTdQslQaaD9G"/>
+<button class="absolute top-3 right-3 p-2 bg-white/80 backdrop-blur-md rounded-full text-on-surface shadow-sm active:scale-90 transition-transform">
+<span class="material-symbols-outlined text-lg">favorite</span>
+</button>
+</div>
+<div class="flex justify-between items-start mb-1">
+<h4 class="font-headline font-bold text-on-surface">Classic Tofu Miso</h4>
+<span class="text-primary font-bold">Rp 18k</span>
+</div>
+<p class="text-sm text-on-surface-variant mb-4">Silken Tofu &amp; Wakame</p>
+<div class="flex items-center text-xs font-bold text-tertiary">
+<span class="material-symbols-outlined text-xs mr-1" style="font-variation-settings: 'FILL' 1;">star</span>
+                        4.7
+                    </div>
+</div>
+<!-- Card 4 -->
+<div class="group bg-surface-container-lowest rounded-lg p-4 transition-all hover:shadow-xl hover:shadow-on-surface/5 hover:scale-[1.02]">
+<div class="relative aspect-square overflow-hidden rounded-lg mb-4 bg-surface-container-low">
+<img alt="Chicken wrap" class="w-full h-full object-cover" data-alt="Fresh grilled chicken wrap with hummus and colorful vegetables wrapped in a whole grain tortilla" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAPr46En52_V-r1wR3vsJkjQnJZAXPZlD1buYNFL1mP6DpvpU-LkTjlVDzWKkOxt0vfgaaTve-8Zo0OG36HIIESZlbEtp4xwW2uLCVvjJfEIS9YN95cXR0s6fAExBAWPLy5oNrUU3sy1EESkPwmvv66fh3rdw_s2Y7t4k4oRlkRM2r8WiIzhqNPyCsMnsACQM2eU7zxj-SxSo9Rl-2wKYkIHytceG_x3najUvYA4jpzVmrXSTNnAojZ7_LqQ_LUvFRGv_L-UvGaTyEB"/>
+<button class="absolute top-3 right-3 p-2 bg-white/80 backdrop-blur-md rounded-full text-on-surface shadow-sm active:scale-90 transition-transform">
+<span class="material-symbols-outlined text-lg">favorite</span>
+</button>
+</div>
+<div class="flex justify-between items-start mb-1">
+<h4 class="font-headline font-bold text-on-surface">Hummus Chicken Wrap</h4>
+<span class="text-primary font-bold">Rp 38k</span>
+</div>
+<p class="text-sm text-on-surface-variant mb-4">Whole Wheat &amp; Roasted Veggies</p>
+<div class="flex items-center text-xs font-bold text-tertiary">
+<span class="material-symbols-outlined text-xs mr-1" style="font-variation-settings: 'FILL' 1;">star</span>
+                        4.6
+                    </div>
+</div>
+</div>
+</section>
+</main>
+<!-- Footer -->
+<footer class="w-full pt-12 pb-24 border-t border-slate-100 bg-slate-50">
+<div class="max-w-7xl mx-auto px-8 grid grid-cols-1 md:grid-cols-4 gap-8">
+<div class="col-span-1 md:col-span-1">
+<span class="text-xl font-black text-blue-900">Masoem University</span>
+<p class="mt-4 text-slate-500 font-['Be_Vietnam_Pro'] text-sm leading-relaxed">
+                    Elevating campus dining through premium culinary experiences and student wellness.
+                </p>
+</div>
+<div class="flex flex-col gap-3">
+<span class="font-bold text-slate-900">Explore</span>
+<a class="text-slate-500 hover:text-orange-500 underline text-sm transition-opacity duration-300" href="#">Privacy Policy</a>
+<a class="text-slate-500 hover:text-orange-500 underline text-sm transition-opacity duration-300" href="#">Terms of Service</a>
+</div>
+<div class="flex flex-col gap-3">
+<span class="font-bold text-slate-900">Support</span>
+<a class="text-slate-500 hover:text-orange-500 underline text-sm transition-opacity duration-300" href="#">Campus Map</a>
+<a class="text-slate-500 hover:text-orange-500 underline text-sm transition-opacity duration-300" href="#">Help Center</a>
+</div>
+<div class="col-span-1">
+<p class="text-slate-500 text-sm font-['Be_Vietnam_Pro']">© 2024 Masoem University. All rights reserved.</p>
+</div>
+</div>
+</footer>
+<!-- BottomNavBar (Mobile Only) -->
+<nav class="md:hidden fixed bottom-0 w-full rounded-t-[3rem] z-50 bg-white/80 backdrop-blur-xl shadow-[0_-12px_32px_rgba(25,28,29,0.06)] flex justify-around items-center h-20 px-4 pb-2">
+<a class="flex flex-col items-center justify-center text-slate-500 px-5 py-2 active:scale-95 duration-200" href="#">
+<span class="material-symbols-outlined">home</span>
+<span class="font-['Be_Vietnam_Pro'] text-[11px] font-medium tracking-wide uppercase mt-1">Home</span>
+</a>
+<a class="flex flex-col items-center justify-center bg-orange-100 text-orange-700 rounded-full px-5 py-2 active:scale-95 duration-200" href="#">
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">restaurant_menu</span>
+<span class="font-['Be_Vietnam_Pro'] text-[11px] font-medium tracking-wide uppercase mt-1">Menu</span>
+</a>
+<a class="flex flex-col items-center justify-center text-slate-500 px-5 py-2 active:scale-95 duration-200" href="#">
+<span class="material-symbols-outlined">receipt_long</span>
+<span class="font-['Be_Vietnam_Pro'] text-[11px] font-medium tracking-wide uppercase mt-1">Orders</span>
+</a>
+<a class="flex flex-col items-center justify-center text-slate-500 px-5 py-2 active:scale-95 duration-200" href="#">
+<span class="material-symbols-outlined">person</span>
+<span class="font-['Be_Vietnam_Pro'] text-[11px] font-medium tracking-wide uppercase mt-1">Profile</span>
+</a>
+</nav>
+</body></html>

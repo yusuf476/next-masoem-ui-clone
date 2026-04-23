@@ -1,6 +1,6 @@
 "use client";
 
-import { useEffect, useState } from "react";
+import { useEffect, useState, useSyncExternalStore } from "react";
 import { createPortal } from "react-dom";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
@@ -25,8 +25,13 @@ function getMenuIcon(iconKey) {
   return iconMap[iconKey] ?? <DashboardIcon />;
 }
 
+function subscribe() {
+  return () => {};
+}
+
 export default function MobileMenu({ links, user, cartCount = 0 }) {
   const [open, setOpen] = useState(false);
+  const mounted = useSyncExternalStore(subscribe, () => true, () => false);
   const pathname = usePathname();
   const mobileLinks = [
     ...links,
@@ -156,7 +161,7 @@ export default function MobileMenu({ links, user, cartCount = 0 }) {
         <span className="hamburger-line"></span>
       </button>
 
-      {typeof document !== "undefined" ? createPortal(drawerContent, document.body) : null}
+      {mounted ? createPortal(drawerContent, document.body) : null}
     </>
   );
 }

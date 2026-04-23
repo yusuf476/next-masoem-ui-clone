@@ -1,4 +1,5 @@
 import Link from "next/link";
+import LanguageSwitcher from "./language-switcher";
 
 export default function SiteFooter() {
   return (
@@ -6,7 +7,7 @@ export default function SiteFooter() {
       <div className="container footer-grid">
         <div className="footer-brand">
           <div className="brand brand-static">
-            <span className="brand-mark">MU</span>
+            <img src="/logo.png" alt="Masoem Market" className="brand-logo" />
             <span>
               <strong>Masoem Market</strong>
               <small>Built for students, lecturers, and campus life.</small>
@@ -38,6 +39,11 @@ export default function SiteFooter() {
           <p>support@masoem.market</p>
           <p>Every day, 08.00 - 21.00 WIB</p>
         </div>
+      </div>
+
+      <div className="container footer-bottom">
+        <small>&copy; {new Date().getFullYear()} Masoem Market. All rights reserved.</small>
+        <LanguageSwitcher />
       </div>
     </footer>
   );

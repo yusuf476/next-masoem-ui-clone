@@ -4,11 +4,15 @@ import { startTransition, useDeferredValue, useState } from "react";
 import { useRouter } from "next/navigation";
 
 const orderStatuses = [
+  "Awaiting Payment",
+  "Payment Expired",
+  "Payment Failed",
   "Paid & Confirmed",
   "Preparing",
   "Ready for Pickup",
   "Out for Delivery",
   "Completed",
+  "Cancelled",
 ];
 
 function InlineMessage({ value, tone = "neutral" }) {
@@ -149,16 +153,12 @@ function InventoryControl({ productId, initialInventory }) {
   );
 }
 
-export default function AdminControls({ recentOrders, inventoryProducts }) {
+export function AdminOrderControls({ recentOrders }) {
   const [orderQuery, setOrderQuery] = useState("");
   const [orderStatusFilter, setOrderStatusFilter] = useState("all");
-  const [productQuery, setProductQuery] = useState("");
-  const [stockFilter, setStockFilter] = useState("all");
   const deferredOrderQuery = useDeferredValue(orderQuery);
-  const deferredProductQuery = useDeferredValue(productQuery);
 
   const normalizedOrderQuery = deferredOrderQuery.trim().toLowerCase();
-  const normalizedProductQuery = deferredProductQuery.trim().toLowerCase();
   const filteredOrders = recentOrders.filter((order) => {
     const matchesQuery =
       !normalizedOrderQuery ||
@@ -170,6 +170,102 @@ export default function AdminControls({ recentOrders, inventoryProducts }) {
 
     return matchesQuery && matchesStatus;
   });
+
+  return (
+    <div className="dashboard-panel card">
+      <div className="stack-sm">
+        <h2>Kelola status order</h2>
+        <p>Ubah progres pesanan secara efisien.</p>
+      </div>
+      <div className="admin-toolbar-grid">
+        <label className="field">
+          <span>Cari order atau pelanggan</span>
+          <input
+            value={orderQuery}
+            onChange={(event) => setOrderQuery(event.target.value)}
+            placeholder="MU-123456 atau nama pelanggan"
+          />
+        </label>
+        <label className="field">
+          <span>Filter status</span>
+          <select
+            value={orderStatusFilter}
+            onChange={(event) => setOrderStatusFilter(event.target.value)}
+          >
+            <option value="all">Semua status</option>
+            {orderStatuses.map((status) => (
+              <option key={status} value={status}>
+                {status}
+              </option>
+            ))}
+          </select>
+        </label>
+      </div>
+      <div className="admin-meta-row">
+        <span className="badge badge-soft">{filteredOrders.length} order tampil</span>
+        {(orderQuery || orderStatusFilter !== "all") && (
+          <button
+            type="button"
+            className="button button-ghost button-small"
+            onClick={() => {
+              setOrderQuery("");
+              setOrderStatusFilter("all");
+            }}
+          >
+            Reset filter
+          </button>
+        )}
+      </div>
+      <div className="table-scroll">
+        <table className="admin-table">
+          <thead>
+            <tr>
+              <th>Order</th>
+              <th>Status saat ini</th>
+              <th>Aksi</th>
+            </tr>
+          </thead>
+          <tbody>
+            {filteredOrders.length === 0 ? (
+              <tr>
+                <td colSpan="3">
+                  <div className="admin-empty-row">
+                    <strong>Tidak ada order yang cocok</strong>
+                    <small>Ubah kata kunci atau filter status untuk melihat data lain.</small>
+                  </div>
+                </td>
+              </tr>
+            ) : (
+              filteredOrders.map((order) => (
+                <tr key={order.id}>
+                  <td>
+                    <strong>{order.orderNumber}</strong>
+                    <small>{order.shipping.fullName}</small>
+                  </td>
+                  <td>
+                    <strong>{order.status}</strong>
+                    <small>{order.paymentStatus}</small>
+                  </td>
+                  <td>
+                    <OrderStatusControl orderNumber={order.orderNumber} currentStatus={order.status} />
+                  </td>
+                </tr>
+              ))
+            )}
+          </tbody>
+        </table>
+      </div>
+    </div>
+  );
+}
+
+export function AdminProductControls({ inventoryProducts }) {
+  const [productQuery, setProductQuery] = useState("");
+  const [stockFilter, setStockFilter] = useState("all");
+  const deferredProductQuery = useDeferredValue(productQuery);
+
+  const normalizedProductQuery = deferredProductQuery.trim().toLowerCase();
+  
   const filteredProducts = inventoryProducts.filter((product) => {
     const matchesQuery =
       !normalizedProductQuery ||
@@ -187,171 +283,84 @@ export default function AdminControls({ recentOrders, inventoryProducts }) {
   });
 
   return (
-    <>
-      <div className="dashboard-panel card">
-        <div className="stack-sm">
-          <h2>Kelola status order</h2>
-          <p>Ubah progres pesanan tanpa keluar dari panel admin.</p>
-        </div>
-        <div className="admin-toolbar-grid">
-          <label className="field">
-            <span>Cari order atau pelanggan</span>
-            <input
-              value={orderQuery}
-              onChange={(event) => setOrderQuery(event.target.value)}
-              placeholder="MU-123456 atau nama pelanggan"
-            />
-          </label>
-          <label className="field">
-            <span>Filter status</span>
-            <select
-              value={orderStatusFilter}
-              onChange={(event) => setOrderStatusFilter(event.target.value)}
-            >
-              <option value="all">Semua status</option>
-              {orderStatuses.map((status) => (
-                <option key={status} value={status}>
-                  {status}
-                </option>
-              ))}
-            </select>
-          </label>
-        </div>
-        <div className="admin-meta-row">
-          <span className="badge badge-soft">{filteredOrders.length} order tampil</span>
-          {(orderQuery || orderStatusFilter !== "all") && (
-            <button
-              type="button"
-              className="button button-ghost button-small"
-              onClick={() => {
-                setOrderQuery("");
-                setOrderStatusFilter("all");
-              }}
-            >
-              Reset filter
-            </button>
-          )}
-        </div>
-        <div className="table-scroll">
-          <table className="admin-table">
-            <thead>
+    <div className="dashboard-panel card">
+      <div className="stack-sm">
+        <h2>Kelola stok aktual produk</h2>
+        <p>Perbarui inventory produk secara langsung untuk menghindari overselling.</p>
+      </div>
+      <div className="admin-toolbar-grid">
+        <label className="field">
+          <span>Cari produk</span>
+          <input
+            value={productQuery}
+            onChange={(event) => setProductQuery(event.target.value)}
+            placeholder="Nama, ID, atau kategori"
+          />
+        </label>
+        <label className="field">
+          <span>Filter stok</span>
+          <select value={stockFilter} onChange={(event) => setStockFilter(event.target.value)}>
+            <option value="all">Semua produk</option>
+            <option value="critical">Stok kritis (≤ 10)</option>
+            <option value="healthy">Stok aman (&gt; 10)</option>
+            <option value="out">Stok habis</option>
+          </select>
+        </label>
+      </div>
+      <div className="admin-meta-row">
+        <span className="badge badge-soft">{filteredProducts.length} produk tampil</span>
+        {(productQuery || stockFilter !== "all") && (
+          <button
+            type="button"
+            className="button button-ghost button-small"
+            onClick={() => {
+              setProductQuery("");
+              setStockFilter("all");
+            }}
+          >
+            Reset filter
+          </button>
+        )}
+      </div>
+      <div className="table-scroll">
+        <table className="admin-table">
+          <thead>
+            <tr>
+              <th>Produk</th>
+              <th>Kategori</th>
+              <th>Stok</th>
+            </tr>
+          </thead>
+          <tbody>
+            {filteredProducts.length === 0 ? (
               <tr>
-                <th>Order</th>
-                <th>Status saat ini</th>
-                <th>Aksi</th>
+                <td colSpan="3">
+                  <div className="admin-empty-row">
+                    <strong>Tidak ada produk yang cocok</strong>
+                    <small>Coba ubah kata kunci pencarian atau filter stok.</small>
+                  </div>
+                </td>
               </tr>
-            </thead>
-            <tbody>
-              {filteredOrders.length === 0 ? (
-                <tr>
-                  <td colSpan="3">
-                    <div className="admin-empty-row">
-                      <strong>Tidak ada order yang cocok</strong>
-                      <small>Ubah kata kunci atau filter status untuk melihat data lain.</small>
-                    </div>
+            ) : (
+              filteredProducts.map((product) => (
+                <tr key={product.id}>
+                  <td>
+                    <strong>{product.name}</strong>
+                    <small>{product.id}</small>
+                  </td>
+                  <td>
+                    <strong>{product.category}</strong>
+                    <small>{product.featured ? "Featured" : "Regular"}</small>
+                  </td>
+                  <td>
+                    <InventoryControl productId={product.id} initialInventory={product.inventory} />
                   </td>
                 </tr>
-              ) : (
-                filteredOrders.map((order) => (
-                  <tr key={order.id}>
-                    <td>
-                      <strong>{order.orderNumber}</strong>
-                      <small>{order.shipping.fullName}</small>
-                    </td>
-                    <td>
-                      <strong>{order.status}</strong>
-                      <small>{order.paymentStatus}</small>
-                    </td>
-                    <td>
-                      <OrderStatusControl orderNumber={order.orderNumber} currentStatus={order.status} />
-                    </td>
-                  </tr>
-                ))
-              )}
-            </tbody>
-          </table>
-        </div>
+              ))
+            )}
+          </tbody>
+        </table>
       </div>
-
-      <div className="dashboard-panel card">
-        <div className="stack-sm">
-          <h2>Kelola stok produk</h2>
-          <p>Perbarui inventory produk secara langsung untuk menghindari overselling.</p>
-        </div>
-        <div className="admin-toolbar-grid">
-          <label className="field">
-            <span>Cari produk</span>
-            <input
-              value={productQuery}
-              onChange={(event) => setProductQuery(event.target.value)}
-              placeholder="Nama, ID, atau kategori"
-            />
-          </label>
-          <label className="field">
-            <span>Filter stok</span>
-            <select value={stockFilter} onChange={(event) => setStockFilter(event.target.value)}>
-              <option value="all">Semua produk</option>
-              <option value="critical">Stok kritis (≤ 10)</option>
-              <option value="healthy">Stok aman (&gt; 10)</option>
-              <option value="out">Stok habis</option>
-            </select>
-          </label>
-        </div>
-        <div className="admin-meta-row">
-          <span className="badge badge-soft">{filteredProducts.length} produk tampil</span>
-          {(productQuery || stockFilter !== "all") && (
-            <button
-              type="button"
-              className="button button-ghost button-small"
-              onClick={() => {
-                setProductQuery("");
-                setStockFilter("all");
-              }}
-            >
-              Reset filter
-            </button>
-          )}
-        </div>
-        <div className="table-scroll">
-          <table className="admin-table">
-            <thead>
-              <tr>
-                <th>Produk</th>
-                <th>Kategori</th>
-                <th>Stok</th>
-              </tr>
-            </thead>
-            <tbody>
-              {filteredProducts.length === 0 ? (
-                <tr>
-                  <td colSpan="3">
-                    <div className="admin-empty-row">
-                      <strong>Tidak ada produk yang cocok</strong>
-                      <small>Coba ubah kata kunci pencarian atau filter stok.</small>
-                    </div>
-                  </td>
-                </tr>
-              ) : (
-                filteredProducts.map((product) => (
-                  <tr key={product.id}>
-                    <td>
-                      <strong>{product.name}</strong>
-                      <small>{product.id}</small>
-                    </td>
-                    <td>
-                      <strong>{product.category}</strong>
-                      <small>{product.featured ? "Featured" : "Regular"}</small>
-                    </td>
-                    <td>
-                      <InventoryControl productId={product.id} initialInventory={product.inventory} />
-                    </td>
-                  </tr>
-                ))
-              )}
-            </tbody>
-          </table>
-        </div>
-      </div>
-    </>
+    </div>
   );
 }

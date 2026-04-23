@@ -29,8 +29,29 @@ create table if not exists public.users (
   faculty text not null,
   phone text not null,
   joined_at timestamptz not null default timezone('utc', now()),
-  role text not null default 'customer' check (role in ('admin', 'customer'))
+  role text not null default 'customer' check (role in ('admin', 'customer')),
+  email_verified_at timestamptz,
+  verification_token_hash text,
+  verification_token_expires_at timestamptz,
+  reset_token_hash text,
+  reset_token_expires_at timestamptz,
+  failed_login_count integer not null default 0,
+  locked_until timestamptz,
+  last_login_at timestamptz,
+  wishlist jsonb not null default '[]'::jsonb,
+  notifications jsonb not null default '[]'::jsonb
 );
+
+alter table if exists public.users add column if not exists email_verified_at timestamptz;
+alter table if exists public.users add column if not exists verification_token_hash text;
+alter table if exists public.users add column if not exists verification_token_expires_at timestamptz;
+alter table if exists public.users add column if not exists reset_token_hash text;
+alter table if exists public.users add column if not exists reset_token_expires_at timestamptz;
+alter table if exists public.users add column if not exists failed_login_count integer not null default 0;
+alter table if exists public.users add column if not exists locked_until timestamptz;
+alter table if exists public.users add column if not exists last_login_at timestamptz;
+alter table if exists public.users add column if not exists wishlist jsonb not null default '[]'::jsonb;
+alter table if exists public.users add column if not exists notifications jsonb not null default '[]'::jsonb;
 
 create table if not exists public.sessions (
   token text primary key,
@@ -71,5 +92,6 @@ create table if not exists public.orders (
 
 create index if not exists idx_products_category on public.products(category);
 create index if not exists idx_users_joined_at on public.users(joined_at desc);
+create index if not exists idx_users_email_verified_at on public.users(email_verified_at);
 create index if not exists idx_orders_user_id on public.orders(user_id);
 create index if not exists idx_orders_created_at on public.orders(created_at desc);

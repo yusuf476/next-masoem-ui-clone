@@ -1,5 +1,6 @@
 "use client";
 
+import Link from "next/link";
 import { useMemo, useState } from "react";
 import { useRouter, useSearchParams } from "next/navigation";
 
@@ -125,10 +126,20 @@ export default function AuthForm({ mode }) {
           type="password"
           value={form.password}
           onChange={(event) => setForm({ ...form, password: event.target.value })}
-          placeholder="Minimal 6 karakter"
+          placeholder="Minimal 8 karakter"
           required
         />
       </label>
+
+      {mode === "login" ? (
+        <Link href="/forgot-password" style={{ justifySelf: "end", fontSize: "0.9rem", color: "var(--primary)" }}>
+          Lupa password?
+        </Link>
+      ) : (
+        <p style={{ fontSize: "0.9rem" }}>
+          Setelah akun dibuat, Anda bisa memverifikasi email dari halaman profil agar keamanan akun lebih kuat.
+        </p>
+      )}
 
       {message ? <p className="helper-text helper-text-error">{message}</p> : null}
 

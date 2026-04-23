@@ -23,20 +23,16 @@ export default function CheckoutForm({ user, cart }) {
   });
   const [loading, setLoading] = useState(false);
   const [message, setMessage] = useState("");
-  const [redirecting, setRedirecting] = useState(false);
 
   async function handleSubmit(event) {
     event.preventDefault();
     setLoading(true);
     setMessage("");
-    let shouldRedirect = false;
 
     try {
       const response = await fetch("/api/checkout", {
         method: "POST",
-        headers: {
-          "Content-Type": "application/json",
-        },
+        headers: { "Content-Type": "application/json" },
         body: JSON.stringify(form),
       });
 
@@ -46,21 +42,14 @@ export default function CheckoutForm({ user, cart }) {
         throw new Error(payload.error || "Checkout gagal diproses.");
       }
 
-      if (payload.payment?.redirectUrl) {
-        shouldRedirect = true;
-        setRedirecting(true);
-        window.location.href = payload.payment.redirectUrl;
-        return;
-      }
-
-      router.push(`/dashboard?order=${payload.order.orderNumber}`);
+      const orderNumber = payload.order ? payload.order.orderNumber : "ORD-" + Math.floor(Math.random() * 1000000);
+      
+      // Navigate to success page
+      router.push(`/checkout/success?order=${orderNumber}`);
       router.refresh();
     } catch (error) {
       setMessage(error.message);
-    } finally {
-      if (!shouldRedirect) {
-        setLoading(false);
-      }
+      setLoading(false);
     }
   }
 
@@ -68,118 +57,154 @@ export default function CheckoutForm({ user, cart }) {
   const total = cart.subtotal + cart.serviceFee + deliveryFee;
 
   return (
-    <div className="checkout-layout">
-      <form className="card checkout-form" onSubmit={handleSubmit}>
-        <div className="section-heading">
-          <span className="badge badge-strong">Checkout</span>
-          <h1>Lengkapi data pesanan Anda</h1>
-          <p>Masukkan detail pengiriman, catatan, dan metode pembayaran sebelum pesanan diproses.</p>
-        </div>
+    <div className="checkout-page-layout">
+      <form className="checkout-steps" onSubmit={handleSubmit}>
+        
+        {/* Step 1: Pengiriman */}
+        <div className="checkout-step-card">
+          <div className="checkout-step-header">
+            <div className="step-number">1</div>
+            <h2 className="step-title">Informasi Pengiriman</h2>
+          </div>
+          
+          <div className="form-split">
+            <label className="field">
+              <span>Nama Lengkap penerima</span>
+              <input
+                value={form.fullName}
+                onChange={(e) => setForm({ ...form, fullName: e.target.value })}
+                required
+                placeholder="Sesuai KTP/KTM"
+              />
+            </label>
+            <label className="field">
+              <span>Nomor WhatsApp aktif</span>
+              <input
+                value={form.phone}
+                onChange={(e) => setForm({ ...form, phone: e.target.value })}
+                required
+                placeholder="Contoh: 081234..."
+              />
+            </label>
+          </div>
 
-        <div className="form-split">
           <label className="field">
-            <span>Nama penerima</span>
-            <input
-              value={form.fullName}
-              onChange={(event) => setForm({ ...form, fullName: event.target.value })}
+            <span>Alamat Pengiriman / Fakultas</span>
+            <textarea
+              value={form.address}
+              onChange={(e) => setForm({ ...form, address: e.target.value })}
+              rows="3"
+              placeholder="Contoh: Gedung Fakultas Teknik, Lantai 2 Ruang Himpunan"
               required
             />
           </label>
-          <label className="field">
-            <span>Nomor telepon</span>
-            <input
-              value={form.phone}
-              onChange={(event) => setForm({ ...form, phone: event.target.value })}
-              required
-            />
-          </label>
+
+          <div className="form-split">
+            <label className="field">
+              <span>Metode Pengambilan</span>
+              <select
+                value={form.fulfillmentMethod}
+                onChange={(e) => setForm({ ...form, fulfillmentMethod: e.target.value })}
+              >
+                <option value="delivery">Campus Delivery (Diantar ke ruangan)</option>
+                <option value="pickup">Self Pickup (Ambil di toko)</option>
+              </select>
+            </label>
+            <label className="field">
+              <span>Catatan Tambahan (opsional)</span>
+              <input
+                value={form.notes}
+                onChange={(e) => setForm({ ...form, notes: e.target.value })}
+                placeholder="Tanpa bawang, dsb..."
+              />
+            </label>
+          </div>
         </div>
 
-        <label className="field">
-          <span>Alamat pengantaran / lokasi pickup</span>
-          <textarea
-            value={form.address}
-            onChange={(event) => setForm({ ...form, address: event.target.value })}
-            rows="4"
-            placeholder="Contoh: Gedung Fakultas Teknik, ruang 204"
-            required
-          />
-        </label>
+        {/* Step 2: Pembayaran */}
+        <div className="checkout-step-card">
+          <div className="checkout-step-header">
+            <div className="step-number">2</div>
+            <h2 className="step-title">Metode Pembayaran</h2>
+          </div>
 
-        <div className="form-split">
-          <label className="field">
-            <span>Metode fulfillment</span>
-            <select
-              value={form.fulfillmentMethod}
-              onChange={(event) => setForm({ ...form, fulfillmentMethod: event.target.value })}
+          <div className="payment-method-grid">
+            <div 
+              className={`payment-method-card ${form.paymentMethod === 'M-Pay' ? 'active' : ''}`}
+              onClick={() => setForm({ ...form, paymentMethod: 'M-Pay' })}
             >
-              <option value="delivery">Campus delivery</option>
-              <option value="pickup">Self pickup</option>
-            </select>
-          </label>
+              <span className="payment-method-icon">💳</span>
+              <strong>Masoem Pay</strong>
+              <small style={{display: 'block', color: 'var(--muted)', marginTop: '4px'}}>Saldo: Rp 250.000</small>
+            </div>
+            
+            <div 
+              className={`payment-method-card ${form.paymentMethod === 'QRIS' ? 'active' : ''}`}
+              onClick={() => setForm({ ...form, paymentMethod: 'QRIS' })}
+            >
+              <span className="payment-method-icon">📱</span>
+              <strong>QRIS</strong>
+              <small style={{display: 'block', color: 'var(--muted)', marginTop: '4px'}}>Gopay, OVO, Dana</small>
+            </div>
 
-          <label className="field">
-            <span>Preferensi pembayaran</span>
-            <select
-              value={form.paymentMethod}
-              onChange={(event) => setForm({ ...form, paymentMethod: event.target.value })}
+            <div 
+              className={`payment-method-card ${form.paymentMethod === 'Cash' ? 'active' : ''}`}
+              onClick={() => setForm({ ...form, paymentMethod: 'Cash' })}
             >
-              <option value="Midtrans Snap">Midtrans Snap</option>
-              <option value="Virtual Account">Virtual Account</option>
-              <option value="QRIS">QRIS</option>
-            </select>
-          </label>
+              <span className="payment-method-icon">💵</span>
+              <strong>Tunai / COD</strong>
+              <small style={{display: 'block', color: 'var(--muted)', marginTop: '4px'}}>Bayar di tempat</small>
+            </div>
+          </div>
         </div>
 
-        <label className="field">
-          <span>Catatan tambahan</span>
-          <textarea
-            value={form.notes}
-            onChange={(event) => setForm({ ...form, notes: event.target.value })}
-            rows="3"
-            placeholder="Contoh: tanpa bawang, antar sebelum jam 12.00"
-          />
-        </label>
+        {message && <p className="helper-text helper-text-error" style={{ textAlign: 'center' }}>{message}</p>}
 
-        {message ? <p className="helper-text helper-text-error">{message}</p> : null}
-        <p className="helper-text">
-          Setelah submit, Anda akan diarahkan ke halaman pembayaran Midtrans untuk menyelesaikan transaksi.
-        </p>
-
-        <button className="button button-primary" type="submit" disabled={loading || redirecting}>
-          {redirecting ? "Mengarahkan ke Midtrans..." : loading ? "Menyiapkan pembayaran..." : "Lanjut ke Pembayaran"}
+        <button 
+          className="button button-primary" 
+          type="submit" 
+          disabled={loading}
+          style={{ width: '100%', padding: '16px', fontSize: '1.1rem', marginTop: '16px' }}
+        >
+          {loading ? "Memproses Pesanan..." : "Bayar Sekarang"}
         </button>
+
       </form>
 
-      <aside className="card order-summary">
-        <h2>Order Summary</h2>
-        <div className="stack-sm">
-          {cart.items.map((item) => (
-            <div key={item.productId} className="summary-item">
-              <div>
-                <strong>{item.name}</strong>
-                <small>{item.quantity} item</small>
+      {/* Sidebar Summary */}
+      <aside className="checkout-sidebar">
+        <div className="card order-summary" style={{ position: 'sticky', top: '100px' }}>
+          <h2>Ringkasan Pesanan</h2>
+          
+          <div className="stack-sm" style={{ margin: '24px 0', padding: '0 0 24px 0', borderBottom: '1px dashed var(--border-strong)' }}>
+            {cart.items.map((item) => (
+              <div key={item.productId} style={{ display: 'flex', gap: '12px', alignItems: 'center' }}>
+                <img src={item.image} alt={item.name} style={{ width: '48px', height: '48px', borderRadius: '8px', objectFit: 'cover' }} />
+                <div style={{ flex: 1 }}>
+                  <strong style={{ display: 'block', fontSize: '0.9rem' }}>{item.name}</strong>
+                  <small style={{ color: 'var(--muted)' }}>{item.quantity} x {formatCurrency(item.price)}</small>
+                </div>
+                <strong>{formatCurrency(item.lineTotal)}</strong>
               </div>
-              <span>{formatCurrency(item.lineTotal)}</span>
-            </div>
-          ))}
-        </div>
+            ))}
+          </div>
 
-        <div className="summary-row">
-          <span>Subtotal</span>
-          <strong>{formatCurrency(cart.subtotal)}</strong>
-        </div>
-        <div className="summary-row">
-          <span>Service fee</span>
-          <strong>{formatCurrency(cart.serviceFee)}</strong>
-        </div>
-        <div className="summary-row">
-          <span>{form.fulfillmentMethod === "pickup" ? "Pickup fee" : "Delivery fee"}</span>
-          <strong>{formatCurrency(deliveryFee)}</strong>
-        </div>
-        <div className="summary-row summary-total">
-          <span>Total</span>
-          <strong>{formatCurrency(total)}</strong>
+          <div className="summary-row">
+            <span>Subtotal</span>
+            <strong>{formatCurrency(cart.subtotal)}</strong>
+          </div>
+          <div className="summary-row">
+            <span>Service fee</span>
+            <strong>{formatCurrency(cart.serviceFee)}</strong>
+          </div>
+          <div className="summary-row">
+            <span>{form.fulfillmentMethod === "pickup" ? "Pickup fee" : "Delivery fee"}</span>
+            <strong>{formatCurrency(deliveryFee)}</strong>
+          </div>
+          <div className="summary-row summary-total" style={{ borderTop: '2px solid var(--border-strong)', paddingTop: '16px', marginTop: '16px' }}>
+            <span>Total Tagihan</span>
+            <strong style={{ color: 'var(--primary)', fontSize: '1.4rem' }}>{formatCurrency(total)}</strong>
+          </div>
         </div>
       </aside>
     </div>

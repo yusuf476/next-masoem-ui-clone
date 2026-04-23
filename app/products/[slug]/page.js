@@ -1,6 +1,9 @@
 import { notFound } from "next/navigation";
 import ProductCard from "../../../components/product-card";
 import ProductPurchasePanel from "../../../components/product-purchase-panel";
+import Breadcrumb from "../../../components/breadcrumb";
+import ReviewsPanel from "../../../components/reviews-panel";
+import WishlistButton from "../../../components/wishlist-button";
 import { formatCurrency } from "../../../lib/format";
 import { getProductBySlug, getRelatedProducts } from "../../../lib/market";
 import { getCurrentUser } from "../../../lib/session";
@@ -26,15 +29,25 @@ export default async function ProductDetailPage({ params }) {
 
   return (
     <main className="container">
+      <Breadcrumb items={[
+        { href: "/", label: "Beranda" },
+        { href: "/products", label: "Katalog" },
+        { label: product.name },
+      ]} />
       <section className="detail-layout">
         <div className="detail-visual card">
           <img src={product.image} alt={product.name} />
         </div>
 
         <div className="detail-content card stack-md">
-          <div className="product-detail-topline">
-            <span className="badge badge-soft">{product.category}</span>
-            <span className={`stock-dot ${stockTone}`}>{stockLabel}</span>
+          <div className="product-detail-topline" style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center' }}>
+            <div style={{ display: 'flex', alignItems: 'center', gap: '8px' }}>
+              <span className="badge badge-soft">{product.category}</span>
+              <span className={`stock-dot ${stockTone}`}>{stockLabel}</span>
+            </div>
+            <div style={{ position: 'relative', width: '40px', height: '40px', display: 'grid', placeItems: 'center', background: 'var(--surface-strong)', borderRadius: '50%' }}>
+              <WishlistButton product={product} />
+            </div>
           </div>
           <div className="stack-sm">
             <h1>{product.name}</h1>
@@ -83,6 +96,8 @@ export default async function ProductDetailPage({ params }) {
           </div>
 
           <ProductPurchasePanel product={product} requiresAuth={!user} />
+          
+          <ReviewsPanel requiresAuth={!user} />
         </div>
       </section>
 

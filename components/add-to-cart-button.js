@@ -2,6 +2,7 @@
 
 import { startTransition, useState } from "react";
 import { useRouter } from "next/navigation";
+import { useToast } from "./toast";
 
 export default function AddToCartButton({
   productId,
@@ -12,8 +13,8 @@ export default function AddToCartButton({
   size = "default",
 }) {
   const [loading, setLoading] = useState(false);
-  const [message, setMessage] = useState("");
   const router = useRouter();
+  const addToast = useToast();
 
   async function handleAdd() {
     if (requiresAuth) {
@@ -22,7 +23,6 @@ export default function AddToCartButton({
     }
 
     setLoading(true);
-    setMessage("");
 
     try {
       const response = await fetch("/api/cart", {
@@ -42,27 +42,24 @@ export default function AddToCartButton({
         throw new Error(payload.error || "Gagal menambahkan produk.");
       }
 
-      setMessage("Produk berhasil ditambahkan.");
+      addToast("✅ Produk berhasil ditambahkan ke keranjang!", "success");
       startTransition(() => {
         router.refresh();
       });
     } catch (error) {
-      setMessage(error.message);
+      addToast(error.message, "error");
     } finally {
       setLoading(false);
     }
   }
 
   return (
-    <div className="stack-sm">
-      <button
-        className={`button button-primary ${size === "small" ? "button-small" : ""}`}
-        onClick={handleAdd}
-        disabled={disabled || loading}
-      >
-        {loading ? "Menambahkan..." : disabled ? "Stok Habis" : "Tambah ke Keranjang"}
-      </button>
-      {message ? <p className="helper-text helper-text-success">{message}</p> : null}
-    </div>
+    <button
+      className={`button button-primary ${size === "small" ? "button-small" : ""}`}
+      onClick={handleAdd}
+      disabled={disabled || loading}
+    >
+      {loading ? "Menambahkan..." : disabled ? "Stok Habis" : "Tambah ke Keranjang"}
+    </button>
   );
 }

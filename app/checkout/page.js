@@ -18,6 +18,11 @@ export default async function CheckoutPage() {
 
   return (
     <main className="container content-section">
+      <div className="section-heading" style={{ textAlign: 'center', marginBottom: '40px' }}>
+        <span className="badge badge-strong" style={{ margin: '0 auto' }}>Checkout</span>
+        <h1>Selesaikan Pesanan Anda</h1>
+        <p>Pilih metode pengiriman dan pembayaran untuk menyelesaikan transaksi.</p>
+      </div>
       <CheckoutForm user={user} cart={cart} />
     </main>
   );

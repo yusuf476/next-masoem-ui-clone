@@ -16,22 +16,22 @@ export default async function ProductsPage({ searchParams }) {
   return (
     <main className="catalog-shell">
       <div className="container stack-lg">
-        <section className="section-heading">
-          <span className="badge badge-strong">Catalog</span>
-          <h1>Katalog produk Masoem Market</h1>
-          <p>Telusuri makanan, perlengkapan belajar, merchandise resmi, dan perangkat pendukung produktivitas.</p>
+        <section className="section-heading" style={{ textAlign: 'center', maxWidth: '600px', margin: '0 auto' }}>
+          <span className="badge badge-strong" style={{ margin: '0 auto' }}>Eksplorasi</span>
+          <h1 style={{ fontSize: 'clamp(2rem, 5vw, 3rem)' }}>Katalog Produk</h1>
+          <p>Temukan kuliner, perlengkapan belajar, dan merchandise resmi untuk mendukung produktivitasmu.</p>
         </section>
 
-        <section className="card" style={{ padding: 24 }}>
-          <form className="catalog-filters" method="get">
-            <label className="field">
-              <span>Cari produk</span>
-              <input name="search" defaultValue={search} placeholder="Cari nama produk atau kategori..." />
+        <section className="card" style={{ padding: 16, position: 'sticky', top: '80px', zIndex: 30, background: 'var(--surface)', backdropFilter: 'blur(16px)', border: '1px solid var(--border)' }}>
+          <form className="catalog-filters" method="get" style={{ alignItems: 'end' }}>
+            <label className="field" style={{ gap: '6px' }}>
+              <span style={{ fontSize: '0.85rem', color: 'var(--muted)' }}>Cari produk</span>
+              <input name="search" defaultValue={search} placeholder="Nama atau kategori..." style={{ border: 'none', background: 'var(--bg)', padding: '12px 16px' }} />
             </label>
-            <label className="field">
-              <span>Kategori</span>
-              <select name="category" defaultValue={category}>
-                <option value="all">Semua kategori</option>
+            <label className="field" style={{ gap: '6px' }}>
+              <span style={{ fontSize: '0.85rem', color: 'var(--muted)' }}>Kategori</span>
+              <select name="category" defaultValue={category} style={{ border: 'none', background: 'var(--bg)', padding: '12px 16px' }}>
+                <option value="all">Semua Kategori</option>
                 {categories.map((item) => (
                   <option key={item.slug} value={item.slug}>
                     {item.name}
@@ -39,17 +39,17 @@ export default async function ProductsPage({ searchParams }) {
                 ))}
               </select>
             </label>
-            <label className="field">
-              <span>Urutkan</span>
-              <select name="sort" defaultValue={sort}>
-                <option value="featured">Paling direkomendasikan</option>
+            <label className="field" style={{ gap: '6px' }}>
+              <span style={{ fontSize: '0.85rem', color: 'var(--muted)' }}>Urutkan</span>
+              <select name="sort" defaultValue={sort} style={{ border: 'none', background: 'var(--bg)', padding: '12px 16px' }}>
+                <option value="featured">Rekomendasi</option>
                 <option value="rating">Rating tertinggi</option>
                 <option value="price-low">Harga terendah</option>
                 <option value="price-high">Harga tertinggi</option>
                 <option value="name">Nama A-Z</option>
               </select>
             </label>
-            <button className="button button-primary" type="submit">
+            <button className="button button-primary" type="submit" style={{ height: '44px' }}>
               Terapkan
             </button>
           </form>

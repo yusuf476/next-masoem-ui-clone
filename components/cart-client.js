@@ -3,6 +3,7 @@
 import { startTransition, useState } from "react";
 import Link from "next/link";
 import { useRouter } from "next/navigation";
+import EmptyState from "./empty-state";
 
 function formatCurrency(value) {
   return new Intl.NumberFormat("id-ID", {
@@ -53,13 +54,11 @@ export default function CartClient({ initialCart }) {
 
   if (cart.items.length === 0) {
     return (
-      <div className="card empty-state">
-        <h2>Keranjang Anda masih kosong</h2>
-        <p>Tambahkan beberapa produk favorit untuk melanjutkan ke checkout.</p>
-        <Link href="/products" className="button button-primary">
-          Jelajahi katalog
-        </Link>
-      </div>
+      <EmptyState
+        iconType="cart"
+        title="Keranjang Anda Kosong"
+        description="Belum ada item yang ditambahkan. Yuk, cari makanan favorit atau perlengkapan kampus Anda sekarang!"
+      />
     );
   }
 

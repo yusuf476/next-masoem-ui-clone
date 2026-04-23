@@ -1,182 +1,1114 @@
 {
-  "users": [],
-  "sessions": [],
-  "carts": [],
-  "orders": [],
-  "categories": [
-    {
-      "slug": "food",
-      "name": "Campus Dining",
-      "description": "Fresh meals and drinks crafted for busy academic days."
-    },
-    {
-      "slug": "stationery",
-      "name": "Study Essentials",
-      "description": "Notebooks, planners, and tools for productive classes."
-    },
-    {
-      "slug": "merchandise",
-      "name": "University Merchandise",
-      "description": "Official apparel and branded lifestyle products."
-    },
-    {
-      "slug": "technology",
-      "name": "Tech & Gadgets",
-      "description": "Devices and accessories for learning, collaboration, and focus."
-    }
-  ],
-  "products": [
-    {
-      "id": "prd_001",
-      "slug": "signature-nasi-goreng",
-      "name": "Signature Nasi Goreng",
-      "category": "food",
-      "price": 32000,
-      "rating": 4.9,
-      "reviews": 182,
-      "featured": true,
-      "inventory": 25,
-      "tagline": "Smoky wok-fried rice with campus favorite spices.",
-      "description": "A hearty plate of signature nasi goreng topped with ayam suwir, telur mata sapi, acar segar, and crunchy crackers. Built to keep you energized from the first lecture to the final assignment.",
-      "features": [
-        "Prepared fresh every order",
-        "Includes egg and crispy crackers",
-        "Popular lunch choice across faculties"
-      ],
-      "image": "https://lh3.googleusercontent.com/aida-public/AB6AXuBrZwPqVU5e1TTbwWpDAevskmP9mRFnjU8bzbNlonUKggkgn_fBeXXabHt1Dwq1EdRUQpgi3dRMxOsG3Tn8W7tEUiVBvuSXJeM4VKT2RvPYxq_ivNc4pQRyZ2LNrKA-uSTjaxUKmMw4nZOodS5oLD-SwiGlOQNkns0qpAf8KOhwh5FlgDHlrk136S2Jz6stlJa1PjYFZMv4WnLjbXIDAQq3QmQwjlC2JdKPBx2mCRVKBCIi7EspeyCZ8wHNdc2x5akXEGFuSXwOztEZ"
-    },
-    {
-      "id": "prd_002",
-      "slug": "sate-ayam-madura",
-      "name": "Sate Ayam Madura",
-      "category": "food",
-      "price": 28000,
-      "rating": 4.8,
-      "reviews": 146,
-      "featured": true,
-      "inventory": 20,
-      "tagline": "Tender grilled skewers with rich peanut sauce.",
-      "description": "Chicken satay marinated overnight and grilled to order. Served with creamy peanut sauce, lontong, and a bright sambal finish for a balanced, satisfying plate.",
-      "features": [
-        "House-made peanut sauce",
-        "Served with lontong",
-        "Reliable dinner bestseller"
-      ],
-      "image": "https://lh3.googleusercontent.com/aida-public/AB6AXuBTWTk4_W1ayaSDi_GaHJhsDY-vFF0fPQUVJ-j3HhbpZJffNA5zmcNPVdy1fzEqiBQ6JMEQ6GPH1ms3wLBxJxUUt5VxynY5FWnpPLoB6p43lAjHdHYFDRJijfNoBmvUJ3Cd0rP7cnnnuxx6WIMOnR9B0KzHgKl-MBYbplNWEBDdAsy0eyfwi-bsCNeX-5G9yTNMrmcapLtryPZIIm1MWad47bcdbqKv1x10buE3GN_Kn76MRWg-zQAUlVujGA_cqjn4QdVp3kDdp6VG"
-    },
-    {
-      "id": "prd_003",
-      "slug": "signature-matcha-latte",
-      "name": "Signature Matcha Latte",
-      "category": "food",
-      "price": 18000,
-      "rating": 4.7,
-      "reviews": 121,
-      "featured": true,
-      "inventory": 40,
-      "tagline": "Creamy ceremonial-style matcha with balanced sweetness.",
-      "description": "A smooth iced matcha latte with gentle earthy notes, creamy milk texture, and customizable sweetness. Great as a study session companion or post-class refreshment.",
-      "features": [
-        "Made with premium matcha",
-        "Customizable sweetness",
-        "Perfect for warm afternoons"
-      ],
-      "image": "https://lh3.googleusercontent.com/aida-public/AB6AXuB_bmTcRcxCcAkxFt9J9_FN1r4EdgTD4-OYWyvoCtN1jBiR2_N7u3IGs4zaYH9L77RQNm0LaRX6uTAUt5Oxd-JKqcCov7lV-IY6g6UA1Eog13_x7QEN1Mf8UMf-GH8scfkcGvnaDLPVUNtEFW3TpwdMF9B0yE3WbdDuvG3kMxXidJwiA2ObVHIlLbhRlnN2Ovn1APHRqh0vP-gK2U1ZSA1uXhXivrksLm8ICiZEYM2O2FmmsTLs3jRHFodQgVG2WzFGPWDE_iiHJZio"
-    },
-    {
-      "id": "prd_004",
-      "slug": "campus-study-bundle",
-      "name": "Campus Study Bundle",
-      "category": "stationery",
-      "price": 89000,
-      "rating": 4.8,
-      "reviews": 64,
-      "featured": true,
-      "inventory": 18,
-      "tagline": "Notebook, planner, sticky tabs, and pen set in one kit.",
-      "description": "A curated starter pack for students who want a cleaner semester workflow. Includes a weekly planner, premium notebook, color tabs, and smooth-writing pens in a branded pouch.",
-      "features": [
-        "All-in-one productivity kit",
-        "Branded reusable pouch",
-        "Ideal for new semester preparation"
-      ],
-      "image": "https://images.unsplash.com/photo-1517842645767-c639042777db?auto=format&fit=crop&w=1200&q=80"
-    },
-    {
-      "id": "prd_005",
-      "slug": "varsity-hoodie-masoem",
-      "name": "Masoem Varsity Hoodie",
-      "category": "merchandise",
-      "price": 245000,
-      "rating": 4.9,
-      "reviews": 97,
-      "featured": false,
-      "inventory": 12,
-      "tagline": "Heavyweight campus hoodie with refined embroidery.",
-      "description": "Premium fleece varsity hoodie designed for comfort in lecture halls, libraries, and travel. Finished with embroidered branding and a relaxed unisex fit.",
-      "features": [
-        "Soft heavyweight fleece",
-        "Embroidered university mark",
-        "Relaxed everyday fit"
-      ],
-      "image": "https://images.unsplash.com/photo-1521572163474-6864f9cf17ab?auto=format&fit=crop&w=1200&q=80"
-    },
-    {
-      "id": "prd_006",
-      "slug": "wireless-focus-headset",
-      "name": "Wireless Focus Headset",
-      "category": "technology",
-      "price": 375000,
-      "rating": 4.6,
-      "reviews": 58,
-      "featured": false,
-      "inventory": 9,
-      "tagline": "Reliable wireless audio for class, calls, and deep work.",
-      "description": "Comfortable over-ear headset with long battery life, low-latency pairing, and a clean microphone profile suitable for online learning and collaborative meetings.",
-      "features": [
-        "Noise-reducing ear cups",
-        "Long battery life",
-        "Built-in microphone for meetings"
-      ],
-      "image": "https://images.unsplash.com/photo-1505740420928-5e560c06d30e?auto=format&fit=crop&w=1200&q=80"
-    },
-    {
-      "id": "prd_007",
-      "slug": "executive-journal-set",
-      "name": "Executive Journal Set",
-      "category": "stationery",
-      "price": 69000,
-      "rating": 4.7,
-      "reviews": 44,
-      "featured": false,
-      "inventory": 22,
-      "tagline": "Minimal desk companion for notes, plans, and reflections.",
-      "description": "A premium ruled journal paired with a sturdy pen and divider cards. Ideal for students, lecturers, and campus organizations managing polished notes.",
-      "features": [
-        "Premium textured cover",
-        "Includes matching pen",
-        "Suitable for formal meeting notes"
-      ],
-      "image": "https://images.unsplash.com/photo-1513258496099-48168024aec0?auto=format&fit=crop&w=1200&q=80"
-    },
-    {
-      "id": "prd_008",
-      "slug": "scholar-salmon-bowl",
-      "name": "Scholar Salmon Bowl",
-      "category": "food",
-      "price": 45000,
-      "rating": 4.8,
-      "reviews": 88,
-      "featured": false,
-      "inventory": 15,
-      "tagline": "Protein-packed bowl for long productive afternoons.",
-      "description": "Grilled salmon served over quinoa, sweet potato, and fresh greens with tahini dressing. A balanced, premium option for health-focused campus dining.",
-      "features": [
-        "High-protein meal",
-        "Fresh greens and roasted vegetables",
-        "Tahini dressing included"
-      ],
-      "image": "https://lh3.googleusercontent.com/aida-public/AB6AXuCpHhPGKwAH3Xu6E_olNBr8_3MvgpLQAnfAs7ylqNuvvVI4-nPfUKA9pajCrXPcqvUHCAI12actKKYy1MXeZOxaEqL3nNypJXKBIiK-kniKnVOcRWoOY3wzeGESlq4tqZT3W3zJfTG0JiYArBWIvjKnrM17fSMXJuAsyyw6hS6u3qxBhXcCbddp3aNN-iyhSDjd30KfJdPAl7INdSInAZaetFzsSZjzKs6YyQAZX0fOvU9BLPhUVgxrk5HGjejmsu32DH0gY3pyqfBe"
-    }
-  ]
+    "users":  [
+                  {
+                      "id":  "9b83de28-d9ba-4637-9385-6016c1649034",
+                      "name":  "Inspect User 2",
+                      "email":  "codex.customer.inspect2.20260409232210@example.com",
+                      "passwordHash":  "fcf730b6d95236ecd3c9fc2d92d7b6b2bb061514961aec041d6c7a7192f592e4",
+                      "studentId":  "20260024",
+                      "faculty":  "QA",
+                      "phone":  "08666666666",
+                      "joinedAt":  "2026-04-09T16:22:11.02+00:00",
+                      "role":  "customer",
+                      "emailVerifiedAt":  null,
+                      "verificationTokenHash":  null,
+                      "verificationTokenExpiresAt":  null,
+                      "resetTokenHash":  null,
+                      "resetTokenExpiresAt":  null,
+                      "failedLoginCount":  0,
+                      "lockedUntil":  null,
+                      "lastLoginAt":  null,
+                      "wishlist":  [
+
+                                   ],
+                      "notifications":  [
+
+                                        ]
+                  },
+                  {
+                      "id":  "656f5b94-ab32-40b5-8bf5-e0eb8cb56cc0",
+                      "name":  "Inspect User",
+                      "email":  "codex.customer.inspect.20260409232101@example.com",
+                      "passwordHash":  "fcf730b6d95236ecd3c9fc2d92d7b6b2bb061514961aec041d6c7a7192f592e4",
+                      "studentId":  "20260023",
+                      "faculty":  "QA",
+                      "phone":  "08555555555",
+                      "joinedAt":  "2026-04-09T16:21:03.217+00:00",
+                      "role":  "customer",
+                      "emailVerifiedAt":  null,
+                      "verificationTokenHash":  null,
+                      "verificationTokenExpiresAt":  null,
+                      "resetTokenHash":  null,
+                      "resetTokenExpiresAt":  null,
+                      "failedLoginCount":  0,
+                      "lockedUntil":  null,
+                      "lastLoginAt":  null,
+                      "wishlist":  [
+
+                                   ],
+                      "notifications":  [
+
+                                        ]
+                  },
+                  {
+                      "id":  "355c0234-7717-4fc5-8168-f6ae6168b62b",
+                      "name":  "Codex Temp Admin",
+                      "email":  "codex.admin.temp.20260409@example.com",
+                      "passwordHash":  "fcf730b6d95236ecd3c9fc2d92d7b6b2bb061514961aec041d6c7a7192f592e4",
+                      "studentId":  "20260022",
+                      "faculty":  "QA",
+                      "phone":  "08444444444",
+                      "joinedAt":  "2026-04-09T16:19:37.025+00:00",
+                      "role":  "admin",
+                      "emailVerifiedAt":  null,
+                      "verificationTokenHash":  null,
+                      "verificationTokenExpiresAt":  null,
+                      "resetTokenHash":  null,
+                      "resetTokenExpiresAt":  null,
+                      "failedLoginCount":  0,
+                      "lockedUntil":  null,
+                      "lastLoginAt":  null,
+                      "wishlist":  [
+
+                                   ],
+                      "notifications":  [
+
+                                        ]
+                  },
+                  {
+                      "id":  "370d0c1f-c951-48d8-a547-685d8f7faea8",
+                      "name":  "Codex Customer AdminCheck",
+                      "email":  "codex.customer.admincheck.20260409231913@example.com",
+                      "passwordHash":  "fcf730b6d95236ecd3c9fc2d92d7b6b2bb061514961aec041d6c7a7192f592e4",
+                      "studentId":  "20260021",
+                      "faculty":  "QA",
+                      "phone":  "08133333333",
+                      "joinedAt":  "2026-04-09T16:19:16.303+00:00",
+                      "role":  "customer",
+                      "emailVerifiedAt":  null,
+                      "verificationTokenHash":  null,
+                      "verificationTokenExpiresAt":  null,
+                      "resetTokenHash":  null,
+                      "resetTokenExpiresAt":  null,
+                      "failedLoginCount":  0,
+                      "lockedUntil":  null,
+                      "lastLoginAt":  null,
+                      "wishlist":  [
+
+                                   ],
+                      "notifications":  [
+
+                                        ]
+                  },
+                  {
+                      "id":  "278516fa-5463-42a9-9144-8d577f00df4e",
+                      "name":  "Codex Customer",
+                      "email":  "codex.customer.20260409231502@example.com",
+                      "passwordHash":  "fcf730b6d95236ecd3c9fc2d92d7b6b2bb061514961aec041d6c7a7192f592e4",
+                      "studentId":  "20260011",
+                      "faculty":  "QA",
+                      "phone":  "08111111111",
+                      "joinedAt":  "2026-04-09T16:15:04.727+00:00",
+                      "role":  "customer",
+                      "emailVerifiedAt":  null,
+                      "verificationTokenHash":  null,
+                      "verificationTokenExpiresAt":  null,
+                      "resetTokenHash":  null,
+                      "resetTokenExpiresAt":  null,
+                      "failedLoginCount":  0,
+                      "lockedUntil":  null,
+                      "lastLoginAt":  null,
+                      "wishlist":  [
+
+                                   ],
+                      "notifications":  [
+
+                                        ]
+                  },
+                  {
+                      "id":  "c1efdbe6-629d-4dde-8eec-d36431a9403f",
+                      "name":  "Codex Patch E2E",
+                      "email":  "codex.e2e.patch.20260409230645@example.com",
+                      "passwordHash":  "fcf730b6d95236ecd3c9fc2d92d7b6b2bb061514961aec041d6c7a7192f592e4",
+                      "studentId":  "20260002",
+                      "faculty":  "Quality Assurance",
+                      "phone":  "08123456780",
+                      "joinedAt":  "2026-04-09T16:06:49.414+00:00",
+                      "role":  "customer",
+                      "emailVerifiedAt":  null,
+                      "verificationTokenHash":  null,
+                      "verificationTokenExpiresAt":  null,
+                      "resetTokenHash":  null,
+                      "resetTokenExpiresAt":  null,
+                      "failedLoginCount":  0,
+                      "lockedUntil":  null,
+                      "lastLoginAt":  null,
+                      "wishlist":  [
+
+                                   ],
+                      "notifications":  [
+
+                                        ]
+                  },
+                  {
+                      "id":  "aee6304b-4ac3-4b10-a4a9-801278866406",
+                      "name":  "Codex E2E",
+                      "email":  "codex.e2e.20260409230217@example.com",
+                      "passwordHash":  "fcf730b6d95236ecd3c9fc2d92d7b6b2bb061514961aec041d6c7a7192f592e4",
+                      "studentId":  "20260001",
+                      "faculty":  "Quality Assurance",
+                      "phone":  "08123456789",
+                      "joinedAt":  "2026-04-09T16:02:22.764+00:00",
+                      "role":  "customer",
+                      "emailVerifiedAt":  null,
+                      "verificationTokenHash":  null,
+                      "verificationTokenExpiresAt":  null,
+                      "resetTokenHash":  null,
+                      "resetTokenExpiresAt":  null,
+                      "failedLoginCount":  0,
+                      "lockedUntil":  null,
+                      "lastLoginAt":  null,
+                      "wishlist":  [
+
+                                   ],
+                      "notifications":  [
+
+                                        ]
+                  },
+                  {
+                      "id":  "a62a471c-fd4d-4068-a81b-7bf8e8513492",
+                      "name":  "sayid",
+                      "email":  "sayidmuhamad@gmail.com",
+                      "passwordHash":  "c775e7b757ede630cd0aa1113bd102661ab38829ca52a6422ab782862f268646",
+                      "studentId":  "24250023",
+                      "faculty":  "ekonomi",
+                      "phone":  "0987654321",
+                      "joinedAt":  "2026-04-07T04:48:58.069+00:00",
+                      "role":  "customer",
+                      "emailVerifiedAt":  null,
+                      "verificationTokenHash":  null,
+                      "verificationTokenExpiresAt":  null,
+                      "resetTokenHash":  null,
+                      "resetTokenExpiresAt":  null,
+                      "failedLoginCount":  0,
+                      "lockedUntil":  null,
+                      "lastLoginAt":  null,
+                      "wishlist":  [
+
+                                   ],
+                      "notifications":  [
+
+                                        ]
+                  },
+                  {
+                      "id":  "8b70aebe-d26c-417c-a7f2-751bba880550",
+                      "name":  "Probe User",
+                      "email":  "probe.1775535676649@example.com",
+                      "passwordHash":  "854ddc006369eb7bac38bb6690e7f9b05d0d68659be1f96564df407d653e0df2",
+                      "studentId":  "PRB-1775535676649",
+                      "faculty":  "QA",
+                      "phone":  "+6281000000000",
+                      "joinedAt":  "2026-04-07T04:21:47.168+00:00",
+                      "role":  "customer",
+                      "emailVerifiedAt":  null,
+                      "verificationTokenHash":  null,
+                      "verificationTokenExpiresAt":  null,
+                      "resetTokenHash":  null,
+                      "resetTokenExpiresAt":  null,
+                      "failedLoginCount":  0,
+                      "lockedUntil":  null,
+                      "lastLoginAt":  null,
+                      "wishlist":  [
+
+                                   ],
+                      "notifications":  [
+
+                                        ]
+                  },
+                  {
+                      "id":  "27e4c193-891c-4595-bf93-0ceaaabbe493",
+                      "name":  "QA Customer",
+                      "email":  "qa.customer.1775535640507@example.com",
+                      "passwordHash":  "scrypt$65b0c7f7ef07a747879d9a00fa5365bf$9443bcd191723973f30f4ecfdc1a2e86e2f8ca629b2d97595ba98ec1332ca3bb5bc3abc4ee952b83e54b7abfae9065f53858ff9cad3e81f56dc6571685d851ab",
+                      "studentId":  "QA-1775535640507",
+                      "faculty":  "QA",
+                      "phone":  "+6281222222222",
+                      "joinedAt":  "2026-04-07T04:21:13.2+00:00",
+                      "role":  "customer",
+                      "emailVerifiedAt":  null,
+                      "verificationTokenHash":  null,
+                      "verificationTokenExpiresAt":  null,
+                      "resetTokenHash":  null,
+                      "resetTokenExpiresAt":  null,
+                      "failedLoginCount":  0,
+                      "lockedUntil":  null,
+                      "lastLoginAt":  "2026-04-12T15:27:11.131Z",
+                      "wishlist":  [
+
+                                   ],
+                      "notifications":  [
+
+                                        ]
+                  },
+                  {
+                      "id":  "qa-admin-1775535640507",
+                      "name":  "QA Admin Temp",
+                      "email":  "qa.admin.1775535640507@example.com",
+                      "passwordHash":  "5e50623bf33bbb50f2e4fecdc9964a93f52e38aca277f5a786486be36b771da6",
+                      "studentId":  "QA-ADMIN",
+                      "faculty":  "QA",
+                      "phone":  "+6281000000000",
+                      "joinedAt":  "2026-04-07T04:20:42.166+00:00",
+                      "role":  "admin",
+                      "emailVerifiedAt":  null,
+                      "verificationTokenHash":  null,
+                      "verificationTokenExpiresAt":  null,
+                      "resetTokenHash":  null,
+                      "resetTokenExpiresAt":  null,
+                      "failedLoginCount":  0,
+                      "lockedUntil":  null,
+                      "lastLoginAt":  null,
+                      "wishlist":  [
+
+                                   ],
+                      "notifications":  [
+
+                                        ]
+                  },
+                  {
+                      "id":  "aff121e9-0c78-4f32-9c52-3ffd3e740102",
+                      "name":  "Hayam wuruk",
+                      "email":  "sugihwildan06@gmail.com",
+                      "passwordHash":  "7ab72f7d926105d912100f2fb9d4c58f6736c36b83b5006553f0183b991bdeaf",
+                      "studentId":  "29261932",
+                      "faculty":  "Komputer",
+                      "phone":  "08957789567",
+                      "joinedAt":  "2026-04-07T03:57:21.037+00:00",
+                      "role":  "customer",
+                      "emailVerifiedAt":  null,
+                      "verificationTokenHash":  null,
+                      "verificationTokenExpiresAt":  null,
+                      "resetTokenHash":  null,
+                      "resetTokenExpiresAt":  null,
+                      "failedLoginCount":  0,
+                      "lockedUntil":  null,
+                      "lastLoginAt":  null,
+                      "wishlist":  [
+
+                                   ],
+                      "notifications":  [
+
+                                        ]
+                  },
+                  {
+                      "id":  "2a30724c-371b-4821-baf4-565680a4a65f",
+                      "name":  "yanto",
+                      "email":  "yusufwsmuhamad@gmail.com",
+                      "passwordHash":  "scrypt$70c2a834209e10b741582df584b4e1bb$bb6ac24e2d3cb5387c32cf9d2f67cb4c74e291f655218ad48c9254a3e27830fbe0a9016aeda3655a16fd2206818beb8e2556be04c44846041bae236eab3c6b09",
+                      "studentId":  "242550031",
+                      "faculty":  "komunitas",
+                      "phone":  "0987541727",
+                      "joinedAt":  "2026-04-07T03:55:14.76+00:00",
+                      "role":  "admin",
+                      "emailVerifiedAt":  null,
+                      "verificationTokenHash":  null,
+                      "verificationTokenExpiresAt":  null,
+                      "resetTokenHash":  null,
+                      "resetTokenExpiresAt":  null,
+                      "failedLoginCount":  0,
+                      "lockedUntil":  null,
+                      "lastLoginAt":  "2026-04-12T15:32:29.864Z",
+                      "wishlist":  [
+
+                                   ],
+                      "notifications":  [
+
+                                        ]
+                  },
+                  {
+                      "id":  "6f2cfe09-d62c-4e2e-8bc3-a3a83ef2c3b9",
+                      "name":  "Shesya",
+                      "email":  "shesyadwinandajuliandra@gmail.com",
+                      "passwordHash":  "3c6eb866679a25adc0a79c5e2aeff9857f619cca89cfd34942c581e800417dd6",
+                      "studentId":  "20261728",
+                      "faculty":  "Ekonomi dan Bisnis",
+                      "phone":  "0812 2400 5382",
+                      "joinedAt":  "2026-04-07T03:55:03.295+00:00",
+                      "role":  "customer",
+                      "emailVerifiedAt":  null,
+                      "verificationTokenHash":  null,
+                      "verificationTokenExpiresAt":  null,
+                      "resetTokenHash":  null,
+                      "resetTokenExpiresAt":  null,
+                      "failedLoginCount":  0,
+                      "lockedUntil":  null,
+                      "lastLoginAt":  null,
+                      "wishlist":  [
+
+                                   ],
+                      "notifications":  [
+
+                                        ]
+                  },
+                  {
+                      "id":  "ccfc3214-902f-4e01-9a40-0b3a18446623",
+                      "name":  "Bayu",
+                      "email":  "sugihsopian8@gmail.com",
+                      "passwordHash":  "481f58cad6a17ac3066c1983ec4cd57073be9cc26c7562800f8ed811acd3b7f9",
+                      "studentId":  "202568719",
+                      "faculty":  "Komputer",
+                      "phone":  "0897785602",
+                      "joinedAt":  "2026-04-07T03:53:55.553+00:00",
+                      "role":  "customer",
+                      "emailVerifiedAt":  null,
+                      "verificationTokenHash":  null,
+                      "verificationTokenExpiresAt":  null,
+                      "resetTokenHash":  null,
+                      "resetTokenExpiresAt":  null,
+                      "failedLoginCount":  0,
+                      "lockedUntil":  null,
+                      "lastLoginAt":  null,
+                      "wishlist":  [
+
+                                   ],
+                      "notifications":  [
+
+                                        ]
+                  },
+                  {
+                      "id":  "67a2da0a-af95-424f-a46b-fd55f1a396b0",
+                      "name":  "budi",
+                      "email":  "kuliahprojek7@gmail.com",
+                      "passwordHash":  "7df8a875d059883523203d70bd903879a42ed2ac5e34355abda3cac7fe4583a5",
+                      "studentId":  "209187263",
+                      "faculty":  "informatika",
+                      "phone":  "72318223940",
+                      "joinedAt":  "2026-04-07T03:49:07.013+00:00",
+                      "role":  "admin",
+                      "emailVerifiedAt":  null,
+                      "verificationTokenHash":  null,
+                      "verificationTokenExpiresAt":  null,
+                      "resetTokenHash":  null,
+                      "resetTokenExpiresAt":  null,
+                      "failedLoginCount":  0,
+                      "lockedUntil":  null,
+                      "lastLoginAt":  null,
+                      "wishlist":  [
+
+                                   ],
+                      "notifications":  [
+
+                                        ]
+                  }
+              ],
+    "sessions":  [
+                     {
+                         "token":  "c9257245-5921-4b73-a719-63780c86e0ee",
+                         "userId":  "9b83de28-d9ba-4637-9385-6016c1649034",
+                         "createdAt":  "2026-04-09T16:22:16.524+00:00"
+                     },
+                     {
+                         "token":  "719a09f5-b66c-43c9-bee8-6c045134050d",
+                         "userId":  "656f5b94-ab32-40b5-8bf5-e0eb8cb56cc0",
+                         "createdAt":  "2026-04-09T16:21:07.304+00:00"
+                     },
+                     {
+                         "token":  "beb07258-9c0b-4c6b-83e0-c46d80306976",
+                         "userId":  "355c0234-7717-4fc5-8168-f6ae6168b62b",
+                         "createdAt":  "2026-04-09T16:19:41.389+00:00"
+                     },
+                     {
+                         "token":  "eda92b49-c73a-4ad8-8ec8-13b107e9008c",
+                         "userId":  "370d0c1f-c951-48d8-a547-685d8f7faea8",
+                         "createdAt":  "2026-04-09T16:19:19.883+00:00"
+                     },
+                     {
+                         "token":  "abb084dd-fd9c-4bf8-bf8b-16370ba52aad",
+                         "userId":  "278516fa-5463-42a9-9144-8d577f00df4e",
+                         "createdAt":  "2026-04-09T16:15:08.398+00:00"
+                     },
+                     {
+                         "token":  "4c979734-afff-42c4-b907-8aef0055aead",
+                         "userId":  "c1efdbe6-629d-4dde-8eec-d36431a9403f",
+                         "createdAt":  "2026-04-09T16:06:53.484+00:00"
+                     },
+                     {
+                         "token":  "af01c64f-1de2-4293-bedb-1ece33294bc6",
+                         "userId":  "aee6304b-4ac3-4b10-a4a9-801278866406",
+                         "createdAt":  "2026-04-09T16:02:23.477+00:00"
+                     },
+                     {
+                         "token":  "48eb7973-b30e-42cf-8552-9d1882c7e76a",
+                         "userId":  "8b70aebe-d26c-417c-a7f2-751bba880550",
+                         "createdAt":  "2026-04-07T04:21:48.061+00:00"
+                     },
+                     {
+                         "token":  "62cf27b8-8d15-4d89-9d3b-7e05028fce60",
+                         "userId":  "6f2cfe09-d62c-4e2e-8bc3-a3a83ef2c3b9",
+                         "createdAt":  "2026-04-07T03:57:15.81+00:00"
+                     },
+                     {
+                         "token":  "999f0fbd-b298-4e68-8b61-1bc58185d30d",
+                         "userId":  "27e4c193-891c-4595-bf93-0ceaaabbe493",
+                         "createdAt":  "2026-04-12T15:27:11.131Z"
+                     },
+                     {
+                         "token":  "3ed9ca98-bdf1-47bb-aa0a-ee49a20addaa",
+                         "userId":  "2a30724c-371b-4821-baf4-565680a4a65f",
+                         "createdAt":  "2026-04-12T15:32:29.864Z"
+                     }
+                 ],
+    "carts":  [
+                  {
+                      "userId":  "67a2da0a-af95-424f-a46b-fd55f1a396b0",
+                      "items":  [
+
+                                ]
+                  },
+                  {
+                      "userId":  "6f2cfe09-d62c-4e2e-8bc3-a3a83ef2c3b9",
+                      "items":  [
+
+                                ]
+                  },
+                  {
+                      "userId":  "qa-admin-1775535640507",
+                      "items":  [
+
+                                ]
+                  },
+                  {
+                      "userId":  "8b70aebe-d26c-417c-a7f2-751bba880550",
+                      "items":  [
+
+                                ]
+                  },
+                  {
+                      "userId":  "a62a471c-fd4d-4068-a81b-7bf8e8513492",
+                      "items":  [
+
+                                ]
+                  },
+                  {
+                      "userId":  "2a30724c-371b-4821-baf4-565680a4a65f",
+                      "items":  [
+
+                                ]
+                  },
+                  {
+                      "userId":  "aee6304b-4ac3-4b10-a4a9-801278866406",
+                      "items":  [
+
+                                ]
+                  },
+                  {
+                      "userId":  "c1efdbe6-629d-4dde-8eec-d36431a9403f",
+                      "items":  [
+
+                                ]
+                  },
+                  {
+                      "userId":  "278516fa-5463-42a9-9144-8d577f00df4e",
+                      "items":  [
+
+                                ]
+                  },
+                  {
+                      "userId":  "370d0c1f-c951-48d8-a547-685d8f7faea8",
+                      "items":  [
+
+                                ]
+                  },
+                  {
+                      "userId":  "355c0234-7717-4fc5-8168-f6ae6168b62b",
+                      "items":  [
+
+                                ]
+                  },
+                  {
+                      "userId":  "656f5b94-ab32-40b5-8bf5-e0eb8cb56cc0",
+                      "items":  [
+
+                                ]
+                  },
+                  {
+                      "userId":  "9b83de28-d9ba-4637-9385-6016c1649034",
+                      "items":  [
+
+                                ]
+                  }
+              ],
+    "orders":  [
+                   {
+                       "id":  "9f6b0a27-b95f-427e-9525-55bb0a4d5ce0",
+                       "orderNumber":  "MU-568404",
+                       "userId":  "370d0c1f-c951-48d8-a547-685d8f7faea8",
+                       "status":  "Preparing",
+                       "paymentStatus":  "paid",
+                       "paymentReference":  "PAY-51568100",
+                       "paymentProvider":  "manual-supabase-ready",
+                       "createdAt":  "2026-04-09T16:19:28.404+00:00",
+                       "estimatedReadyAt":  "2026-04-09T17:04:28.405+00:00",
+                       "fulfillmentMethod":  "delivery",
+                       "paymentMethod":  "M-Pay",
+                       "paymentToken":  null,
+                       "paymentUrl":  null,
+                       "paymentPayload":  null,
+                       "stockApplied":  true,
+                       "paidAt":  "2026-04-09T16:19:28.1+00:00",
+                       "notes":  "Admin verification order",
+                       "shipping":  {
+                                        "phone":  "08133333333",
+                                        "address":  "Gedung QA Kampus",
+                                        "fullName":  "Codex Customer AdminCheck"
+                                    },
+                       "items":  [
+                                     {
+                                         "name":  "Signature Nasi Goreng",
+                                         "slug":  "signature-nasi-goreng",
+                                         "image":  "https://lh3.googleusercontent.com/aida-public/AB6AXuBrZwPqVU5e1TTbwWpDAevskmP9mRFnjU8bzbNlonUKggkgn_fBeXXabHt1Dwq1EdRUQpgi3dRMxOsG3Tn8W7tEUiVBvuSXJeM4VKT2RvPYxq_ivNc4pQRyZ2LNrKA-uSTjaxUKmMw4nZOodS5oLD-SwiGlOQNkns0qpAf8KOhwh5FlgDHlrk136S2Jz6stlJa1PjYFZMv4WnLjbXIDAQq3QmQwjlC2JdKPBx2mCRVKBCIi7EspeyCZ8wHNdc2x5akXEGFuSXwOztEZ",
+                                         "price":  32000,
+                                         "category":  "food",
+                                         "quantity":  1,
+                                         "lineTotal":  32000,
+                                         "productId":  "prd_001"
+                                     }
+                                 ],
+                       "subtotal":  32000,
+                       "serviceFee":  2500,
+                       "deliveryFee":  12000,
+                       "total":  46500
+                   },
+                   {
+                       "id":  "eb77134f-94bf-48eb-adbc-a8d95f50a26d",
+                       "orderNumber":  "MU-316089",
+                       "userId":  "278516fa-5463-42a9-9144-8d577f00df4e",
+                       "status":  "Paid \u0026 Confirmed",
+                       "paymentStatus":  "paid",
+                       "paymentReference":  "PAY-51315676",
+                       "paymentProvider":  "manual-supabase-ready",
+                       "createdAt":  "2026-04-09T16:15:16.089+00:00",
+                       "estimatedReadyAt":  "2026-04-09T17:00:16.089+00:00",
+                       "fulfillmentMethod":  "delivery",
+                       "paymentMethod":  "M-Pay",
+                       "paymentToken":  null,
+                       "paymentUrl":  null,
+                       "paymentPayload":  null,
+                       "stockApplied":  true,
+                       "paidAt":  "2026-04-09T16:15:15.676+00:00",
+                       "notes":  "Admin flow test",
+                       "shipping":  {
+                                        "phone":  "08111111111",
+                                        "address":  "Gedung QA Kampus",
+                                        "fullName":  "Codex Customer"
+                                    },
+                       "items":  [
+                                     {
+                                         "name":  "Signature Nasi Goreng",
+                                         "slug":  "signature-nasi-goreng",
+                                         "image":  "https://lh3.googleusercontent.com/aida-public/AB6AXuBrZwPqVU5e1TTbwWpDAevskmP9mRFnjU8bzbNlonUKggkgn_fBeXXabHt1Dwq1EdRUQpgi3dRMxOsG3Tn8W7tEUiVBvuSXJeM4VKT2RvPYxq_ivNc4pQRyZ2LNrKA-uSTjaxUKmMw4nZOodS5oLD-SwiGlOQNkns0qpAf8KOhwh5FlgDHlrk136S2Jz6stlJa1PjYFZMv4WnLjbXIDAQq3QmQwjlC2JdKPBx2mCRVKBCIi7EspeyCZ8wHNdc2x5akXEGFuSXwOztEZ",
+                                         "price":  32000,
+                                         "category":  "food",
+                                         "quantity":  1,
+                                         "lineTotal":  32000,
+                                         "productId":  "prd_001"
+                                     }
+                                 ],
+                       "subtotal":  32000,
+                       "serviceFee":  2500,
+                       "deliveryFee":  12000,
+                       "total":  46500
+                   },
+                   {
+                       "id":  "e0cd43c9-79ff-428d-b10f-753c63878a64",
+                       "orderNumber":  "MU-823854",
+                       "userId":  "c1efdbe6-629d-4dde-8eec-d36431a9403f",
+                       "status":  "Paid \u0026 Confirmed",
+                       "paymentStatus":  "paid",
+                       "paymentReference":  "PAY-50823649",
+                       "paymentProvider":  "manual-supabase-ready",
+                       "createdAt":  "2026-04-09T16:07:03.854+00:00",
+                       "estimatedReadyAt":  "2026-04-09T16:52:03.854+00:00",
+                       "fulfillmentMethod":  "delivery",
+                       "paymentMethod":  "M-Pay",
+                       "paymentToken":  null,
+                       "paymentUrl":  null,
+                       "paymentPayload":  null,
+                       "stockApplied":  true,
+                       "paidAt":  "2026-04-09T16:07:03.649+00:00",
+                       "notes":  "Verifikasi setelah patch",
+                       "shipping":  {
+                                        "phone":  "08123456780",
+                                        "address":  "Gedung QA Kampus, Lantai 3",
+                                        "fullName":  "Codex Patch E2E"
+                                    },
+                       "items":  [
+                                     {
+                                         "name":  "Signature Nasi Goreng",
+                                         "slug":  "signature-nasi-goreng",
+                                         "image":  "https://lh3.googleusercontent.com/aida-public/AB6AXuBrZwPqVU5e1TTbwWpDAevskmP9mRFnjU8bzbNlonUKggkgn_fBeXXabHt1Dwq1EdRUQpgi3dRMxOsG3Tn8W7tEUiVBvuSXJeM4VKT2RvPYxq_ivNc4pQRyZ2LNrKA-uSTjaxUKmMw4nZOodS5oLD-SwiGlOQNkns0qpAf8KOhwh5FlgDHlrk136S2Jz6stlJa1PjYFZMv4WnLjbXIDAQq3QmQwjlC2JdKPBx2mCRVKBCIi7EspeyCZ8wHNdc2x5akXEGFuSXwOztEZ",
+                                         "price":  32000,
+                                         "category":  "food",
+                                         "quantity":  1,
+                                         "lineTotal":  32000,
+                                         "productId":  "prd_001"
+                                     }
+                                 ],
+                       "subtotal":  32000,
+                       "serviceFee":  2500,
+                       "deliveryFee":  12000,
+                       "total":  46500
+                   },
+                   {
+                       "id":  "8a2ee228-95fc-4920-96dc-4b59ea7777bb",
+                       "orderNumber":  "MU-552659",
+                       "userId":  "aee6304b-4ac3-4b10-a4a9-801278866406",
+                       "status":  "Paid \u0026 Confirmed",
+                       "paymentStatus":  "paid",
+                       "paymentReference":  "PAY-50551451",
+                       "paymentProvider":  "manual-supabase-ready",
+                       "createdAt":  "2026-04-09T16:02:32.659+00:00",
+                       "estimatedReadyAt":  "2026-04-09T16:47:32.659+00:00",
+                       "fulfillmentMethod":  "delivery",
+                       "paymentMethod":  "M-Pay",
+                       "paymentToken":  null,
+                       "paymentUrl":  null,
+                       "paymentPayload":  null,
+                       "stockApplied":  true,
+                       "paidAt":  "2026-04-09T16:02:31.451+00:00",
+                       "notes":  "Pengujian end to end",
+                       "shipping":  {
+                                        "phone":  "08123456789",
+                                        "address":  "Gedung QA Kampus, Lantai 2",
+                                        "fullName":  "Codex E2E"
+                                    },
+                       "items":  [
+                                     {
+                                         "name":  "Signature Nasi Goreng",
+                                         "slug":  "signature-nasi-goreng",
+                                         "image":  "https://lh3.googleusercontent.com/aida-public/AB6AXuBrZwPqVU5e1TTbwWpDAevskmP9mRFnjU8bzbNlonUKggkgn_fBeXXabHt1Dwq1EdRUQpgi3dRMxOsG3Tn8W7tEUiVBvuSXJeM4VKT2RvPYxq_ivNc4pQRyZ2LNrKA-uSTjaxUKmMw4nZOodS5oLD-SwiGlOQNkns0qpAf8KOhwh5FlgDHlrk136S2Jz6stlJa1PjYFZMv4WnLjbXIDAQq3QmQwjlC2JdKPBx2mCRVKBCIi7EspeyCZ8wHNdc2x5akXEGFuSXwOztEZ",
+                                         "price":  32000,
+                                         "category":  "food",
+                                         "quantity":  1,
+                                         "lineTotal":  32000,
+                                         "productId":  "prd_001"
+                                     }
+                                 ],
+                       "subtotal":  32000,
+                       "serviceFee":  2500,
+                       "deliveryFee":  12000,
+                       "total":  46500
+                   },
+                   {
+                       "id":  "f28edf60-43c7-453a-8b65-5f1d70266441",
+                       "orderNumber":  "MU-835858",
+                       "userId":  "2a30724c-371b-4821-baf4-565680a4a65f",
+                       "status":  "Paid \u0026 Confirmed",
+                       "paymentStatus":  "paid",
+                       "paymentReference":  "PAY-88834943",
+                       "paymentProvider":  "manual-supabase-ready",
+                       "createdAt":  "2026-04-07T19:07:15.858+00:00",
+                       "estimatedReadyAt":  "2026-04-07T19:52:15.858+00:00",
+                       "fulfillmentMethod":  "pickup",
+                       "paymentMethod":  "Cash",
+                       "paymentToken":  null,
+                       "paymentUrl":  null,
+                       "paymentPayload":  null,
+                       "stockApplied":  true,
+                       "paidAt":  "2026-04-07T19:07:14.943+00:00",
+                       "notes":  "sss",
+                       "shipping":  {
+                                        "phone":  "0987541727",
+                                        "address":  "ssssss",
+                                        "fullName":  "yanto"
+                                    },
+                       "items":  [
+                                     {
+                                         "name":  "Signature Matcha Latte",
+                                         "slug":  "signature-matcha-latte",
+                                         "image":  "https://lh3.googleusercontent.com/aida-public/AB6AXuB_bmTcRcxCcAkxFt9J9_FN1r4EdgTD4-OYWyvoCtN1jBiR2_N7u3IGs4zaYH9L77RQNm0LaRX6uTAUt5Oxd-JKqcCov7lV-IY6g6UA1Eog13_x7QEN1Mf8UMf-GH8scfkcGvnaDLPVUNtEFW3TpwdMF9B0yE3WbdDuvG3kMxXidJwiA2ObVHIlLbhRlnN2Ovn1APHRqh0vP-gK2U1ZSA1uXhXivrksLm8ICiZEYM2O2FmmsTLs3jRHFodQgVG2WzFGPWDE_iiHJZio",
+                                         "price":  18000,
+                                         "category":  "food",
+                                         "quantity":  1,
+                                         "lineTotal":  18000,
+                                         "productId":  "prd_003"
+                                     }
+                                 ],
+                       "subtotal":  18000,
+                       "serviceFee":  2500,
+                       "deliveryFee":  0,
+                       "total":  20500
+                   },
+                   {
+                       "id":  "ba52ba51-9212-4b5c-90cb-9f6f466c01c1",
+                       "orderNumber":  "MU-567320",
+                       "userId":  "a62a471c-fd4d-4068-a81b-7bf8e8513492",
+                       "status":  "Completed",
+                       "paymentStatus":  "paid",
+                       "paymentReference":  "PAY-37566976",
+                       "paymentProvider":  "manual-supabase-ready",
+                       "createdAt":  "2026-04-07T04:52:47.32+00:00",
+                       "estimatedReadyAt":  "2026-04-07T05:37:47.32+00:00",
+                       "fulfillmentMethod":  "delivery",
+                       "paymentMethod":  "QRIS",
+                       "paymentToken":  null,
+                       "paymentUrl":  null,
+                       "paymentPayload":  null,
+                       "stockApplied":  true,
+                       "paidAt":  "2026-04-07T04:52:46.976+00:00",
+                       "notes":  "antar jam 10 pagi",
+                       "shipping":  {
+                                        "phone":  "0987654321",
+                                        "address":  "bandung",
+                                        "fullName":  "sayid"
+                                    },
+                       "items":  [
+                                     {
+                                         "name":  "Signature Nasi Goreng",
+                                         "slug":  "signature-nasi-goreng",
+                                         "image":  "https://lh3.googleusercontent.com/aida-public/AB6AXuBrZwPqVU5e1TTbwWpDAevskmP9mRFnjU8bzbNlonUKggkgn_fBeXXabHt1Dwq1EdRUQpgi3dRMxOsG3Tn8W7tEUiVBvuSXJeM4VKT2RvPYxq_ivNc4pQRyZ2LNrKA-uSTjaxUKmMw4nZOodS5oLD-SwiGlOQNkns0qpAf8KOhwh5FlgDHlrk136S2Jz6stlJa1PjYFZMv4WnLjbXIDAQq3QmQwjlC2JdKPBx2mCRVKBCIi7EspeyCZ8wHNdc2x5akXEGFuSXwOztEZ",
+                                         "price":  32000,
+                                         "category":  "food",
+                                         "quantity":  1,
+                                         "lineTotal":  32000,
+                                         "productId":  "prd_001"
+                                     },
+                                     {
+                                         "name":  "Sate Ayam Madura",
+                                         "slug":  "sate-ayam-madura",
+                                         "image":  "https://lh3.googleusercontent.com/aida-public/AB6AXuBTWTk4_W1ayaSDi_GaHJhsDY-vFF0fPQUVJ-j3HhbpZJffNA5zmcNPVdy1fzEqiBQ6JMEQ6GPH1ms3wLBxJxUUt5VxynY5FWnpPLoB6p43lAjHdHYFDRJijfNoBmvUJ3Cd0rP7cnnnuxx6WIMOnR9B0KzHgKl-MBYbplNWEBDdAsy0eyfwi-bsCNeX-5G9yTNMrmcapLtryPZIIm1MWad47bcdbqKv1x10buE3GN_Kn76MRWg-zQAUlVujGA_cqjn4QdVp3kDdp6VG",
+                                         "price":  28000,
+                                         "category":  "food",
+                                         "quantity":  2,
+                                         "lineTotal":  56000,
+                                         "productId":  "prd_002"
+                                     }
+                                 ],
+                       "subtotal":  88000,
+                       "serviceFee":  2500,
+                       "deliveryFee":  12000,
+                       "total":  102500
+                   },
+                   {
+                       "id":  "79e13dde-8a35-4311-9081-7568ecb47744",
+                       "orderNumber":  "MU-419567",
+                       "userId":  "6f2cfe09-d62c-4e2e-8bc3-a3a83ef2c3b9",
+                       "status":  "Paid \u0026 Confirmed",
+                       "paymentStatus":  "paid",
+                       "paymentReference":  "PAY-34418807",
+                       "paymentProvider":  "manual-supabase-ready",
+                       "createdAt":  "2026-04-07T04:00:19.567+00:00",
+                       "estimatedReadyAt":  "2026-04-07T04:45:19.567+00:00",
+                       "fulfillmentMethod":  "delivery",
+                       "paymentMethod":  "QRIS",
+                       "paymentToken":  null,
+                       "paymentUrl":  null,
+                       "paymentPayload":  null,
+                       "stockApplied":  true,
+                       "paidAt":  "2026-04-07T04:00:18.807+00:00",
+                       "notes":  "jangan pedes² ya mie nya",
+                       "shipping":  {
+                                        "phone":  "0812 2400 5382",
+                                        "address":  "parkiran",
+                                        "fullName":  "Shesya"
+                                    },
+                       "items":  [
+                                     {
+                                         "name":  "Signature Nasi Goreng",
+                                         "slug":  "signature-nasi-goreng",
+                                         "image":  "https://lh3.googleusercontent.com/aida-public/AB6AXuBrZwPqVU5e1TTbwWpDAevskmP9mRFnjU8bzbNlonUKggkgn_fBeXXabHt1Dwq1EdRUQpgi3dRMxOsG3Tn8W7tEUiVBvuSXJeM4VKT2RvPYxq_ivNc4pQRyZ2LNrKA-uSTjaxUKmMw4nZOodS5oLD-SwiGlOQNkns0qpAf8KOhwh5FlgDHlrk136S2Jz6stlJa1PjYFZMv4WnLjbXIDAQq3QmQwjlC2JdKPBx2mCRVKBCIi7EspeyCZ8wHNdc2x5akXEGFuSXwOztEZ",
+                                         "price":  32000,
+                                         "category":  "food",
+                                         "quantity":  1,
+                                         "lineTotal":  32000,
+                                         "productId":  "prd_001"
+                                     },
+                                     {
+                                         "name":  "Campus Study Bundle",
+                                         "slug":  "campus-study-bundle",
+                                         "image":  "https://images.unsplash.com/photo-1517842645767-c639042777db?auto=format\u0026fit=crop\u0026w=1200\u0026q=80",
+                                         "price":  89000,
+                                         "category":  "stationery",
+                                         "quantity":  1,
+                                         "lineTotal":  89000,
+                                         "productId":  "prd_004"
+                                     },
+                                     {
+                                         "name":  "Sate Ayam Madura",
+                                         "slug":  "sate-ayam-madura",
+                                         "image":  "https://lh3.googleusercontent.com/aida-public/AB6AXuBTWTk4_W1ayaSDi_GaHJhsDY-vFF0fPQUVJ-j3HhbpZJffNA5zmcNPVdy1fzEqiBQ6JMEQ6GPH1ms3wLBxJxUUt5VxynY5FWnpPLoB6p43lAjHdHYFDRJijfNoBmvUJ3Cd0rP7cnnnuxx6WIMOnR9B0KzHgKl-MBYbplNWEBDdAsy0eyfwi-bsCNeX-5G9yTNMrmcapLtryPZIIm1MWad47bcdbqKv1x10buE3GN_Kn76MRWg-zQAUlVujGA_cqjn4QdVp3kDdp6VG",
+                                         "price":  28000,
+                                         "category":  "food",
+                                         "quantity":  1,
+                                         "lineTotal":  28000,
+                                         "productId":  "prd_002"
+                                     }
+                                 ],
+                       "subtotal":  149000,
+                       "serviceFee":  2500,
+                       "deliveryFee":  12000,
+                       "total":  163500
+                   },
+                   {
+                       "id":  "606ceb23-f3ea-4997-ab32-83ffd9f9cb51",
+                       "orderNumber":  "MU-856283",
+                       "userId":  "67a2da0a-af95-424f-a46b-fd55f1a396b0",
+                       "status":  "Paid \u0026 Confirmed",
+                       "paymentStatus":  "paid",
+                       "paymentReference":  "PAY-33855984",
+                       "paymentProvider":  "manual-supabase-ready",
+                       "createdAt":  "2026-04-07T03:50:56.283+00:00",
+                       "estimatedReadyAt":  "2026-04-07T04:35:56.283+00:00",
+                       "fulfillmentMethod":  "delivery",
+                       "paymentMethod":  "QRIS",
+                       "paymentToken":  null,
+                       "paymentUrl":  null,
+                       "paymentPayload":  null,
+                       "stockApplied":  true,
+                       "paidAt":  "2026-04-07T03:50:55.984+00:00",
+                       "notes":  "antar jam 1",
+                       "shipping":  {
+                                        "phone":  "72318223940",
+                                        "address":  "jatinangor",
+                                        "fullName":  "budi"
+                                    },
+                       "items":  [
+                                     {
+                                         "name":  "Campus Study Bundle",
+                                         "slug":  "campus-study-bundle",
+                                         "image":  "https://images.unsplash.com/photo-1517842645767-c639042777db?auto=format\u0026fit=crop\u0026w=1200\u0026q=80",
+                                         "price":  89000,
+                                         "category":  "stationery",
+                                         "quantity":  1,
+                                         "lineTotal":  89000,
+                                         "productId":  "prd_004"
+                                     },
+                                     {
+                                         "name":  "Signature Matcha Latte",
+                                         "slug":  "signature-matcha-latte",
+                                         "image":  "https://lh3.googleusercontent.com/aida-public/AB6AXuB_bmTcRcxCcAkxFt9J9_FN1r4EdgTD4-OYWyvoCtN1jBiR2_N7u3IGs4zaYH9L77RQNm0LaRX6uTAUt5Oxd-JKqcCov7lV-IY6g6UA1Eog13_x7QEN1Mf8UMf-GH8scfkcGvnaDLPVUNtEFW3TpwdMF9B0yE3WbdDuvG3kMxXidJwiA2ObVHIlLbhRlnN2Ovn1APHRqh0vP-gK2U1ZSA1uXhXivrksLm8ICiZEYM2O2FmmsTLs3jRHFodQgVG2WzFGPWDE_iiHJZio",
+                                         "price":  18000,
+                                         "category":  "food",
+                                         "quantity":  1,
+                                         "lineTotal":  18000,
+                                         "productId":  "prd_003"
+                                     }
+                                 ],
+                       "subtotal":  107000,
+                       "serviceFee":  2500,
+                       "deliveryFee":  12000,
+                       "total":  121500
+                   }
+               ],
+    "categories":  [
+                       {
+                           "slug":  "food",
+                           "name":  "Campus Dining",
+                           "description":  "Fresh meals and drinks crafted for busy academic days."
+                       },
+                       {
+                           "slug":  "stationery",
+                           "name":  "Study Essentials",
+                           "description":  "Notebooks, planners, and tools for productive classes."
+                       },
+                       {
+                           "slug":  "merchandise",
+                           "name":  "University Merchandise",
+                           "description":  "Official apparel and branded lifestyle products."
+                       },
+                       {
+                           "slug":  "technology",
+                           "name":  "Tech \u0026 Gadgets",
+                           "description":  "Devices and accessories for learning, collaboration, and focus."
+                       }
+                   ],
+    "products":  [
+                     {
+                         "id":  "prd_001",
+                         "slug":  "signature-nasi-goreng",
+                         "name":  "Signature Nasi Goreng",
+                         "category":  "food",
+                         "price":  32000,
+                         "rating":  4.9,
+                         "reviews":  182,
+                         "featured":  true,
+                         "inventory":  15,
+                         "tagline":  "Smoky wok-fried rice with campus favorite spices.",
+                         "description":  "A hearty plate of signature nasi goreng topped with ayam suwir, telur mata sapi, acar segar, and crunchy crackers. Built to keep you energized from the first lecture to the final assignment.",
+                         "features":  [
+                                          "Prepared fresh every order",
+                                          "Includes egg and crispy crackers",
+                                          "Popular lunch choice across faculties"
+                                      ],
+                         "image":  "https://lh3.googleusercontent.com/aida-public/AB6AXuBrZwPqVU5e1TTbwWpDAevskmP9mRFnjU8bzbNlonUKggkgn_fBeXXabHt1Dwq1EdRUQpgi3dRMxOsG3Tn8W7tEUiVBvuSXJeM4VKT2RvPYxq_ivNc4pQRyZ2LNrKA-uSTjaxUKmMw4nZOodS5oLD-SwiGlOQNkns0qpAf8KOhwh5FlgDHlrk136S2Jz6stlJa1PjYFZMv4WnLjbXIDAQq3QmQwjlC2JdKPBx2mCRVKBCIi7EspeyCZ8wHNdc2x5akXEGFuSXwOztEZ"
+                     },
+                     {
+                         "id":  "prd_004",
+                         "slug":  "campus-study-bundle",
+                         "name":  "Campus Study Bundle",
+                         "category":  "stationery",
+                         "price":  89000,
+                         "rating":  4.8,
+                         "reviews":  64,
+                         "featured":  true,
+                         "inventory":  16,
+                         "tagline":  "Notebook, planner, sticky tabs, and pen set in one kit.",
+                         "description":  "A curated starter pack for students who want a cleaner semester workflow. Includes a weekly planner, premium notebook, color tabs, and smooth-writing pens in a branded pouch.",
+                         "features":  [
+                                          "All-in-one productivity kit",
+                                          "Branded reusable pouch",
+                                          "Ideal for new semester preparation"
+                                      ],
+                         "image":  "https://images.unsplash.com/photo-1517842645767-c639042777db?auto=format\u0026fit=crop\u0026w=1200\u0026q=80"
+                     },
+                     {
+                         "id":  "prd_005",
+                         "slug":  "varsity-hoodie-masoem",
+                         "name":  "Masoem Varsity Hoodie",
+                         "category":  "merchandise",
+                         "price":  245000,
+                         "rating":  4.9,
+                         "reviews":  97,
+                         "featured":  false,
+                         "inventory":  12,
+                         "tagline":  "Heavyweight campus hoodie with refined embroidery.",
+                         "description":  "Premium fleece varsity hoodie designed for comfort in lecture halls, libraries, and travel. Finished with embroidered branding and a relaxed unisex fit.",
+                         "features":  [
+                                          "Soft heavyweight fleece",
+                                          "Embroidered university mark",
+                                          "Relaxed everyday fit"
+                                      ],
+                         "image":  "https://images.unsplash.com/photo-1521572163474-6864f9cf17ab?auto=format\u0026fit=crop\u0026w=1200\u0026q=80"
+                     },
+                     {
+                         "id":  "prd_006",
+                         "slug":  "wireless-focus-headset",
+                         "name":  "Wireless Focus Headset",
+                         "category":  "technology",
+                         "price":  375000,
+                         "rating":  4.6,
+                         "reviews":  58,
+                         "featured":  false,
+                         "inventory":  9,
+                         "tagline":  "Reliable wireless audio for class, calls, and deep work.",
+                         "description":  "Comfortable over-ear headset with long battery life, low-latency pairing, and a clean microphone profile suitable for online learning and collaborative meetings.",
+                         "features":  [
+                                          "Noise-reducing ear cups",
+                                          "Long battery life",
+                                          "Built-in microphone for meetings"
+                                      ],
+                         "image":  "https://images.unsplash.com/photo-1505740420928-5e560c06d30e?auto=format\u0026fit=crop\u0026w=1200\u0026q=80"
+                     },
+                     {
+                         "id":  "prd_007",
+                         "slug":  "executive-journal-set",
+                         "name":  "Executive Journal Set",
+                         "category":  "stationery",
+                         "price":  69000,
+                         "rating":  4.7,
+                         "reviews":  44,
+                         "featured":  false,
+                         "inventory":  22,
+                         "tagline":  "Minimal desk companion for notes, plans, and reflections.",
+                         "description":  "A premium ruled journal paired with a sturdy pen and divider cards. Ideal for students, lecturers, and campus organizations managing polished notes.",
+                         "features":  [
+                                          "Premium textured cover",
+                                          "Includes matching pen",
+                                          "Suitable for formal meeting notes"
+                                      ],
+                         "image":  "https://images.unsplash.com/photo-1513258496099-48168024aec0?auto=format\u0026fit=crop\u0026w=1200\u0026q=80"
+                     },
+                     {
+                         "id":  "prd_mnoeq1aj_5csa",
+                         "slug":  "ayam-geprek",
+                         "name":  "ayam geprek",
+                         "category":  "food",
+                         "price":  10000,
+                         "rating":  0,
+                         "reviews":  0,
+                         "featured":  true,
+                         "inventory":  50,
+                         "tagline":  "ayam geprek pedas lezat",
+                         "description":  "mkwdnajndnreininrnwknjjjh",
+                         "features":  [
+                                          "disajikan dengan sambal unggulan"
+                                      ],
+                         "image":  "https://resepmamiku.com/wp-content/uploads/2022/02/ayam-geprek-yscooking-760x950.jpg"
+                     },
+                     {
+                         "id":  "prd_002",
+                         "slug":  "sate-ayam-madura",
+                         "name":  "Sate Ayam Madura",
+                         "category":  "food",
+                         "price":  28000,
+                         "rating":  4.8,
+                         "reviews":  146,
+                         "featured":  true,
+                         "inventory":  17,
+                         "tagline":  "Tender grilled skewers with rich peanut sauce.",
+                         "description":  "Chicken satay marinated overnight and grilled to order. Served with creamy peanut sauce, lontong, and a bright sambal finish for a balanced, satisfying plate.",
+                         "features":  [
+                                          "House-made peanut sauce",
+                                          "Served with lontong",
+                                          "Reliable dinner bestseller"
+                                      ],
+                         "image":  "https://lh3.googleusercontent.com/aida-public/AB6AXuBTWTk4_W1ayaSDi_GaHJhsDY-vFF0fPQUVJ-j3HhbpZJffNA5zmcNPVdy1fzEqiBQ6JMEQ6GPH1ms3wLBxJxUUt5VxynY5FWnpPLoB6p43lAjHdHYFDRJijfNoBmvUJ3Cd0rP7cnnnuxx6WIMOnR9B0KzHgKl-MBYbplNWEBDdAsy0eyfwi-bsCNeX-5G9yTNMrmcapLtryPZIIm1MWad47bcdbqKv1x10buE3GN_Kn76MRWg-zQAUlVujGA_cqjn4QdVp3kDdp6VG"
+                     },
+                     {
+                         "id":  "prd_003",
+                         "slug":  "signature-matcha-latte",
+                         "name":  "Signature Matcha Latte",
+                         "category":  "food",
+                         "price":  18000,
+                         "rating":  4.7,
+                         "reviews":  121,
+                         "featured":  true,
+                         "inventory":  38,
+                         "tagline":  "Creamy ceremonial-style matcha with balanced sweetness.",
+                         "description":  "A smooth iced matcha latte with gentle earthy notes, creamy milk texture, and customizable sweetness. Great as a study session companion or post-class refreshment.",
+                         "features":  [
+                                          "Made with premium matcha",
+                                          "Customizable sweetness",
+                                          "Perfect for warm afternoons"
+                                      ],
+                         "image":  "https://lh3.googleusercontent.com/aida-public/AB6AXuB_bmTcRcxCcAkxFt9J9_FN1r4EdgTD4-OYWyvoCtN1jBiR2_N7u3IGs4zaYH9L77RQNm0LaRX6uTAUt5Oxd-JKqcCov7lV-IY6g6UA1Eog13_x7QEN1Mf8UMf-GH8scfkcGvnaDLPVUNtEFW3TpwdMF9B0yE3WbdDuvG3kMxXidJwiA2ObVHIlLbhRlnN2Ovn1APHRqh0vP-gK2U1ZSA1uXhXivrksLm8ICiZEYM2O2FmmsTLs3jRHFodQgVG2WzFGPWDE_iiHJZio"
+                     },
+                     {
+                         "id":  "prd_mnronbmd_l2mu",
+                         "slug":  "produk-admin-e2e-20260409231913",
+                         "name":  "Produk Admin E2E 20260409231913",
+                         "category":  "food",
+                         "price":  12345,
+                         "rating":  0,
+                         "reviews":  0,
+                         "featured":  false,
+                         "inventory":  11,
+                         "tagline":  "Produk uji admin",
+                         "description":  "Produk khusus pengujian jalur admin.",
+                         "features":  [
+                                          "Tes admin",
+                                          "End to end"
+                                      ],
+                         "image":  "https://images.unsplash.com/photo-1546069901-ba9599a7e63c?auto=format\u0026fit=crop\u0026w=800\u0026q=80"
+                     },
+                     {
+                         "id":  "prd_008",
+                         "slug":  "scholar-salmon-bowl",
+                         "name":  "Scholar Salmon Bowl",
+                         "category":  "food",
+                         "price":  45000,
+                         "rating":  4.8,
+                         "reviews":  88,
+                         "featured":  false,
+                         "inventory":  15,
+                         "tagline":  "Protein-packed bowl for long productive afternoons.",
+                         "description":  "Grilled salmon served over quinoa, sweet potato, and fresh greens with tahini dressing. A balanced, premium option for health-focused campus dining.",
+                         "features":  [
+                                          "High-protein meal",
+                                          "Fresh greens and roasted vegetables",
+                                          "Tahini dressing included"
+                                      ],
+                         "image":  "https://lh3.googleusercontent.com/aida-public/AB6AXuCpHhPGKwAH3Xu6E_olNBr8_3MvgpLQAnfAs7ylqNuvvVI4-nPfUKA9pajCrXPcqvUHCAI12actKKYy1MXeZOxaEqL3nNypJXKBIiK-kniKnVOcRWoOY3wzeGESlq4tqZT3W3zJfTG0JiYArBWIvjKnrM17fSMXJuAsyyw6hS6u3qxBhXcCbddp3aNN-iyhSDjd30KfJdPAl7INdSInAZaetFzsSZjzKs6YyQAZX0fOvU9BLPhUVgxrk5HGjejmsu32DH0gY3pyqfBe"
+                     }
+                 ]
 }

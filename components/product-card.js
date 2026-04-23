@@ -1,16 +1,20 @@
 import Link from "next/link";
 import { formatCurrency } from "../lib/format";
 import AddToCartButton from "./add-to-cart-button";
+import WishlistButton from "./wishlist-button";
 
 export default function ProductCard({ product, requiresAuth = false }) {
   const stockTone =
     product.inventory <= 0 ? "sold-out" : product.inventory <= 10 ? "running-low" : "ready";
 
   return (
-    <article className="product-card">
-      <Link href={`/products/${product.slug}`} className="product-image-link">
-        <img src={product.image} alt={product.name} className="product-image" />
-      </Link>
+    <article className="product-card ripple-container">
+      <div className="product-image-wrapper">
+        <Link href={`/products/${product.slug}`} className="product-image-link">
+          <img src={product.image} alt={product.name} className="product-image" />
+        </Link>
+        <WishlistButton product={product} />
+      </div>
 
       <div className="product-body">
         <div className="product-meta">

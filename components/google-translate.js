@@ -4,8 +4,19 @@ import { useEffect } from "react";
 
 export default function GoogleTranslate() {
   useEffect(() => {
-    // Check if the script is already loaded to avoid duplicates
-    if (!document.querySelector("#google-translate-script")) {
+    if (typeof window === "undefined" || window.matchMedia("(max-width: 900px)").matches) {
+      return undefined;
+    }
+
+    let timeoutId = null;
+    let idleCallbackId = null;
+    let disposed = false;
+
+    const loadTranslateScript = () => {
+      if (disposed || document.querySelector("#google-translate-script")) {
+        return;
+      }
+
       const script = document.createElement("script");
       script.id = "google-translate-script";
       script.src = "//translate.google.com/translate_a/element.js?cb=googleTranslateElementInit";
@@ -13,16 +24,38 @@ export default function GoogleTranslate() {
       document.body.appendChild(script);
 
       window.googleTranslateElementInit = () => {
+        if (disposed || !window.google?.translate) {
+          return;
+        }
+
         new window.google.translate.TranslateElement(
-          { 
-            pageLanguage: 'id',
-            includedLanguages: 'en,id', // Only allow ID and EN
-            autoDisplay: false
-          }, 
-          'google_translate_element'
+          {
+            pageLanguage: "id",
+            includedLanguages: "en,id",
+            autoDisplay: false,
+          },
+          "google_translate_element",
         );
       };
+    };
+
+    if ("requestIdleCallback" in window) {
+      idleCallbackId = window.requestIdleCallback(loadTranslateScript, { timeout: 1500 });
+    } else {
+      timeoutId = window.setTimeout(loadTranslateScript, 1200);
     }
+
+    return () => {
+      disposed = true;
+
+      if (timeoutId) {
+        window.clearTimeout(timeoutId);
+      }
+
+      if (idleCallbackId && "cancelIdleCallback" in window) {
+        window.cancelIdleCallback(idleCallbackId);
+      }
+    };
   }, []);
 
   return null;
